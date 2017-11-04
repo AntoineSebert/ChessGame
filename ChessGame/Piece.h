@@ -1,6 +1,6 @@
 #pragma once
 
-#include<memory>
+#include <memory>
 
 /*
 	@author Antoine "Anthony" Sébert
@@ -13,7 +13,7 @@ class Piece {
 		// public
 		// protected
 		private:
-			//std::weak_ptr<Player> owner;
+			std::weak_ptr<Player> owner;
 			std::weak_ptr<unsigned int> color;
 			char representation;
 
@@ -21,9 +21,7 @@ class Piece {
 		public:
 			Piece();
 			~Piece();
-			std::array<Cell> myfunc() {
-
-			}
+			std::array<Cell> const& canMove() const;
 		// protected
 		// private
 };

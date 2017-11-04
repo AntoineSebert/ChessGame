@@ -12,3 +12,7 @@ Piece::Piece() {
 
 Piece::~Piece() {
 }
+
+std::array<Cell> const & Piece::canMove() const {
+	// TODO: insérer une instruction return ici
+}
