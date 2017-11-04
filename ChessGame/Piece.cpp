@@ -6,11 +6,9 @@
 	@description abstract class for the pieces
 */
 
-Piece::Piece()
-{
+Piece::Piece() {
 }
 
 
-Piece::~Piece()
-{
+Piece::~Piece() {
 }
