@@ -13,15 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Pieces">
+      <UniqueIdentifier>{5a9124c8-66c1-4144-b1f6-ac4bff84b72b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Pieces">
+      <UniqueIdentifier>{ecd1c525-de22-4307-a7b7-83662e659bb7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Piece.h">
+      <Filter>Fichiers d%27en-tête\Pieces</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Singleton.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Piece.cpp">
+      <Filter>Fichiers sources\Pieces</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
