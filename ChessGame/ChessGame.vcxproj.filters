@@ -28,7 +28,7 @@
       <Filter>Fichiers d%27en-tête\Pieces</Filter>
     </ClInclude>
     <ClInclude Include="king.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Pieces</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -42,7 +42,7 @@
       <Filter>Fichiers sources\Pieces</Filter>
     </ClCompile>
     <ClCompile Include="king.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Pieces</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
