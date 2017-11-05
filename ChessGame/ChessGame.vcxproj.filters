@@ -30,6 +30,9 @@
     <ClInclude Include="king.h">
       <Filter>Fichiers d%27en-tête\Pieces</Filter>
     </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Singleton.cpp">
@@ -43,6 +46,9 @@
     </ClCompile>
     <ClCompile Include="king.cpp">
       <Filter>Fichiers sources\Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
