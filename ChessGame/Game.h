@@ -21,6 +21,8 @@ class Game : public Singleton<Game> {
 		private:
 			std::unique_ptr<Board> gameBoard;
 			std::array<Player, 2> players;
+			difficulties difficulty;
+			gameModes gameMode;
 
 	// members
 		public:
