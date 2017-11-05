@@ -6,13 +6,8 @@
 	@description abstract class for the pieces
 */
 
-Piece::Piece() {
-}
+Piece::Piece(std::weak_ptr<Player> newOwner) : owner(newOwner) {}
 
-
-Piece::~Piece() {
-}
-
-std::array<Cell> const & Piece::canMove() const {
-	// TODO: insérer une instruction return ici
+char Piece::getRepresentation() {
+	return representation;
 }

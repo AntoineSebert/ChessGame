@@ -1,5 +1,6 @@
 #pragma once
 
+#include <array>
 #include <memory>
 
 /*
@@ -14,14 +15,13 @@ class Piece {
 		// protected
 		private:
 			std::weak_ptr<Player> owner;
-			std::weak_ptr<unsigned int> color;
 			char representation;
 
 	// members
 		public:
-			Piece();
-			~Piece();
-			std::array<Cell> const& canMove() const;
+			Piece(std::weak_ptr<Player> newOwner);
+			virtual std::array<Cell> const& possibleMoves() const = 0;
+			char getRepresentation();
 		// protected
 		// private
 };
