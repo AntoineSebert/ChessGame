@@ -1,8 +1,11 @@
 #pragma once
 
 #include "Singleton.h"
+#include "difficulties.h"
+#include "gameModes.h"
 
 #include <array>
+#include <memory>
 
 /*
 	@author Antoine "Anthony" Sébert
@@ -16,7 +19,7 @@ class Game : public Singleton<Game> {
 		// public
 		// protected
 		private:
-			Board* gameBoard;
+			std::unique_ptr<Board> gameBoard;
 			std::array<Player, 2> players;
 
 	// members
@@ -24,5 +27,9 @@ class Game : public Singleton<Game> {
 			void initialize();
 		// protected
 		private:
+			void initializeBoard();
+			void initializePlayers();
+			void initializeArmies();
+			difficulties setDifficulty();
+			gameModes setGameModes();
 };
-

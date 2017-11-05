@@ -111,7 +111,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="difficulties.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="gameModes.h" />
     <ClInclude Include="king.h" />
     <ClInclude Include="Piece.h" />
     <ClInclude Include="Singleton.h" />
