@@ -6,7 +6,7 @@
 	@description abstract class for the pieces
 */
 
-Piece::Piece(std::weak_ptr<Player> newOwner) : owner(newOwner) {}
+Piece::Piece(std::weak_ptr<Player> newOwner) : owner(newOwner), representation('*') {}
 
 char Piece::getRepresentation() {
 	return representation;
