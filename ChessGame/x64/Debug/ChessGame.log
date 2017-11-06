@@ -1,163 +1,25 @@
 ﻿  main.cpp
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2059: erreur de syntaxe : ')'
-  c:\users\i\desktop\chessgame\chessgame\singleton.h(22): note: voir la référence à l'instanciation de classe modèle 'Singleton<T>' en cours de compilation
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2059: erreur de syntaxe : 'const'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ')' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ';' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2059: erreur de syntaxe : ')'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<T>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Board>::T' utilise une class de 'Board' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Board>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Board>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Board>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Player>::T' utilise une class de 'Player' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Player>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Player>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Player>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Interface>::T' utilise une class de 'Interface' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Interface>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Interface>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Interface>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Game>::T' utilise une class de 'Game' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Game>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Game>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Game>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
 d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\array(234): warning C4624: 'std::array<Player,2>' : le destructeur a été implicitement défini comme étant supprimé
   c:\users\i\desktop\chessgame\chessgame\game.h(29): note: voir la référence à l'instanciation de classe modèle 'std::array<Player,2>' en cours de compilation
 c:\users\i\desktop\chessgame\chessgame\game.h(46): warning C4624: 'Game' : le destructeur a été implicitement défini comme étant supprimé
-  king.cpp
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2059: erreur de syntaxe : ')'
-  c:\users\i\desktop\chessgame\chessgame\singleton.h(22): note: voir la référence à l'instanciation de classe modèle 'Singleton<T>' en cours de compilation
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2059: erreur de syntaxe : 'const'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ')' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ';' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2059: erreur de syntaxe : ')'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<T>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Player>::T' utilise une class de 'Player' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Player>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Player>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Player>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-  Singleton.cpp
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2059: erreur de syntaxe : ')'
-  c:\users\i\desktop\chessgame\chessgame\singleton.h(22): note: voir la référence à l'instanciation de classe modèle 'Singleton<T>' en cours de compilation
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2059: erreur de syntaxe : 'const'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ')' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ';' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2059: erreur de syntaxe : ')'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<T>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-  Player.cpp
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2059: erreur de syntaxe : ')'
-  c:\users\i\desktop\chessgame\chessgame\singleton.h(22): note: voir la référence à l'instanciation de classe modèle 'Singleton<T>' en cours de compilation
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2059: erreur de syntaxe : 'const'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ')' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ';' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2059: erreur de syntaxe : ')'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<T>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Player>::T' utilise une class de 'Player' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Player>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Player>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Player>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-  Piece.cpp
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2059: erreur de syntaxe : ')'
-  c:\users\i\desktop\chessgame\chessgame\singleton.h(22): note: voir la référence à l'instanciation de classe modèle 'Singleton<T>' en cours de compilation
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2059: erreur de syntaxe : 'const'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ')' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ';' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2059: erreur de syntaxe : ')'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<T>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Player>::T' utilise une class de 'Player' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Player>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Player>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Player>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-  Interface.cpp
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2059: erreur de syntaxe : ')'
-  c:\users\i\desktop\chessgame\chessgame\singleton.h(22): note: voir la référence à l'instanciation de classe modèle 'Singleton<T>' en cours de compilation
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2059: erreur de syntaxe : 'const'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ')' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ';' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2059: erreur de syntaxe : ')'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<T>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Interface>::T' utilise une class de 'Interface' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Interface>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Interface>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Interface>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-  Game.cpp
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2059: erreur de syntaxe : ')'
-  c:\users\i\desktop\chessgame\chessgame\singleton.h(22): note: voir la référence à l'instanciation de classe modèle 'Singleton<T>' en cours de compilation
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2059: erreur de syntaxe : 'const'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ')' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ';' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2059: erreur de syntaxe : ')'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<T>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Board>::T' utilise une class de 'Board' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Board>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Board>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Board>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Player>::T' utilise une class de 'Player' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Player>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Player>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Player>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Interface>::T' utilise une class de 'Interface' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Interface>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Interface>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Interface>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Game>::T' utilise une class de 'Game' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Game>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Game>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Game>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\array(234): warning C4624: 'std::array<Player,2>' : le destructeur a été implicitement défini comme étant supprimé
-  c:\users\i\desktop\chessgame\chessgame\game.h(29): note: voir la référence à l'instanciation de classe modèle 'std::array<Player,2>' en cours de compilation
-c:\users\i\desktop\chessgame\chessgame\game.h(46): warning C4624: 'Game' : le destructeur a été implicitement défini comme étant supprimé
+c:\users\i\desktop\chessgame\chessgame\singleton.h(26): error C2280: 'Game::Game(void)' : tentative de référencement d'une fonction supprimée
+  c:\users\i\desktop\chessgame\chessgame\game.h(46): note: le compilateur a généré 'Game::Game' ici
+  c:\users\i\desktop\chessgame\chessgame\singleton.h(25): note: pendant la compilation de la fonction membre '<Inconnu>' (classe <Inconnu>)
+  c:\users\i\desktop\chessgame\chessgame\main.cpp(12): note: voir la référence à l'instanciation de la fonction modèle 'Game &Singleton<Game>::getInstance(void)' en cours de compilation
+  c:\users\i\desktop\chessgame\chessgame\game.h(21): note: voir la référence à l'instanciation de classe modèle 'Singleton<Game>' en cours de compilation
+  c:\users\i\desktop\chessgame\chessgame\game.h(46): note: 'Game::Game(void)' : la fonction a été supprimée implicitement, car 'Game' a un membre de données 'Game::players' comportant un destructeur supprimé ou inaccessible
+  c:\users\i\desktop\chessgame\chessgame\game.h(29): note: voir la déclaration de 'Game::players'
+  Génération de code en cours...
+  Compilation en cours...
   Board.cpp
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2059: erreur de syntaxe : ')'
-  c:\users\i\desktop\chessgame\chessgame\singleton.h(22): note: voir la référence à l'instanciation de classe modèle 'Singleton<T>' en cours de compilation
-c:\users\i\desktop\chessgame\chessgame\singleton.h(15): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2059: erreur de syntaxe : 'const'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(16): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ')' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2143: erreur de syntaxe : absence de ';' avant '&&'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2059: erreur de syntaxe : ')'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2238: jetons inattendus avant ';'
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<T>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<T>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(17): error C2079: 'Singleton<Board>::T' utilise une class de 'Board' non défini
-c:\users\i\desktop\chessgame\chessgame\singleton.h(18): error C2523: 'Singleton<Board>::~T' : balise destructeur non correcte
-c:\users\i\desktop\chessgame\chessgame\singleton.h(20): error C2327: 'Singleton<Board>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
-c:\users\i\desktop\chessgame\chessgame\singleton.h(21): error C2327: 'Singleton<Board>::T' : n'est pas un nom de type, un membre static, ni un énumérateur
+  Génération de code en cours...
+  Compilation en cours...
+  king.cpp
+  Player.cpp
+  Piece.cpp
+  Interface.cpp
+  Game.cpp
+d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\array(234): warning C4624: 'std::array<Player,2>' : le destructeur a été implicitement défini comme étant supprimé
+  c:\users\i\desktop\chessgame\chessgame\game.h(29): note: voir la référence à l'instanciation de classe modèle 'std::array<Player,2>' en cours de compilation
+c:\users\i\desktop\chessgame\chessgame\game.h(46): warning C4624: 'Game' : le destructeur a été implicitement défini comme étant supprimé
   Génération de code en cours...

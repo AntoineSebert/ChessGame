@@ -12,6 +12,7 @@
 		gameMode = setGameModes();
 		difficulty = setDifficulty();
 		initializePlayers();
+		setWhoPlaysFirst();
 		initializeArmies();
 	}
 	// protected

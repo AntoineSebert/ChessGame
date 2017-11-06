@@ -9,6 +9,7 @@
 template<typename T> class Singleton {
 	public:
 		static T& getInstance();
+	/*
 	private:
 		// construct/destruct
 			T() = default;
@@ -18,4 +19,10 @@ template<typename T> class Singleton {
 		// assign
 			T& operator=(const T&) = delete;
 			T& operator=(T&&) = delete;
+	*/
 };
+
+template<typename T> inline T& Singleton<T>::getInstance() {
+	static T instance;
+	return instance;
+}
