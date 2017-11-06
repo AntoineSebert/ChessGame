@@ -111,6 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Board.h" />
     <ClInclude Include="difficulties.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="gameModes.h" />
@@ -120,6 +121,7 @@
     <ClInclude Include="Singleton.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Board.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="king.cpp" />

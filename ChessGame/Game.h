@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Singleton.h"
+#include "Interface.h"
 #include "difficulties.h"
 #include "gameModes.h"
 
@@ -20,6 +21,7 @@ class Game : public Singleton<Game> {
 		// protected
 		private:
 			std::unique_ptr<Board> gameBoard;
+			Interface gameInterface;
 			std::array<Player, 2> players;
 			difficulties difficulty;
 			gameModes gameMode;
@@ -29,9 +31,12 @@ class Game : public Singleton<Game> {
 			void initialize();
 		// protected
 		private:
+			Game();
+			~Game();
 			void initializeBoard();
 			void initializePlayers();
 			void initializeArmies();
 			difficulties setDifficulty();
 			gameModes setGameModes();
+			unsigned int setWhoPlaysFirst();
 };

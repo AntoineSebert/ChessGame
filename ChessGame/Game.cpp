@@ -16,7 +16,9 @@
 	}
 // protected
 // private
-	void Game::initializeBoard() {}
+	void Game::initializeBoard() {
+
+	}
 	void Game::initializePlayers() {}
 	void Game::initializeArmies() {}
 	difficulties Game::setDifficulty() {
@@ -25,4 +27,8 @@
 	}
 	gameModes Game::setGameModes() {
 		return gameModes();
+	}
+
+	unsigned int Game::setWhoPlaysFirst() {
+		return 0;
 	}
