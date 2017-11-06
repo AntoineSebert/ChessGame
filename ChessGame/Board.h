@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Singleton.h"
+#include "Game.h"
 #include "Cell.h"
 
 #include <array>

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "Piece.h"
+
+#include <memory>
+
 /*
 	@author Antoine "Anthony" Sébert
 	@creation_date 06/11/2017
@@ -7,8 +11,14 @@
 */
 
 class Cell {
-	public:
-	Cell();
-	~Cell();
+	// attributes
+		private:
+			unsigned int color;
+			std::weak_ptr<Piece> content;
+
+	// methods
+		public:
+			Cell();
+			~Cell();
 };
 
