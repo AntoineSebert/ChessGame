@@ -1,9 +1,12 @@
 #pragma once
 
 #include "Singleton.h"
-#include "Interface.h"
+
 #include "difficulties.h"
 #include "gameModes.h"
+
+#include "Board.h"
+#include "Interface.h"
 
 #include <array>
 #include <memory>
