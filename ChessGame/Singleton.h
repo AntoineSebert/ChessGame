@@ -8,14 +8,14 @@
 
 template<typename T> class Singleton {
 	public:
-		static T& GetInstance();
-
+		static T& getInstance();
 	private:
-		T() = default;
-		~T() = default;
-
-		T(const T&) = delete;
-		T& operator=(const T&) = delete;
-		T(T&&) = delete;
-		T& operator=(T&&) = delete;
+		// construct/destruct
+			T() = default;
+			T(const T&) = delete;
+			T(T&&) = delete;
+			~T() = default;
+		// assign
+			T& operator=(const T&) = delete;
+			T& operator=(T&&) = delete;
 };

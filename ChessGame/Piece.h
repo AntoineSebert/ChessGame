@@ -1,8 +1,9 @@
 #pragma once
 
 #include "Player.h"
+#include "Cell.h"
 
-#include <array>
+#include <vector>
 #include <memory>
 
 /*
@@ -22,7 +23,7 @@ class Piece {
 	// members
 		public:
 			Piece(std::weak_ptr<Player> newOwner);
-			virtual std::array<Cell> const& possibleMoves() const = 0;
+			virtual std::vector<Cell> const& possibleMoves() const = 0;
 			char getRepresentation();
 		// protected
 		// private

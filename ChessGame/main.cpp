@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[]) {
 
-	Game::GetInstance().initialize();
+	Game::getInstance().initialize();
 
 	return 0;
 }

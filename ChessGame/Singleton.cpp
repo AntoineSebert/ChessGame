@@ -6,7 +6,7 @@
 	@description thread-safe templated singleton class using magic statics
 */
 
-template<typename T> T& Singleton::GetInstance() {
+template<typename T> inline T & Singleton<T>::getInstance() {
 	static T instance;
 	return instance;
 }
