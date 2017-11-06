@@ -35,6 +35,8 @@ class Game : public Singleton<Game> {
 			void initialize();
 		// protected
 		private:
+			Game();
+			~Game();
 			void gameLoop();
 			// préparation
 				void initializeBoard();

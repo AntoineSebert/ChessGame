@@ -20,7 +20,7 @@
 	void Game::gameLoop() {}
 	// préparation
 		void Game::initializeBoard() {
-
+			gameBoard.get()->getInstance();
 		}
 		void Game::initializePlayers() {}
 		void Game::initializeArmies() {}
