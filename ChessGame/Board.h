@@ -10,8 +10,5 @@
 
 class Board : public Singleton<Board> {
 	friend class Singleton<Board>;
-	private:
-		Board();
-		~Board();
 };
 

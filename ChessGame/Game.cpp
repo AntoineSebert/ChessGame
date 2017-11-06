@@ -14,21 +14,23 @@
 		initializePlayers();
 		initializeArmies();
 	}
-// protected
+	// protected
 // private
-	void Game::initializeBoard() {
+	void Game::gameLoop() {}
+	// préparation
+		void Game::initializeBoard() {
 
-	}
-	void Game::initializePlayers() {}
-	void Game::initializeArmies() {}
-	difficulties Game::setDifficulty() {
+		}
+		void Game::initializePlayers() {}
+		void Game::initializeArmies() {}
+		difficulties Game::setDifficulty() {
 
-		return difficulties();
-	}
-	gameModes Game::setGameModes() {
-		return gameModes();
-	}
+			return difficulties();
+		}
+		gameModes Game::setGameModes() {
+			return gameModes();
+		}
 
-	unsigned int Game::setWhoPlaysFirst() {
-		return 0;
-	}
+		unsigned int Game::setWhoPlaysFirst() {
+			return 0;
+		}

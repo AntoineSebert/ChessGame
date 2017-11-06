@@ -10,8 +10,5 @@
 
 class Interface : public Singleton<Interface> {
 	friend class Singleton<Interface>;
-	private:
-	Interface();
-	~Interface();
 };
 

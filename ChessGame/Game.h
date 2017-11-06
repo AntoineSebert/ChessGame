@@ -6,6 +6,7 @@
 #include "gameModes.h"
 
 #include "Board.h"
+#include "Player.h"
 #include "Interface.h"
 
 #include <array>
@@ -34,12 +35,12 @@ class Game : public Singleton<Game> {
 			void initialize();
 		// protected
 		private:
-			Game();
-			~Game();
-			void initializeBoard();
-			void initializePlayers();
-			void initializeArmies();
-			difficulties setDifficulty();
-			gameModes setGameModes();
-			unsigned int setWhoPlaysFirst();
+			void gameLoop();
+			// préparation
+				void initializeBoard();
+				void initializePlayers();
+				void initializeArmies();
+				difficulties setDifficulty();
+				gameModes setGameModes();
+				unsigned int setWhoPlaysFirst();
 };
