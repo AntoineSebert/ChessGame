@@ -6,7 +6,10 @@
 	@description board element container
 */
 
-Cell::Cell() {}
-
+Cell::Cell(unsigned int newColor) : color(newColor) {}
 
 Cell::~Cell() {}
+
+unsigned int Cell::getColor() {
+	return color;
+}

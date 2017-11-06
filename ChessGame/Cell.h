@@ -18,7 +18,10 @@ class Cell {
 
 	// methods
 		public:
-			Cell();
+			Cell(unsigned int newColor);
 			~Cell();
+			unsigned int getColor();
+	private:
+		Cell();
 };
 

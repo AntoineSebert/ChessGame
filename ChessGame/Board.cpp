@@ -10,7 +10,7 @@
 	void Board::initialize() {
 		for (size_t i = 0; i < data.size(); ++i) {
 			for (size_t ii = 0; ii < data.size(); ++ii) {
-				//data[i][ii]
+				data[i][ii].
 			}
 		}
 	}
