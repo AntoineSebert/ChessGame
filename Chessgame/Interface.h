@@ -1,12 +1,12 @@
 /*
 	@author Antoine "Anthony" Sébert
 	@creation_date 05/11/2017
-	@description user input handler
+	@description user input/output handler
 */
 
 #pragma once
 
-#include <list>
+#include <vector>
 #include <string>
 
 #include "Singleton.h"
@@ -20,14 +20,13 @@ class Interface : public Singleton<Interface> {
 
 	// members
 		public:
-			template<typename T> T multipleChoice(unsigned int choicesNumber, std::list<std::string>* labels);
+			template<typename T>
+			T multipleChoice(unsigned int choicesNumber, std::vector<std::string>* labels);
 		// protected
 		private:
 			Interface();
 			~Interface();
+			bool isNumber(std::string input);
+			bool isAlphabetical(std::string input);
+			bool isAlphanumeraical(std::string input);
 };
-
-template<typename T>
-inline T Interface::multipleChoice(unsigned int choicesNumber, std::list<std::string>* labels) {
-	return T();
-}
