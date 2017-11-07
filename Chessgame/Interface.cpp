@@ -17,7 +17,12 @@
 		//cin >>
 		return nullptr;
 	}
-// protected
+
+	bool Interface::booleanChoice(std::vector<std::string>* labels) {
+		return false;
+	}
+
+	// protected
 // private
 	Interface::Interface() {}
 	Interface::~Interface() {}

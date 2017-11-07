@@ -22,6 +22,7 @@ class Interface : public Singleton<Interface> {
 		public:
 			template<typename T>
 			T multipleChoice(unsigned int choicesNumber, std::vector<std::string>* labels);
+			bool booleanChoice(std::vector<std::string>* labels);
 		// protected
 		private:
 			Interface();
