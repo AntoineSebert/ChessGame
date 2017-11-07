@@ -22,12 +22,14 @@ class Interface : public Singleton<Interface> {
 		public:
 			template<typename T>
 			T multipleChoice(unsigned int choicesNumber, std::vector<std::string>* labels);
-			bool booleanChoice(std::vector<std::string>* labels);
+			bool booleanChoice(std::string question);
 		// protected
 		private:
 			Interface();
 			~Interface();
-			bool isNumber(std::string input);
-			bool isAlphabetical(std::string input);
-			bool isAlphanumeraical(std::string input);
+			bool isNumberString(std::string input);
+			bool isAlphabeticalString(std::string input);
+			bool isAlphanumeraicalString(std::string input);
+			bool isNumber(char character);
+			bool isAlphabetical(char character);
 };
