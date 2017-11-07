@@ -6,8 +6,9 @@
 
 #pragma once
 
-#include <vector>
+#include <iostream>
 #include <string>
+#include <vector>
 
 #include "Singleton.h"
 
@@ -27,6 +28,7 @@ class Interface : public Singleton<Interface> {
 		private:
 			Interface();
 			~Interface();
+			unsigned int getCorrectInput(unsigned int choicesNumber, bool(*testFunction)(std::string));
 			bool isNumberString(std::string input);
 			bool isAlphabeticalString(std::string input);
 			bool isAlphanumeraicalString(std::string input);

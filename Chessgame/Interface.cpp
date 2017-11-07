@@ -13,11 +13,10 @@
 			std::cout << ' ' << labels->at(0) << std::endl << std::endl;
 			for (size_t i = 1; i < choicesNumber; ++i)
 				std::cout << "  " << labels->at(i + 1) << std::endl << std::endl;
+			return getCorrectInput(isNumberString);
 		}
-		//cin >>
 		return nullptr;
 	}
-
 	bool Interface::booleanChoice(std::string question) {
 		return false;
 	}
@@ -26,22 +25,29 @@
 // private
 	Interface::Interface() {}
 	Interface::~Interface() {}
+	unsigned int Interface::getCorrectInput(unsigned int choicesNumber, bool(*testFunction)(std::string)) {
+		std::string input;
+		do {
+			std::cin >> input;
+		} while (!testFunction(input));
+		return 0;
+	}
 	bool Interface::isNumberString(std::string input) {
-		for (size_t i = 0; i < input.length; ++i) {
+		for (size_t i = 0; i < input.size(); ++i) {
 			if (!isNumber(input.at(i)))
 				return false;
 		}
 		return true;
 	}
 	bool Interface::isAlphabeticalString(std::string input) {
-		for (size_t i = 0; i < input.length; ++i) {
+		for (size_t i = 0; i < input.size(); ++i) {
 			if (!isAlphabetical(input.at(i)))
 				return false;
 		}
 		return true;
 	}
 	bool Interface::isAlphanumeraicalString(std::string input) {
-		for (size_t i = 0; i < input.length; ++i) {
+		for (size_t i = 0; i < input.size(); ++i) {
 			if (!isNumber(input.at(i)) || !isAlphabetical(input.at(i)))
 				return false;
 		}
