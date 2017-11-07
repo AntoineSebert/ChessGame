@@ -14,7 +14,7 @@
 #include "gameModes.h"
 //#include "Board.h"
 //#include "Player.h"
-//#include "Interface.h"
+#include "Interface.h"
 
 class Game : public Singleton<Game> {
 	friend class Singleton<Game>;
@@ -23,14 +23,14 @@ class Game : public Singleton<Game> {
 		// protected
 		private:
 			//std::unique_ptr<Board> gameBoard;
-			//Interface gameInterface;
+			Interface* gameInterface = nullptr;
 			//std::array<Player, 2> players;
 			difficulties difficulty;
 			gameModes gameMode;
 
 	// members
 		public:
-		void initialize();
+			void initialize();
 		// protected
 		private:
 			Game();

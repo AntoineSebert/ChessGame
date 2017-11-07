@@ -17,17 +17,26 @@
 	}
 // protected
 // private
+	Game::Game() {
+		gameInterface = &Interface::getInstance();
+	}
+	Game::~Game() {}
 	void Game::gameLoop() {}
 	// préparation
+		gameModes Game::setGameModes() {
+			/*
+			switch (gameInterface) {
+
+			}
+			*/
+			return gameModes();
+		}
 		void Game::initializePlayers() {
 
 		}
 		difficulties Game::setDifficulty() {
 
 			return difficulties();
-		}
-		gameModes Game::setGameModes() {
-			return gameModes();
 		}
 		unsigned int Game::setWhoPlaysFirst() {
 			return 0;
@@ -36,5 +45,3 @@
 			//gameBoard.get()->getInstance();
 		}
 		void Game::initializeArmies() {}
-		Game::Game() {}
-		Game::~Game() {}

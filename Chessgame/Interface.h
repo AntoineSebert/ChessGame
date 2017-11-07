@@ -6,6 +6,9 @@
 
 #pragma once
 
+#include <list>
+#include <string>
+
 #include "Singleton.h"
 
 class Interface : public Singleton<Interface> {
@@ -16,10 +19,15 @@ class Interface : public Singleton<Interface> {
 		// private
 
 	// members
-		// public
+		public:
+			template<typename T> T multipleChoice(unsigned int choicesNumber, std::list<std::string>* labels);
 		// protected
 		private:
 			Interface();
 			~Interface();
 };
 
+template<typename T>
+inline T Interface::multipleChoice(unsigned int choicesNumber, std::list<std::string>* labels) {
+	return T();
+}
