@@ -25,8 +25,8 @@ class Game : public Singleton<Game> {
 			//std::unique_ptr<Board> gameBoard;
 			//Interface gameInterface;
 			//std::array<Player, 2> players;
-			//difficulties difficulty;
-			//gameModes gameMode;
+			difficulties difficulty;
+			gameModes gameMode;
 
 	// members
 		public:
@@ -40,7 +40,7 @@ class Game : public Singleton<Game> {
 				void initializeBoard();
 				void initializePlayers();
 				void initializeArmies();
-				//difficulties setDifficulty();
-				//gameModes setGameModes();
+				difficulties setDifficulty();
+				gameModes setGameModes();
 				unsigned int setWhoPlaysFirst();
 };

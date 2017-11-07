@@ -8,23 +8,20 @@
 
 // public
 	void Game::initialize() {
-		initializeBoard();
-		//gameMode = setGameModes();
-		//difficulty = setDifficulty();
+		gameMode = setGameModes();
+		difficulty = setDifficulty();
 		initializePlayers();
 		setWhoPlaysFirst();
+		initializeBoard();
 		initializeArmies();
 	}
 // protected
 // private
 	void Game::gameLoop() {}
 	// préparation
-		void Game::initializeBoard() {
-			//gameBoard.get()->getInstance();
+		void Game::initializePlayers() {
+
 		}
-		void Game::initializePlayers() {}
-		void Game::initializeArmies() {}
-		/*
 		difficulties Game::setDifficulty() {
 
 			return difficulties();
@@ -32,9 +29,12 @@
 		gameModes Game::setGameModes() {
 			return gameModes();
 		}
-		*/
 		unsigned int Game::setWhoPlaysFirst() {
 			return 0;
-		}		
+		}
+		void Game::initializeBoard() {
+			//gameBoard.get()->getInstance();
+		}
+		void Game::initializeArmies() {}
 		Game::Game() {}
 		Game::~Game() {}
