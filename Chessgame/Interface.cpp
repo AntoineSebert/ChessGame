@@ -9,7 +9,7 @@
 // public
 	unsigned int Interface::numberChoice(unsigned int choicesNumber, std::vector<std::string>* labels) {
 		displayLabels(labels);
-		return getCorrectInput(choicesNumber, isNumberString);
+		return getNumberInput(choicesNumber);
 	}
 	bool Interface::booleanChoice(std::string question) {
 		std::cout << ' ' << question << std::endl << std::endl;
@@ -17,7 +17,7 @@
 	}
 	std::string Interface::alphanumericalChoice(std::string question) {
 		std::cout << ' ' << question << std::endl << std::endl;
-		// put this constant in a header file
+		// put this fucking constant in a header file
 		return getStringInput(32);
 	}
 // protected
@@ -33,10 +33,10 @@
 		}
 	}
 	// first level input
-		unsigned int Interface::getCorrectInput(unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*)) {
+		unsigned int Interface::getNumberInput(unsigned int choicesNumber) {
 			std::string input;
+			// create list of checking functions
 			do {
-				//if (testFunction == &isNumberString)
 				std::cout << " Please type a number" << std::endl;
 				std::cin >> input;
 			} while (!isValueCorrect(&input, choicesNumber, testFunction));
@@ -89,6 +89,12 @@
 		}
 		bool Interface::isAlphabetical(char character) {
 			return (64 < character && character < 91) || (96 < character && character < 123);
+		}
+		bool Interface::isValueCorrect(std::string* input, std::list<std::function<bool(std::string*)>Interface::*> functions, std::list<int*> arguments) {
+			for (size_t i = 0; i < functions.size(); ++i) {
+				if ()
+			}
+			return false;
 		}
 
 	bool Interface::isValueCorrect(std::string* input, unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*)) {

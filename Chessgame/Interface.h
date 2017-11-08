@@ -6,7 +6,9 @@
 
 #pragma once
 
+#include <functional>
 #include <iostream>
+#include <list>
 #include <string>
 #include <vector>
 
@@ -18,6 +20,13 @@ class Interface : public Singleton<Interface> {
 		// public
 		// protected
 		// private
+			struct bindedFunction {
+				public:
+					// equivalent to void* array[] -> language security bypass like a boss
+					void** parameters;
+					// void **parameters = malloc(NB_OBJECTS * sizeof(*parameters));
+					std::function<bool(std::string*)>Interface::* function;
+			};
 
 	// members
 		public:
@@ -30,7 +39,7 @@ class Interface : public Singleton<Interface> {
 			~Interface();
 			void displayLabels(std::vector<std::string>* labels);
 			// first level input
-				unsigned int getCorrectInput(unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*));
+				unsigned int getNumberInput(unsigned int choicesNumber);
 				bool getBooleanInput();
 				std::string getStringInput(unsigned int maxChararacters);
 			// second level input
@@ -41,8 +50,6 @@ class Interface : public Singleton<Interface> {
 			// third level input
 				bool isNumber(char character);
 				bool isAlphabetical(char character);
-				// fonction de l'apocalypse
-				bool isValueCorrect(std::string* input/*, list of generic functions to check the input (order matter), each followed with potential parameters*/);
-
-			bool isValueCorrect(std::string* input, unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*));
+			// fonction de l'apocalypse
+				bool isValueCorrect(std::string* input, std::list<std::function<bool(std::string*)>Interface::*> functions, std::list<int*> arguments = {});
 };
