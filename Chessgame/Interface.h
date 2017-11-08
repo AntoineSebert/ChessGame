@@ -21,21 +21,28 @@ class Interface : public Singleton<Interface> {
 
 	// members
 		public:
-			template<typename T>
-			T multipleChoice(unsigned int choicesNumber, std::vector<std::string>* labels);
+			unsigned int numberChoice(unsigned int choicesNumber, std::vector<std::string>* labels);
 			bool booleanChoice(std::string question);
+			std::string alphanumericalChoice(std::string question);
 		// protected
 		private:
 			Interface();
 			~Interface();
 			void displayLabels(std::vector<std::string>* labels);
-			unsigned int getCorrectInput(unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*));
-			bool getBooleanInput();
-			bool isNumberString(std::string* input);
-			bool isAlphabeticalString(std::string* input);
-			bool isAlphanumeraicalString(std::string* input);
-			bool isBoolean(std::string* input);
-			bool isNumber(char character);
-			bool isAlphabetical(char character);
+			// first level input
+				unsigned int getCorrectInput(unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*));
+				bool getBooleanInput();
+				std::string getStringInput(unsigned int maxChararacters);
+			// second level input
+				bool isNumberString(std::string* input);
+				bool isAlphabeticalString(std::string* input);
+				bool isAlphanumeraicalString(std::string* input);
+				bool isBoolean(std::string* input);
+			// third level input
+				bool isNumber(char character);
+				bool isAlphabetical(char character);
+				// fonction de l'apocalypse
+				bool isValueCorrect(std::string* input/*, list of generic functions to check the input (order matter), each followed with potential parameters*/);
+
 			bool isValueCorrect(std::string* input, unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*));
 };
