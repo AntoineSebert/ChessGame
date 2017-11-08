@@ -18,6 +18,7 @@
 		return nullptr;
 	}
 	bool Interface::booleanChoice(std::string question) {
+		std::cout << ' ' << question << std::endl << std::endl;
 		return false;
 	}
 
@@ -25,30 +26,30 @@
 // private
 	Interface::Interface() {}
 	Interface::~Interface() {}
-	unsigned int Interface::getCorrectInput(unsigned int choicesNumber, bool(*testFunction)(std::string)) {
+	unsigned int Interface::getCorrectInput(unsigned int choicesNumber, bool(*testFunction)(std::string*)) {
 		std::string input;
 		do {
 			std::cin >> input;
-		} while (!testFunction(input));
+		} while (!isValueCorrect(&input, choicesNumber, testFunction));
 		return 0;
 	}
-	bool Interface::isNumberString(std::string input) {
-		for (size_t i = 0; i < input.size(); ++i) {
-			if (!isNumber(input.at(i)))
+	bool Interface::isNumberString(std::string* input) {
+		for (size_t i = 0; i < input->size(); ++i) {
+			if (!isNumber(input->at(i)))
 				return false;
 		}
 		return true;
 	}
-	bool Interface::isAlphabeticalString(std::string input) {
-		for (size_t i = 0; i < input.size(); ++i) {
-			if (!isAlphabetical(input.at(i)))
+	bool Interface::isAlphabeticalString(std::string* input) {
+		for (size_t i = 0; i < input->size(); ++i) {
+			if (!isAlphabetical(input->at(i)))
 				return false;
 		}
 		return true;
 	}
-	bool Interface::isAlphanumeraicalString(std::string input) {
-		for (size_t i = 0; i < input.size(); ++i) {
-			if (!isNumber(input.at(i)) || !isAlphabetical(input.at(i)))
+	bool Interface::isAlphanumeraicalString(std::string* input) {
+		for (size_t i = 0; i < input->size(); ++i) {
+			if (!isNumber(input->at(i)) || !isAlphabetical(input->at(i)))
 				return false;
 		}
 		return true;
@@ -58,4 +59,11 @@
 	}
 	bool Interface::isAlphabetical(char character) {
 		return (64 < character && character < 91) || (96 < character && character < 123);
+	}
+	bool Interface::isValueCorrect(std::string* input, unsigned int choicesNumber, bool(*testFunction)(std::string*)) {
+		if (testFunction(input)) {
+			int result = std::stoi(*input);
+			return 0 < result && result < (int)choicesNumber;
+		}
+		return false;
 	}
