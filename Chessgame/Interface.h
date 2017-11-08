@@ -28,11 +28,14 @@ class Interface : public Singleton<Interface> {
 		private:
 			Interface();
 			~Interface();
-			unsigned int getCorrectInput(unsigned int choicesNumber, bool(*testFunction)(std::string*));
+			void displayLabels(std::vector<std::string>* labels);
+			unsigned int getCorrectInput(unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*));
+			bool getBooleanInput();
 			bool isNumberString(std::string* input);
 			bool isAlphabeticalString(std::string* input);
 			bool isAlphanumeraicalString(std::string* input);
+			bool isBoolean(std::string* input);
 			bool isNumber(char character);
 			bool isAlphabetical(char character);
-			bool isValueCorrect(std::string* input, unsigned int choicesNumber, bool(*testFunction)(std::string*));
+			bool isValueCorrect(std::string* input, unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*));
 };

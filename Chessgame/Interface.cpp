@@ -10,28 +10,44 @@
 	template<typename T>
 	inline T Interface::multipleChoice(unsigned int choicesNumber, std::vector<std::string>* labels) {
 		if (2 < labels->size()) {
-			std::cout << ' ' << labels->at(0) << std::endl << std::endl;
-			for (size_t i = 1; i < choicesNumber; ++i)
-				std::cout << "  " << labels->at(i + 1) << std::endl << std::endl;
+			displayLabels(labels);
 			return getCorrectInput(isNumberString);
 		}
 		return nullptr;
 	}
 	bool Interface::booleanChoice(std::string question) {
 		std::cout << ' ' << question << std::endl << std::endl;
-		return false;
+		return getBooleanInput();
 	}
 
-	// protected
+// protected
 // private
 	Interface::Interface() {}
 	Interface::~Interface() {}
-	unsigned int Interface::getCorrectInput(unsigned int choicesNumber, bool(*testFunction)(std::string*)) {
+	void Interface::displayLabels(std::vector<std::string>* labels) {
+		for (std::vector<std::string>::iterator it = labels->begin(); it != labels->end(); ++it) {
+			std::cout << ' ';
+			if (it == labels->begin())
+				std::cout << labels->end() - it << ' ';
+			std::cout << *it << std::endl << std::endl;
+		}
+	}
+	unsigned int Interface::getCorrectInput(unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*)) {
 		std::string input;
 		do {
+			//if (testFunction == &isNumberString)
+			std::cout << " Please type 0 or 1" << std::endl;
 			std::cin >> input;
 		} while (!isValueCorrect(&input, choicesNumber, testFunction));
-		return 0;
+		return std::stoi(input);
+	}
+	bool Interface::getBooleanInput() {
+		std::string input;
+		do {
+			std::cout << " Please type 0 or 1" << std::endl;
+			std::cin >> input;
+		} while (!isBoolean(&input));
+		return std::stoi(input);
 	}
 	bool Interface::isNumberString(std::string* input) {
 		for (size_t i = 0; i < input->size(); ++i) {
@@ -54,14 +70,18 @@
 		}
 		return true;
 	}
+	bool Interface::isBoolean(std::string* input) {
+		return (input->size() == 1 && isNumberString(input) && input->front() < 32 ? *input == "1" : false);
+	}
 	bool Interface::isNumber(char character) {
 		return 47 < character && character < 58;
 	}
 	bool Interface::isAlphabetical(char character) {
 		return (64 < character && character < 91) || (96 < character && character < 123);
 	}
-	bool Interface::isValueCorrect(std::string* input, unsigned int choicesNumber, bool(*testFunction)(std::string*)) {
-		if (testFunction(input)) {
+	bool Interface::isValueCorrect(std::string* input, unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*)) {
+		// accessing member function parameter like a boss
+		if ((this->*testFunction)(input)) {
 			int result = std::stoi(*input);
 			return 0 < result && result < (int)choicesNumber;
 		}
