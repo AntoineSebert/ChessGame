@@ -6,6 +6,24 @@
 
 #include "Interface.h"
 
+Interface::bindedFunction::bindedFunction(std::function<bool(std::string*)> Interface::* newFunction, void * parameter) {
+	function = newFunction;
+	void **parameters = new void*[1];
+	parameters[0] = parameter;
+}
+Interface::bindedFunction::bindedFunction(std::function<bool(std::string*)> Interface::* newFunction, unsigned int count, ...) {
+	va_list args;
+	va_start(args, count);
+	void **parameters = new void*[count];
+	for (unsigned int i = 0; i < count; ++i)
+		parameters[i] = va_arg(args, void*);
+	va_end(args);
+}
+Interface::bindedFunction::~bindedFunction() {
+	for (size_t i = 0; i != '\0'; ++i)
+		delete parameters[i];
+}
+
 // public
 	unsigned int Interface::numberChoice(unsigned int choicesNumber, std::vector<std::string>* labels) {
 		displayLabels(labels);
@@ -35,11 +53,17 @@
 	// first level input
 		unsigned int Interface::getNumberInput(unsigned int choicesNumber) {
 			std::string input;
-			// create list of checking functions
+			std::list<bindedFunction>() filters;
 			do {
 				std::cout << " Please type a number" << std::endl;
 				std::cin >> input;
-			} while (!isValueCorrect(&input, choicesNumber, testFunction));
+			} while (
+				!isValueCorrect(
+					&input,
+					&filter
+				)
+			);
+			//std::list<bindedFunction>(1, bindedFunction(std::function<bool(std::string*)>(isNumberString), (void*)&choicesNumber));
 			return std::stoi(input);
 		}
 		bool Interface::getBooleanInput() {
@@ -52,10 +76,11 @@
 		}
 		std::string Interface::getStringInput(unsigned int maxChararacters) {
 			std::string input;
+			std::list<bindedFunction> filters;
 			do {
 				std::cout << " Please type an alphanumerical string shorter than " << maxChararacters << " characters" << std::endl;
 				std::cin >> input;
-			} while (!isValueCorrect(&input, maxChararacters, testFunction));
+			} while (!isValueCorrect(&input, &filters));
 			return input;
 		}
 	// second level input
@@ -90,13 +115,13 @@
 		bool Interface::isAlphabetical(char character) {
 			return (64 < character && character < 91) || (96 < character && character < 123);
 		}
-		bool Interface::isValueCorrect(std::string* input, std::list<std::function<bool(std::string*)>Interface::*> functions, std::list<int*> arguments) {
-			for (size_t i = 0; i < functions.size(); ++i) {
-				if ()
+		bool Interface::isValueCorrect(std::string* input, std::list<bindedFunction> filters) {
+			for (size_t i = 0; i < filters.size(); ++i) {
+				//if ()
 			}
 			return false;
 		}
-
+	/*
 	bool Interface::isValueCorrect(std::string* input, unsigned int choicesNumber, bool(Interface::*testFunction)(std::string*)) {
 		// accessing member function parameter like a boss
 		if ((this->*testFunction)(input)) {
@@ -105,3 +130,4 @@
 		}
 		return false;
 	}
+	*/
