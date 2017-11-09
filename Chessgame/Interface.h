@@ -6,10 +6,7 @@
 
 #pragma once
 
-#include <cstdarg>
-#include <functional>
 #include <iostream>
-#include <list>
 #include <string>
 #include <vector>
 
@@ -21,15 +18,6 @@ class Interface : public Singleton<Interface> {
 		// public
 		// protected
 		// private
-			struct bindedFunction {
-				public:
-					// equivalent to void* array[] -> language security bypass like a boss
-					void** parameters;
-					std::function<bool(std::string*)>Interface::* function;
-					bindedFunction(std::function<bool(std::string*)>Interface::* newFunction, void* parameter);
-					bindedFunction(std::function<bool(std::string*)>Interface::* newFunction, unsigned int count, ...);
-					~bindedFunction();
-			};
 
 	// members
 		public:
@@ -53,6 +41,4 @@ class Interface : public Singleton<Interface> {
 			// third level input
 				bool isNumber(char character);
 				bool isAlphabetical(char character);
-			// fonction de l'apocalypse
-				bool isValueCorrect(std::string* input, std::list<std::function<bool(std::string*)>Interface::*> functions, std::list<int*> arguments = {});
 };
