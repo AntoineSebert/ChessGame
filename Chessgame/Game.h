@@ -15,7 +15,7 @@
 #include "difficulties.h"
 #include "gameModes.h"
 //#include "Board.h"
-//#include "Player.h"
+#include "Player.h"
 #include "Interface.h"
 
 class Game : public Singleton<Game> {
