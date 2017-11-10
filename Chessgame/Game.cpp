@@ -8,20 +8,19 @@
 
 // public
 	void Game::initialize() {
+		gameInterface = &Interface::getInstance();
 		gameMode = setGameModes();
-		difficulty = setDifficulty();
 		initializePlayers();
+		difficulty = setDifficulty();
 		setWhoPlaysFirst();
 		initializeBoard();
 		initializeArmies();
 	}
 	difficulties Game::getDifficulty() { return difficulty; }
-	gameModes Game::getGameModes() { return gameMode; }
+	gameModes Game::getGameMode() { return gameMode; }
 // protected
 // private
-	Game::Game() {
-		gameInterface = &Interface::getInstance();
-	}
+	Game::Game() {}
 	Game::~Game() {}
 	void Game::gameLoop() {}
 	// préparation
@@ -38,8 +37,18 @@
 
 		}
 		difficulties Game::setDifficulty() {
-
-			return difficulties();
+			if (gameMode != PVP) {
+				std::vector<std::string> labels = {
+					"Select the difficulty",
+					"1 - RANDOM",
+					"2 - EASY",
+					"3 - MEDIUM",
+					"4 - HARD",
+					"5 - NONE"
+				};
+				return (difficulties)gameInterface->numberChoice(&labels, NONE + 1);
+			}
+			return NONE;
 		}
 		unsigned int Game::setWhoPlaysFirst() {
 			return 0;

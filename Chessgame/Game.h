@@ -34,7 +34,7 @@ class Game : public Singleton<Game> {
 		public:
 			void initialize();
 			difficulties getDifficulty();
-			gameModes getGameModes();
+			gameModes getGameMode();
 		// protected
 		private:
 			Game();
