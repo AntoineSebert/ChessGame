@@ -6,9 +6,21 @@
 
 #pragma once
 
-class Player {
-	public:
-		Player();
-		~Player();
-};
+#include <string>
 
+class Player {
+	// attributes
+		// public
+		// protected
+		private:
+			//Army playerArmy;
+			unsigned int color;
+			std::string name;
+
+	// members
+		public:
+			Player(std::string playerName, unsigned int color);
+			~Player();
+		// protected
+		// private
+};

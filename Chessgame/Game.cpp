@@ -11,8 +11,8 @@
 		gameInterface = &Interface::getInstance();
 		gameMode = setGameModes();
 		initializePlayers();
-		difficulty = setDifficulty();
 		setWhoPlaysFirst();
+		difficulty = setDifficulty();
 		initializeBoard();
 		initializeArmies();
 	}
@@ -21,7 +21,10 @@
 // protected
 // private
 	Game::Game() {}
-	Game::~Game() {}
+	Game::~Game() {
+		for (Player* object : players)
+			delete(object);
+	}
 	void Game::gameLoop() {}
 	// préparation
 		gameModes Game::setGameModes() {
@@ -34,7 +37,16 @@
 			return (gameModes)gameInterface->numberChoice(&labels, EVE + 1);
 		}
 		void Game::initializePlayers() {
-
+			switch (gameMode) {
+				case PVP:
+					break;
+				case PVE:
+					break;
+				case EVE:
+					break;
+				default:
+					break;
+			}
 		}
 		difficulties Game::setDifficulty() {
 			if (gameMode != PVP) {

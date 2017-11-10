@@ -6,6 +6,8 @@
 
 #include "Player.h"
 
-Player::Player() {}
-
-Player::~Player() {}
+// public
+	Player::Player(std::string playerName, unsigned int color) {}
+	Player::~Player() {}
+// protected
+// private

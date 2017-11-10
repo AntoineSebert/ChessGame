@@ -26,7 +26,8 @@ class Game : public Singleton<Game> {
 		private:
 			//std::unique_ptr<Board> gameBoard;
 			Interface* gameInterface = nullptr;
-			//std::array<Player, 2> players;
+			std::array<Player*, 2> players;
+			std::weak_ptr<Player> firstToPlay;
 			difficulties difficulty;
 			gameModes gameMode;
 
