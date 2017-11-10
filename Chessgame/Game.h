@@ -8,6 +8,8 @@
 
 #include <array>
 #include <memory>
+#include <string>
+#include <vector>
 
 #include "Singleton.h"
 #include "difficulties.h"
@@ -31,6 +33,8 @@ class Game : public Singleton<Game> {
 	// members
 		public:
 			void initialize();
+			difficulties getDifficulty();
+			gameModes getGameModes();
 		// protected
 		private:
 			Game();

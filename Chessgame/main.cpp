@@ -8,7 +8,8 @@
 
 int main(int argc, char *argv[]) {
 
-	Game::getInstance().initialize();
+	Game* game = &Game::getInstance();
+	game->initialize();
 
 	return 0;
 }

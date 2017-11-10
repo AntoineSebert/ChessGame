@@ -15,6 +15,8 @@
 		initializeBoard();
 		initializeArmies();
 	}
+	difficulties Game::getDifficulty() { return difficulty; }
+	gameModes Game::getGameModes() { return gameMode; }
 // protected
 // private
 	Game::Game() {
@@ -24,12 +26,13 @@
 	void Game::gameLoop() {}
 	// préparation
 		gameModes Game::setGameModes() {
-			/*
-			switch (gameInterface) {
-
-			}
-			*/
-			return gameModes();
+			std::vector<std::string> labels = {
+				"Select the gamemode",
+				"1 - PVP",
+				"2 - PVE",
+				"3 - EVE"
+			};
+			return (gameModes)gameInterface->numberChoice(&labels, EVE + 1);
 		}
 		void Game::initializePlayers() {
 
