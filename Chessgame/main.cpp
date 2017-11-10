@@ -10,8 +10,8 @@ int main(int argc, char *argv[]) {
 
 	Game* game = &Game::getInstance();
 	game->initialize();
-	game->getGameMode();
-	game->getDifficulty();
+
+	system("pause");
 
 	return 0;
 }

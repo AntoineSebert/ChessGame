@@ -27,8 +27,8 @@
 	void Interface::displayLabels(std::vector<std::string>* labels) {
 		for (std::vector<std::string>::iterator it = labels->begin(); it != labels->end(); ++it) {
 			std::cout << ' ';
-			if (it == labels->begin())
-				std::cout << labels->end() - it << ' ';
+			if (*it != labels->front())
+				std::cout << it - labels->begin() << " - ";
 			std::cout << *it << std::endl << std::endl;
 		}
 	}

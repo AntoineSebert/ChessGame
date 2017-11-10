@@ -27,9 +27,9 @@
 		gameModes Game::setGameModes() {
 			std::vector<std::string> labels = {
 				"Select the gamemode",
-				"1 - PVP",
-				"2 - PVE",
-				"3 - EVE"
+				"PVP",
+				"PVE",
+				"EVE"
 			};
 			return (gameModes)gameInterface->numberChoice(&labels, EVE + 1);
 		}
@@ -40,13 +40,12 @@
 			if (gameMode != PVP) {
 				std::vector<std::string> labels = {
 					"Select the difficulty",
-					"1 - RANDOM",
-					"2 - EASY",
-					"3 - MEDIUM",
-					"4 - HARD",
-					"5 - NONE"
+					"RANDOM",
+					"EASY",
+					"MEDIUM",
+					"HARD"
 				};
-				return (difficulties)gameInterface->numberChoice(&labels, NONE + 1);
+				return (difficulties)gameInterface->numberChoice(&labels, HARD + 1);
 			}
 			return NONE;
 		}
