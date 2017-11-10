@@ -1,2 +1,19 @@
 ﻿  Game.cpp
-  Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe
+d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1712): error C2664: 'Player::Player(const Player &)' : impossible de convertir l'argument 1 de 'Player *' en 'const Player &'
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1712): note: Raison : impossible de convertir de 'Player *' en 'const Player'
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1712): note: Aucun constructeur n'a pu prendre le type de source, ou la résolution de la surcharge du constructeur était ambiguë
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1778): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<Player*>(Player *&&)' en cours de compilation
+          with
+          [
+              _Ty=Player
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1778): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<Player*>(Player *&&)' en cours de compilation
+          with
+          [
+              _Ty=Player
+          ]
+  c:\users\i\desktop\chessgame\chessgame\game.cpp(47): note: voir la référence à l'instanciation de la fonction modèle 'std::shared_ptr<Player> std::make_shared<Player,Player*>(Player *&&)' en cours de compilation
+  Génération de code en cours...
+  Compilation en cours...
+  main.cpp
+  Génération de code en cours...

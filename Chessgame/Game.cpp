@@ -11,7 +11,6 @@
 		gameInterface = &Interface::getInstance();
 		gameMode = setGameModes();
 		initializePlayers();
-		setWhoPlaysFirst();
 		difficulty = setDifficulty();
 		initializeBoard();
 		initializeArmies();
@@ -22,8 +21,8 @@
 // private
 	Game::Game() {}
 	Game::~Game() {
-		for (Player* object : players)
-			delete(object);
+		for (std::shared_ptr<Player> player : players)
+			player.reset();
 	}
 	void Game::gameLoop() {}
 	// préparation
@@ -37,12 +36,18 @@
 			return (gameModes)gameInterface->numberChoice(&labels, EVE + 1);
 		}
 		void Game::initializePlayers() {
+			setWhoPlaysFirst();
 			switch (gameMode) {
 				case PVP:
 					break;
 				case PVE:
 					break;
 				case EVE:
+					/*
+					for (std::shared_ptr<Player> player : players)
+						player = std::make_shared<Player>(new Player("HAL9000", 2));
+					*/
+					firstToPlay = std::static_pointer_cast<Player>(players.at(0));
 					break;
 				default:
 					break;
