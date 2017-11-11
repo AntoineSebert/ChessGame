@@ -7,7 +7,8 @@
 #include "Player.h"
 
 // public
-	Player::Player(std::string playerName, unsigned int color) {}
+	Player::Player(std::string playerName, unsigned int newColor) : name(playerName), color(newColor) {}
 	Player::~Player() {}
+	std::string Player::getName() { return name; }
 // protected
 // private

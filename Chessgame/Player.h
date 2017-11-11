@@ -19,8 +19,9 @@ class Player {
 
 	// members
 		public:
-			Player(std::string playerName, unsigned int color);
+			Player(std::string playerName, unsigned int newColor);
 			~Player();
+			std::string getName();
 		// protected
 		// private
 };
