@@ -19,7 +19,6 @@ class Board : public Singleton<Board> {
 		// protected
 		private:
 			//std::array<std::array<Cell, 8>, 8> data;
-			//std::weak_ptr<Game> parent;
 
 	// methods
 		public:

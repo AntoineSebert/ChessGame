@@ -14,6 +14,7 @@
 		firstToPlay = setWhoPlaysFirst();
 		difficulty = setDifficulty();
 
+		gameBoard = &gameBoard->getInstance();
 		initializeBoard();
 		initializeArmies();
 	}
@@ -86,6 +87,6 @@
 			return players.at(gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1));
 		}
 		void Game::initializeBoard() {
-			gameBoard->getInstance();
+			gameBoard->initialize();
 		}
 		void Game::initializeArmies() {}
