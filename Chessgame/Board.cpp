@@ -8,15 +8,24 @@
 
 // public
 	void Board::initialize() {
-		/*
 		for (size_t i = 0; i < data.size(); ++i) {
-			for (size_t ii = 0; ii < data.size(); ++ii) {
-				//data[i][ii]
-			}
+			for (size_t ii = 0; ii < data.size(); ++ii)
+				data[i][ii] = new Cell((i + ii) % 2);
 		}
-		*/
+	}
+	void Board::display() {
+		for (std::array<Cell*, 8> array : data) {
+			for (Cell* cell : array)
+				cell->displayContent();
+			std::cout << std::endl;
+		}
 	}
 // protected
 // private
 	Board::Board() {}
-	Board::~Board() {}
+	Board::~Board() {
+		for (size_t i = 0; i < data.size(); ++i) {
+			for (size_t ii = 0; ii < data.size(); ++ii)
+				delete(data[i][ii]);
+		}
+	}

@@ -16,8 +16,6 @@
 class Interface : public Singleton<Interface> {
 	friend class Singleton<Interface>;
 	// attributes
-		// public
-		// protected
 		// private
 
 	// members

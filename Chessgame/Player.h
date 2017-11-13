@@ -9,12 +9,12 @@
 #include <iostream>
 #include <string>
 
+#include "Army.h"
+
 class Player {
 	// attributes
-		// public
-		// protected
 		private:
-			//Army playerArmy;
+			Army playerArmy;
 			unsigned int color;
 			std::string name;
 
@@ -24,6 +24,7 @@ class Player {
 			~Player();
 			std::string getName();
 			unsigned int getColor();
+			void initializeArmy();
 		// protected
 		// private
 };

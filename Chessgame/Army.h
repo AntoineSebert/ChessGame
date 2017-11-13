@@ -6,9 +6,18 @@
 
 #pragma once
 
+#include <array>
+
+#include "Piece.h"
+
 class Army {
-	public:
-	Army();
-	~Army();
+	// attributes
+		private:
+			std::array<Piece*, 16> alivePieces;
+
+	// membres
+		public:
+			Army();
+			~Army();
 };
 

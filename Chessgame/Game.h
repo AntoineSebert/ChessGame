@@ -22,8 +22,6 @@
 class Game : public Singleton<Game> {
 	friend class Singleton<Game>;
 	// attributes
-		// public
-		// protected
 		private:
 			Board* gameBoard = nullptr;
 			Interface* gameInterface = nullptr;

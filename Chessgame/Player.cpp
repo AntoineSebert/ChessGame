@@ -14,5 +14,8 @@
 	Player::~Player() {}
 	std::string Player::getName() { return name; }
 	unsigned int Player::getColor() { return color; }
+	void Player::initializeArmy() {
+		
+	}
 // protected
 // private

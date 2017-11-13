@@ -10,19 +10,18 @@
 #include <memory>
 
 #include "Singleton.h"
-//#include "Cell.h"
+#include "Cell.h"
 
 class Board : public Singleton<Board> {
 	friend class Singleton<Board>;
 	// attributes
-		// public
-		// protected
 		private:
-			//std::array<std::array<Cell, 8>, 8> data;
+			std::array<std::array<Cell*, 8>, 8> data;
 
 	// methods
 		public:
 			void initialize();
+			void display();
 		private:
 			Board();
 			~Board();

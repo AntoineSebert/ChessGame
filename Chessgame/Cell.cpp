@@ -12,5 +12,11 @@
 	unsigned int Cell::getColor() {
 		return color;
 	}
+	void Cell::displayContent() {
+		//
+		// condition piece présente
+		//
+		std::cout << "*";
+	}
 // protected
 // private

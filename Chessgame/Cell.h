@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <iostream>
 #include <memory>
 
 //#include "Piece.h"
@@ -21,5 +22,7 @@ class Cell {
 			Cell(unsigned int newColor);
 			~Cell();
 			unsigned int getColor();
+			void displayContent();
+			//void setPiece(Piece* newPiece);
 };
 

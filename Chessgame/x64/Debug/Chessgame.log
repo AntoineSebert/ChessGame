@@ -1,7 +1,7 @@
-﻿  Game.cpp
-  Cell.cpp
+﻿  main.cpp
+  Player.cpp
+  Piece.cpp
+  Game.cpp
+  Army.cpp
   Génération de code en cours...
-  Ignoré... (aucune modification pertinente détectée)
-  main.cpp
-  Board.cpp
   Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe

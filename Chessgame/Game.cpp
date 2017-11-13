@@ -13,9 +13,9 @@
 		initializePlayers();
 		firstToPlay = setWhoPlaysFirst();
 		difficulty = setDifficulty();
-
 		gameBoard = &gameBoard->getInstance();
 		initializeBoard();
+
 		initializeArmies();
 	}
 	difficulties Game::getDifficulty() { return difficulty; }
@@ -89,4 +89,7 @@
 		void Game::initializeBoard() {
 			gameBoard->initialize();
 		}
-		void Game::initializeArmies() {}
+		void Game::initializeArmies() {
+			for (std::shared_ptr<Player> player : players)
+				player.get()->initializeArmy();
+		}
