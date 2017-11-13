@@ -10,10 +10,10 @@
 	void Game::initialize() {
 		gameInterface = &Interface::getInstance();
 		gameMode = setGameModes();
-
 		initializePlayers();
 		firstToPlay = setWhoPlaysFirst();
 		difficulty = setDifficulty();
+
 		initializeBoard();
 		initializeArmies();
 	}
@@ -83,9 +83,9 @@
 			};
 			for (std::shared_ptr<Player> player : players)
 				labels.push_back(player->getName());
-			return players.at(gameInterface->numberChoice(&labels, labels.size() - 1));
+			return players.at(gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1));
 		}
 		void Game::initializeBoard() {
-			//gameBoard.get()->getInstance();
+			gameBoard->getInstance();
 		}
 		void Game::initializeArmies() {}

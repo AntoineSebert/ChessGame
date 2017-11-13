@@ -15,7 +15,7 @@
 #include "Singleton.h"
 #include "difficulties.h"
 #include "gameModes.h"
-//#include "Board.h"
+#include "Board.h"
 #include "Player.h"
 #include "Interface.h"
 
@@ -25,7 +25,7 @@ class Game : public Singleton<Game> {
 		// public
 		// protected
 		private:
-			//std::unique_ptr<Board> gameBoard;
+			Board* gameBoard = nullptr;
 			Interface* gameInterface = nullptr;
 			std::array<std::shared_ptr<Player>, 2> players;
 			std::weak_ptr<Player> firstToPlay;
