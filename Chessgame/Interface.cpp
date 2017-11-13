@@ -56,7 +56,7 @@
 			do {
 				std::cout << " Please type an alphanumerical string shorter than " << maxChararacters << " characters" << std::endl;
 				std::cin >> input;
-			} while (!isAlphanumeraicalString(&input));
+			} while (!isAlphanumeraicalString(&input) && maxChararacters < input.size());
 			return input;
 		}
 	// second level input

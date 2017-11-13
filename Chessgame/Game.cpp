@@ -10,6 +10,7 @@
 	void Game::initialize() {
 		gameInterface = &Interface::getInstance();
 		gameMode = setGameModes();
+
 		initializePlayers();
 		firstToPlay = setWhoPlaysFirst();
 		difficulty = setDifficulty();
@@ -21,9 +22,17 @@
 // protected
 // private
 	Game::Game() {}
-	Game::~Game() {
-	}
+	Game::~Game() {}
 	void Game::gameLoop() {}
+	void Game::chooseHumanPlayerName(std::string* target, std::vector<std::string>* alreadyTakenNames) {
+		do {
+			*target = gameInterface->alphanumericalChoice(
+				&(std::vector<std::string>() = {
+					"Type the name of the human player (names must be different)"
+				})
+			);
+		} while (std::find(alreadyTakenNames->begin(), alreadyTakenNames->end(), *target) != alreadyTakenNames->end());
+	}
 	// préparation
 		gameModes Game::setGameModes() {
 			std::vector<std::string> labels = {
@@ -35,22 +44,25 @@
 			return (gameModes)gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
 		}
 		void Game::initializePlayers() {
+			std::array<std::string, 2> names;
 			switch (gameMode) {
 				case PVP:
-					for(unsigned int i = 0; i < players.size(); ++i)
-						players[i] = std::make_shared<Player>(Player("HAL9000", 2));
+					chooseHumanPlayerName(&names[0], &(std::vector<std::string>(names.begin(), names.end())));
+					chooseHumanPlayerName(&names[1], &(std::vector<std::string>(names.begin(), names.end())));
 					break;
 				case PVE:
-					for (unsigned int i = 0; i < players.size(); ++i)
-						players[i] = std::make_shared<Player>(Player("HAL9000", 2));
+					names[0] = "HAL9000";
+					chooseHumanPlayerName(&names[1], &(std::vector<std::string>(names.begin(), names.end())));
 					break;
 				case EVE:
 					for (unsigned int i = 0; i < players.size(); ++i)
-						players[i] = std::make_shared<Player>(Player("HAL9000", 2));
+						names[i] = "HAL9000";
 					break;
 				default:
 					break;
 			}
+			for (unsigned int i = 0; i < players.size(); ++i)
+				players[i] = std::make_shared<Player>(Player(names[i], 2));
 		}
 		difficulties Game::setDifficulty() {
 			if (gameMode != PVP) {

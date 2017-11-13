@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <algorithm>
 #include <array>
 #include <memory>
 #include <string>
@@ -41,6 +42,7 @@ class Game : public Singleton<Game> {
 			Game();
 			~Game();
 			void gameLoop();
+			void chooseHumanPlayerName(std::string* target, std::vector<std::string>* alreadyTakenNames);
 			// préparation
 				void initializeBoard();
 				void initializePlayers();
