@@ -7,8 +7,12 @@
 #include "Player.h"
 
 // public
-	Player::Player(std::string playerName, unsigned int newColor) : name(playerName), color(newColor) {}
+	Player::Player(std::string playerName, unsigned int newColor) {
+		name = playerName;
+		color = newColor;
+	}
 	Player::~Player() {}
 	std::string Player::getName() { return name; }
+	unsigned int Player::getColor() { return color; }
 // protected
 // private

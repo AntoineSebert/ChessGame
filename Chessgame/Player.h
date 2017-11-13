@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <iostream>
 #include <string>
 
 class Player {
@@ -22,6 +23,7 @@ class Player {
 			Player(std::string playerName, unsigned int newColor);
 			~Player();
 			std::string getName();
+			unsigned int getColor();
 		// protected
 		// private
 };

@@ -11,9 +11,7 @@
 		gameInterface = &Interface::getInstance();
 		gameMode = setGameModes();
 		initializePlayers();
-		std::cout << "============" << std::endl;
-		setWhoPlaysFirst();
-		std::cout << "============" << std::endl;
+		firstToPlay = setWhoPlaysFirst();
 		difficulty = setDifficulty();
 		initializeBoard();
 		initializeArmies();
@@ -24,8 +22,6 @@
 // private
 	Game::Game() {}
 	Game::~Game() {
-		for (std::shared_ptr<Player> player : players)
-			player.reset();
 	}
 	void Game::gameLoop() {}
 	// préparation
@@ -41,13 +37,16 @@
 		void Game::initializePlayers() {
 			switch (gameMode) {
 				case PVP:
+					for(unsigned int i = 0; i < players.size(); ++i)
+						players[i] = std::make_shared<Player>(Player("HAL9000", 2));
 					break;
 				case PVE:
+					for (unsigned int i = 0; i < players.size(); ++i)
+						players[i] = std::make_shared<Player>(Player("HAL9000", 2));
 					break;
 				case EVE:
-					for (std::shared_ptr<Player> player : players)
-						player = std::make_shared<Player>(Player("HAL9000", 2));
-					firstToPlay = std::static_pointer_cast<Player>(players.at(0));
+					for (unsigned int i = 0; i < players.size(); ++i)
+						players[i] = std::make_shared<Player>(Player("HAL9000", 2));
 					break;
 				default:
 					break;
@@ -66,17 +65,13 @@
 			}
 			return NONE;
 		}
-		unsigned int Game::setWhoPlaysFirst() {
+		std::shared_ptr<Player> Game::setWhoPlaysFirst() {
 			std::vector<std::string> labels = {
 				"Select the player who will start playing first"
 			};
-			players.at(0).get()->getName();
-			/*
 			for (std::shared_ptr<Player> player : players)
-				labels.push_back(player.get()->getName());
-			*/
-			//return gameInterface->numberChoice(&labels, labels.size() - 1);
-			return 0;
+				labels.push_back(player->getName());
+			return players.at(gameInterface->numberChoice(&labels, labels.size() - 1));
 		}
 		void Game::initializeBoard() {
 			//gameBoard.get()->getInstance();

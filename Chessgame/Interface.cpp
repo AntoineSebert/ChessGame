@@ -8,6 +8,8 @@
 
 // public
 	unsigned int Interface::numberChoice(std::vector<std::string>* labels, unsigned int firstBound, unsigned int secondBound) {
+		if (labels->size() < 2)
+			throw std::logic_error("The given array must at least contain two values");
 		displayLabels(labels);
 		return getNumberInput(firstBound, secondBound);
 	}

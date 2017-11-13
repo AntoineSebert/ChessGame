@@ -47,5 +47,5 @@ class Game : public Singleton<Game> {
 				void initializeArmies();
 				difficulties setDifficulty();
 				gameModes setGameModes();
-				unsigned int setWhoPlaysFirst();
+				std::shared_ptr<Player> setWhoPlaysFirst();
 };

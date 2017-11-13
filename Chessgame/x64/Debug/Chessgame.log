@@ -1,6 +1,6 @@
-﻿  Player.cpp
+﻿  Game.cpp
+c:\users\i\desktop\chessgame\chessgame\game.cpp(74): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
   Génération de code en cours...
   Ignoré... (aucune modification pertinente détectée)
   main.cpp
-  Game.cpp
   Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe
