@@ -10,13 +10,18 @@
 #include <iostream>
 
 #include "Piece.h"
+#include "Bishop.h"
+#include "King.h"
+#include "Knight.h"
+#include "Pawn.h"
+#include "Queen.h"
 #include "Rook.h"
 
 class Army {
 	// attributes
 		private:
-			std::array<Piece*, 16> alivePieces;
-			std::array<Piece*, 15> deadPieces;
+			std::array<std::shared_ptr<Piece>, 16> alivePieces;
+			std::array<std::shared_ptr<Piece>, 15> deadPieces;
 			unsigned int* color;
 
 	// membres

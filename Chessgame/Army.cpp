@@ -8,12 +8,25 @@
 
 // public
 	Army::Army(unsigned int* newColor) : color(newColor) {
+		alivePieces.at(0) = std::make_shared<Rook>(color);
+		alivePieces.at(0) = std::make_shared<Knight>(color);
+		alivePieces.at(0) = std::make_shared<Bishop>(color);
+		if (*color == 0) {
+			// à vérifier
+			alivePieces.at(0) = std::make_shared<Queen>(color);
+			alivePieces.at(0) = std::make_shared<King>(color);
+		}
+		else {
+			// à vérifier
+			alivePieces.at(0) = std::make_shared<King>(color);
+			alivePieces.at(0) = std::make_shared<Queen>(color);
+		}
+		alivePieces.at(0) = std::make_shared<Bishop>(color);
+		alivePieces.at(0) = std::make_shared<Knight>(color);
+		alivePieces.at(0) = std::make_shared<Rook>(color);
 		for (unsigned int i = 8; i < alivePieces.size(); ++i)
-			alivePieces.at(i) = new Rook(color);
+			alivePieces.at(0) = std::make_shared<Pawn>(color);
 	}
-	Army::~Army() {
-		for (unsigned int i = 0; i < alivePieces.size(); ++i)
-			delete(alivePieces.at(i));
-	}
+	Army::~Army() {}
 // protected
 // private
