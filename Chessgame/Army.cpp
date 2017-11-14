@@ -7,7 +7,12 @@
 #include "Army.h"
 
 // public
-	Army::Army(unsigned int* newColor) : color(newColor) {}
+	Army::Army(unsigned int* newColor) : color(newColor) {
+		/*
+		for (unsigned int i = 8; i < alivePieces.size(); ++i)
+			alivePieces.at(i) = new (Piece) rook();
+		*/
+	}
 	Army::~Army() {}
 // protected
 // private

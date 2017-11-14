@@ -16,6 +16,12 @@
     <Filter Include="Fichiers d%27en-tête\constants">
       <UniqueIdentifier>{8128d2bd-6c90-4857-8454-2a4c0d3c45f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Pieces">
+      <UniqueIdentifier>{2e310105-4e32-4cee-a4ff-9ea6fda35728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Pieces">
+      <UniqueIdentifier>{2386e9c1-67f6-4d9b-8d20-ad91eb6e12e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,15 +45,18 @@
     <ClCompile Include="Cell.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="King.cpp">
+      <Filter>Fichiers sources\Pieces</Filter>
+    </ClCompile>
     <ClCompile Include="Piece.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="Rook.cpp">
+      <Filter>Fichiers sources\Pieces</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Singleton.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
@@ -74,7 +83,16 @@
     <ClInclude Include="Cell.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Fichiers d%27en-tête\constants</Filter>
+    </ClInclude>
     <ClInclude Include="Piece.h">
+      <Filter>Fichiers d%27en-tête\Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="Rook.h">
+      <Filter>Fichiers d%27en-tête\Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="King.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
