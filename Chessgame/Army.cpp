@@ -6,6 +6,8 @@
 
 #include "Army.h"
 
-Army::Army() {}
-
-Army::~Army() {}
+// public
+	Army::Army(unsigned int* newColor) : color(newColor) {}
+	Army::~Army() {}
+// protected
+// private

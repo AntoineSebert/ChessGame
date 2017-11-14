@@ -11,7 +11,6 @@
 		gameInterface = &Interface::getInstance();
 		gameMode = setGameModes();
 		initializePlayers();
-		firstToPlay = setWhoPlaysFirst();
 		difficulty = setDifficulty();
 		gameBoard = &gameBoard->getInstance();
 		initializeBoard();
@@ -62,8 +61,15 @@
 				default:
 					break;
 			}
+			std::vector<std::string> labels = {
+				"Select the player who will start playing first"
+			};
+			for (std::string name : names)
+				labels.push_back(name);
+			unsigned int firstToPlayIndex = gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
 			for (unsigned int i = 0; i < players.size(); ++i)
-				players[i] = std::make_shared<Player>(Player(names[i], 2));
+				players[i] = std::make_shared<Player>(Player(names[i], (i == firstToPlayIndex ? 0 : 1)));
+			firstToPlay = players[firstToPlayIndex];
 		}
 		difficulties Game::setDifficulty() {
 			if (gameMode != PVP) {
@@ -77,14 +83,6 @@
 				return (difficulties)gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
 			}
 			return NONE;
-		}
-		std::shared_ptr<Player> Game::setWhoPlaysFirst() {
-			std::vector<std::string> labels = {
-				"Select the player who will start playing first"
-			};
-			for (std::shared_ptr<Player> player : players)
-				labels.push_back(player->getName());
-			return players.at(gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1));
 		}
 		void Game::initializeBoard() {
 			gameBoard->initialize();

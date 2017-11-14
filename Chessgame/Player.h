@@ -14,7 +14,7 @@
 class Player {
 	// attributes
 		private:
-			Army playerArmy;
+			Army* playerArmy;
 			unsigned int color;
 			std::string name;
 

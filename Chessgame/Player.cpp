@@ -11,11 +11,13 @@
 		name = playerName;
 		color = newColor;
 	}
-	Player::~Player() {}
+	Player::~Player() {
+		//delete(playerArmy);
+	}
 	std::string Player::getName() { return name; }
 	unsigned int Player::getColor() { return color; }
 	void Player::initializeArmy() {
-		
+		//playerArmy = new Army(&color);
 	}
 // protected
 // private
