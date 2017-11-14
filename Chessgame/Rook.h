@@ -21,4 +21,3 @@ class Rook : public Piece {
 		// protected
 		// private
 };
-

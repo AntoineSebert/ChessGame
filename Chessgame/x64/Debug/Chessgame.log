@@ -1,8 +1,16 @@
-﻿  Player.cpp
+﻿  Queen.cpp
+  Pawn.cpp
+  Knight.cpp
+  Bishop.cpp
+  Army.cpp
+  Génération de code en cours...
+  Compilation en cours...
+  Rook.cpp
+  Player.cpp
+  main.cpp
   Game.cpp
   Génération de code en cours...
-  Ignoré... (aucune modification pertinente détectée)
-  Piece.cpp
-  Army.cpp
-  main.cpp
+  Compilation en cours...
+  King.cpp
+  Génération de code en cours...
   Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe

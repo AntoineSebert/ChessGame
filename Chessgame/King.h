@@ -10,15 +10,15 @@
 
 class King : public Piece {
 	// attributes
-	private:
-	unsigned int* color;
-	char representation = 'K';
+		private:
+			unsigned int* color;
+			char representation = 'K';
 
 	// members
-	public:
-	King(unsigned int* newColor);
-	~King();
-	// protected
-	// private
+		public:
+			King(unsigned int* newColor);
+			~King();
+		// protected
+		// private
 };
 
