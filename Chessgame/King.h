@@ -9,8 +9,16 @@
 #include "Piece.h"
 
 class King : public Piece {
+	// attributes
+	private:
+	unsigned int* color;
+	char representation = 'K';
+
+	// members
 	public:
-	King();
+	King(unsigned int* newColor);
 	~King();
+	// protected
+	// private
 };
 

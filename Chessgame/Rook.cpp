@@ -6,6 +6,8 @@
 
 #include "Rook.h"
 
-Rook::Rook() {}
-
-Rook::~Rook() {}
+// public
+	Rook::Rook(unsigned int* newColor) : color(newColor) {}
+	Rook::~Rook() {}
+// protected
+// private

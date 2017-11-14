@@ -6,7 +6,8 @@
 
 #include "king.h"
 
-King::King() {}
-
-
-King::~King() {}
+// public
+	King::King(unsigned int* newColor) : color(newColor) {}
+	King::~King() {}
+// protected
+// private

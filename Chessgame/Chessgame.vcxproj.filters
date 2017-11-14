@@ -93,7 +93,7 @@
       <Filter>Fichiers d%27en-tête\Pieces</Filter>
     </ClInclude>
     <ClInclude Include="King.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Pieces</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

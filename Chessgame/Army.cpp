@@ -8,11 +8,12 @@
 
 // public
 	Army::Army(unsigned int* newColor) : color(newColor) {
-		/*
 		for (unsigned int i = 8; i < alivePieces.size(); ++i)
-			alivePieces.at(i) = new (Piece) rook();
-		*/
+			alivePieces.at(i) = new Rook(color);
 	}
-	Army::~Army() {}
+	Army::~Army() {
+		for (unsigned int i = 0; i < alivePieces.size(); ++i)
+			delete(alivePieces.at(i));
+	}
 // protected
 // private

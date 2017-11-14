@@ -10,6 +10,7 @@
 #include <iostream>
 
 #include "Piece.h"
+#include "Rook.h"
 
 class Army {
 	// attributes
