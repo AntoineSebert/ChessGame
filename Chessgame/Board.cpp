@@ -13,11 +13,20 @@
 				data[i][ii] = new Cell((i + ii) % 2);
 		}
 	}
-	void Board::display() {
-		for (std::array<Cell*, 8> array : data) {
-			for (Cell* cell : array)
-				cell->displayContent();
-			std::cout << std::endl;
+	void Board::display(unsigned int turns) {
+		if (turns % 2 == 0) {
+			for (std::array<Cell*, 8> array : data) {
+				for (Cell* cell : array)
+					cell->displayContent();
+				std::cout << std::endl;
+			}
+		}
+		else {
+			for (auto it = data.rbegin(); it != data.rend(); ++it) {
+				for (Cell* cell : *it)
+					cell->displayContent();
+				std::cout << std::endl;
+			}
 		}
 	}
 // protected

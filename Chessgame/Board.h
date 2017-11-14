@@ -21,7 +21,7 @@ class Board : public Singleton<Board> {
 	// methods
 		public:
 			void initialize();
-			void display();
+			void display(unsigned int turns);
 		private:
 			Board();
 			~Board();

@@ -14,8 +14,8 @@
 		difficulty = setDifficulty();
 		gameBoard = &gameBoard->getInstance();
 		initializeBoard();
-
 		initializeArmies();
+		gameLoop();
 	}
 	difficulties Game::getDifficulty() { return difficulty; }
 	gameModes Game::getGameMode() { return gameMode; }
@@ -23,7 +23,9 @@
 // private
 	Game::Game() {}
 	Game::~Game() {}
-	void Game::gameLoop() {}
+	void Game::gameLoop() {
+		++turns;
+	}
 	void Game::chooseHumanPlayerName(std::string* target, std::vector<std::string>* alreadyTakenNames) {
 		do {
 			*target = gameInterface->alphanumericalChoice(

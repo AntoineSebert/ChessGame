@@ -29,6 +29,7 @@ class Game : public Singleton<Game> {
 			std::weak_ptr<Player> firstToPlay;
 			difficulties difficulty;
 			gameModes gameMode;
+			unsigned int turns = 0;
 
 	// members
 		public:

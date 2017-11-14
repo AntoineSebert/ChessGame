@@ -12,7 +12,7 @@ class Knight : public Piece {
 	// attributes
 		private:
 			unsigned int* color;
-			char representation = 'r';
+			char representation = 'k';
 
 	// members
 		public:

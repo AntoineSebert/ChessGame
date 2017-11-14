@@ -12,7 +12,7 @@ class Rook : public Piece {
 	// attributes
 		private:
 			unsigned int* color;
-			char representation = 'r';
+			char representation = 'R';
 
 	// members
 		public:

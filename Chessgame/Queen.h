@@ -12,7 +12,7 @@ class Queen : public Piece {
 	// attributes
 		private:
 			unsigned int* color;
-			char representation = 'p';
+			char representation = 'Q';
 
 	// members
 		public:
