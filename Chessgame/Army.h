@@ -20,13 +20,14 @@
 class Army {
 	// attributes
 		private:
-			std::array<std::shared_ptr<Piece>, 16> alivePieces;
-			std::array<std::shared_ptr<Piece>, 15> deadPieces;
+			std::vector<std::shared_ptr<Piece>> alivePieces;
+			std::vector<std::shared_ptr<Piece>> deadPieces;
 			unsigned int* color;
 
 	// membres
 		public:
 			Army(unsigned int* newColor);
 			~Army();
+			std::weak_ptr<Piece> getPiece(unsigned int index);
 };
 

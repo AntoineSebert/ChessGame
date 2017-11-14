@@ -94,6 +94,8 @@
 			gameBoard->initialize();
 		}
 		void Game::initializeArmies() {
-			for(unsigned int i = 0; i < players.size(); ++i)
-				players.at(i).get()->initializeArmy();
+			/*
+			for (unsigned int i = 0; i < players.size(); ++i)
+				players.at(i).get()->initializeArmy(gameBoard, start, end);
+			*/
 		}

@@ -1,16 +1,15 @@
-﻿  Queen.cpp
-  Pawn.cpp
-  Knight.cpp
-  Bishop.cpp
+﻿  Player.cpp
+  Game.cpp
+c:\users\i\desktop\chessgame\chessgame\game.cpp(98): error C2065: 'start' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\game.cpp(98): error C2065: 'end' : identificateur non déclaré
+  Board.cpp
   Army.cpp
   Génération de code en cours...
   Compilation en cours...
-  Rook.cpp
-  Player.cpp
   main.cpp
-  Game.cpp
   Génération de code en cours...
-  Compilation en cours...
-  King.cpp
-  Génération de code en cours...
-  Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe
+  Ignoré... (aucune modification pertinente détectée)
+  Piece.cpp
+  Rook.cpp
+  Queen.cpp
+  Knight.cpp

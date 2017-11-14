@@ -11,6 +11,7 @@
 #include <string>
 
 #include "Army.h"
+#include "Board.h"
 
 class Player {
 	// attributes
@@ -25,7 +26,7 @@ class Player {
 			~Player();
 			std::string getName();
 			unsigned int getColor();
-			void initializeArmy();
+			void initializeArmy(Board* gameBoard, unsigned int start, unsigned int end);
 		// protected
 		// private
 };
