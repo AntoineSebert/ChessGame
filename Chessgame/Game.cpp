@@ -45,31 +45,35 @@
 		}
 		void Game::initializePlayers() {
 			std::array<std::string, 2> names;
-			switch (gameMode) {
-				case PVP:
-					chooseHumanPlayerName(&names[0], &(std::vector<std::string>(names.begin(), names.end())));
-					chooseHumanPlayerName(&names[1], &(std::vector<std::string>(names.begin(), names.end())));
-					break;
-				case PVE:
-					names[0] = "HAL9000";
-					chooseHumanPlayerName(&names[1], &(std::vector<std::string>(names.begin(), names.end())));
-					break;
-				case EVE:
-					for (unsigned int i = 0; i < players.size(); ++i)
-						names[i] = "HAL9000";
-					break;
-				default:
-					break;
-			}
-			std::vector<std::string> labels = {
-				"Select the player who will start playing first"
-			};
-			for (std::string name : names)
-				labels.push_back(name);
-			unsigned int firstToPlayIndex = gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
+			initializePlayersNames(&names);
+			unsigned int firstToPlayIndex = setWhoPlaysFirst(&names);
 			for (unsigned int i = 0; i < players.size(); ++i)
 				players[i] = std::make_shared<Player>(Player(names[i], (i == firstToPlayIndex ? 0 : 1)));
 			firstToPlay = players[firstToPlayIndex];
+		}
+		void Game::initializePlayersNames(std::array<std::string, 2>* names) {
+			switch (gameMode) {
+				case PVP:
+					chooseHumanPlayerName(&names->at(0), &(std::vector<std::string>(names->begin(), names->end())));
+					chooseHumanPlayerName(&names->at(1), &(std::vector<std::string>(names->begin(), names->end())));
+					break;
+				case PVE:
+					names->at(0) = "HAL9000";
+					chooseHumanPlayerName(&names->at(1), &(std::vector<std::string>(names->begin(), names->end())));
+					break;
+				case EVE:
+					for (unsigned int i = 0; i < players.size(); ++i)
+						names->at(i) = "HAL9000";
+					break;
+			}
+		}
+		unsigned int Game::setWhoPlaysFirst(std::array<std::string, 2>* names) {
+			std::vector<std::string> labels = {
+				"Select the player who will start playing first"
+			};
+			for (std::string name : *names)
+				labels.push_back(name);
+			return gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
 		}
 		difficulties Game::setDifficulty() {
 			if (gameMode != PVP) {

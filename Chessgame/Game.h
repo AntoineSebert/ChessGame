@@ -44,6 +44,8 @@ class Game : public Singleton<Game> {
 			// préparation
 				void initializeBoard();
 				void initializePlayers();
+				void initializePlayersNames(std::array<std::string, 2>* names);
+				unsigned int setWhoPlaysFirst(std::array<std::string, 2>* names);
 				void initializeArmies();
 				difficulties setDifficulty();
 				gameModes setGameModes();
