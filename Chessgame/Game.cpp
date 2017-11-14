@@ -48,7 +48,7 @@
 			initializePlayersNames(&names);
 			unsigned int firstToPlayIndex = setWhoPlaysFirst(&names);
 			for (unsigned int i = 0; i < players.size(); ++i)
-				players[i] = std::make_shared<Player>(Player(names[i], (i == firstToPlayIndex ? 0 : 1)));
+				players[i] = std::make_shared<Player>(names[i], (i == firstToPlayIndex ? 0 : 1));
 			firstToPlay = players[firstToPlayIndex];
 		}
 		void Game::initializePlayersNames(std::array<std::string, 2>* names) {
@@ -92,6 +92,6 @@
 			gameBoard->initialize();
 		}
 		void Game::initializeArmies() {
-			for (std::shared_ptr<Player> player : players)
-				player.get()->initializeArmy();
+			for(unsigned int i = 0; i < players.size(); ++i)
+				players.at(i).get()->initializeArmy();
 		}

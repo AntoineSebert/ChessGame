@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <memory>
 #include <iostream>
 #include <string>
 
@@ -14,7 +15,7 @@
 class Player {
 	// attributes
 		private:
-			Army* playerArmy;
+			std::unique_ptr<Army> playerArmy;
 			unsigned int color;
 			std::string name;
 
