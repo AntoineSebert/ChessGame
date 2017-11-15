@@ -26,7 +26,7 @@ class Player {
 			~Player();
 			std::string getName();
 			unsigned int getColor();
-			void initializeArmy(Board* gameBoard, unsigned int start, unsigned int end);
+			void initializeArmy(Board* gameBoard);
 		// protected
 		// private
 };

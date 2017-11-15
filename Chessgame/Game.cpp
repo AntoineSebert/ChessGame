@@ -24,16 +24,13 @@
 	Game::Game() {}
 	Game::~Game() {}
 	void Game::gameLoop() {
+		while(turns < 500 || isGameFinished())
 		++turns;
+		gameBoard->display(turns);
 	}
-	void Game::chooseHumanPlayerName(std::string* target, std::vector<std::string>* alreadyTakenNames) {
-		do {
-			*target = gameInterface->alphanumericalChoice(
-				&(std::vector<std::string>() = {
-					"Type the name of the human player (names must be different)"
-				})
-			);
-		} while (std::find(alreadyTakenNames->begin(), alreadyTakenNames->end(), *target) != alreadyTakenNames->end());
+	bool Game::isGameFinished() {
+		// tester les deux rois
+		return false;
 	}
 	// préparation
 		gameModes Game::setGameModes() {
@@ -69,6 +66,15 @@
 					break;
 			}
 		}
+		void Game::chooseHumanPlayerName(std::string* target, std::vector<std::string>* alreadyTakenNames) {
+			do {
+				*target = gameInterface->alphanumericalChoice(
+					&(std::vector<std::string>() = {
+					"Type the name of the human player (names must be different)"
+				})
+				);
+			} while (std::find(alreadyTakenNames->begin(), alreadyTakenNames->end(), *target) != alreadyTakenNames->end());
+		}
 		unsigned int Game::setWhoPlaysFirst(std::array<std::string, 2>* names) {
 			std::vector<std::string> labels = {
 				"Select the player who will start playing first"
@@ -94,8 +100,6 @@
 			gameBoard->initialize();
 		}
 		void Game::initializeArmies() {
-			/*
 			for (unsigned int i = 0; i < players.size(); ++i)
-				players.at(i).get()->initializeArmy(gameBoard, start, end);
-			*/
+				players.at(i).get()->initializeArmy(gameBoard);
 		}

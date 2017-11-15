@@ -28,6 +28,7 @@ class Army {
 		public:
 			Army(unsigned int* newColor);
 			~Army();
-			std::weak_ptr<Piece> getPiece(unsigned int index);
+			std::vector<std::shared_ptr<Piece>>* getPiecesInArmy();
+			unsigned int getArmySize();
 };
 

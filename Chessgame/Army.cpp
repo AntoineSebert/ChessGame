@@ -28,5 +28,11 @@
 			alivePieces.push_back(std::make_shared<Pawn>(color));
 	}
 	Army::~Army() {}
+	std::vector<std::shared_ptr<Piece>>* Army::getPiecesInArmy() {
+		return &alivePieces;
+	}
+	unsigned int Army::getArmySize() {
+		return alivePieces.size();
+	}
 // protected
 // private

@@ -9,13 +9,13 @@
 #include <iostream>
 #include <memory>
 
-//#include "Piece.h"
+#include "Piece.h"
 
 class Cell {
 	// attributes
 		private:
 			unsigned int color;
-			//std::weak_ptr<Piece> content;
+			std::weak_ptr<Piece> content;
 
 	// methods
 		public:
@@ -23,6 +23,7 @@ class Cell {
 			~Cell();
 			unsigned int getColor();
 			void displayContent();
-			//void setPiece(Piece* newPiece);
+			void setPiece(Piece* newPiece);
+			void removePiece();
 };
 

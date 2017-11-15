@@ -14,10 +14,17 @@
 	Player::~Player() {}
 	std::string Player::getName() { return name; }
 	unsigned int Player::getColor() { return color; }
-	void Player::initializeArmy(Board* gameBoard, unsigned int start, unsigned int end) {
+	void Player::initializeArmy(Board* gameBoard) {
 		playerArmy = std::make_unique<Army>(&color);
-		// boucle for pour la mise en place des pièces
-		//playerArmy.get().
+		if (color == 0) {
+
+			for (unsigned int i = 0; i < playerArmy.get()->getArmySize(); ++i) {
+				playerArmy.get()->getPiecesInArmy();
+			}
+		}
+		else {
+
+		}
 	}
 // protected
 // private

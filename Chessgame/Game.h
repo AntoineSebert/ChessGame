@@ -41,11 +41,12 @@ class Game : public Singleton<Game> {
 			Game();
 			~Game();
 			void gameLoop();
-			void chooseHumanPlayerName(std::string* target, std::vector<std::string>* alreadyTakenNames);
+			bool isGameFinished();
 			// préparation
 				void initializeBoard();
 				void initializePlayers();
 				void initializePlayersNames(std::array<std::string, 2>* names);
+				void chooseHumanPlayerName(std::string* target, std::vector<std::string>* alreadyTakenNames);
 				unsigned int setWhoPlaysFirst(std::array<std::string, 2>* names);
 				void initializeArmies();
 				difficulties setDifficulty();
