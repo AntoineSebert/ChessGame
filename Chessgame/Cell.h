@@ -23,7 +23,8 @@ class Cell {
 			~Cell();
 			unsigned int getColor();
 			void displayContent();
-			void setPiece(Piece* newPiece);
+			void setPiece(std::weak_ptr<Piece> newPiece);
 			void removePiece();
+		private:
+			template <typename T> bool is_uninitialized(std::weak_ptr<T> const& weak);
 };
-

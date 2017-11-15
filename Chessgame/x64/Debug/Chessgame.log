@@ -1,15 +1,13 @@
 ﻿  Player.cpp
   Game.cpp
-c:\users\i\desktop\chessgame\chessgame\game.cpp(98): error C2065: 'start' : identificateur non déclaré
-c:\users\i\desktop\chessgame\chessgame\game.cpp(98): error C2065: 'end' : identificateur non déclaré
-  Board.cpp
+  Cell.cpp
   Army.cpp
+c:\users\i\desktop\chessgame\chessgame\army.cpp(35): warning C4267: 'return' : conversion de 'size_t' en 'unsigned int', perte possible de données
   Génération de code en cours...
   Compilation en cours...
   main.cpp
+  Board.cpp
   Génération de code en cours...
   Ignoré... (aucune modification pertinente détectée)
   Piece.cpp
-  Rook.cpp
-  Queen.cpp
-  Knight.cpp
+  Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe

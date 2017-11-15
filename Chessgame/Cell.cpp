@@ -13,10 +13,18 @@
 		return color;
 	}
 	void Cell::displayContent() {
-		//
-		// condition piece présente
-		//
-		std::cout << "*";
+		std::cout << (is_uninitialized(content) ? content._Get()->getRepresentation() : '*');
+	}
+	void Cell::setPiece(std::weak_ptr<Piece> newPiece) {
+		content = newPiece;
+	}
+	void Cell::removePiece() {
+		content.reset();
 	}
 // protected
 // private
+	template<typename T>
+	inline bool Cell::is_uninitialized(std::weak_ptr<T> const & weak) {
+		using wt = std::weak_ptr<T>;
+		return !weak.owner_before(wt{}) && !wt{}.owner_before(weak);
+	}
