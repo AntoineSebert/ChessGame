@@ -32,7 +32,15 @@
 		return &alivePieces;
 	}
 	unsigned int Army::getArmySize() {
-		return alivePieces.size();
+		return (unsigned int)alivePieces.size();
+	}
+	void Army::displayArmy() {
+		for (std::shared_ptr<Piece> piece : alivePieces)
+			std::cout << piece.get()->getRepresentation();
+		std::cout << std::endl;
+		for (std::shared_ptr<Piece> piece : deadPieces)
+			std::cout << piece.get()->getRepresentation();
+		std::cout << std::endl;
 	}
 // protected
 // private

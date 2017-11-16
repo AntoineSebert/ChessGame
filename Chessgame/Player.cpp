@@ -16,35 +16,44 @@
 	unsigned int Player::getColor() { return color; }
 	void Player::initializeArmy(Board* gameBoard) {
 		playerArmy = std::make_unique<Army>(&color);
+		playerArmy.get()->displayArmy();
 		if (color == 0) {
 			placePieces(
-				gameBoard->getData()->at(1).begin(),
-				gameBoard->getData()->at(1).end() - 1,
-				playerArmy.get()->getArmyContainer()->begin() + 8,
-				playerArmy.get()->getArmyContainer()->end() - 1
+				gameBoard->getData()->at(1).begin(), gameBoard->getData()->at(1).end(),
+				playerArmy.get()->getArmyContainer()->begin() + 8, playerArmy.get()->getArmyContainer()->end()
+			);
+			placePieces(
+				gameBoard->getData()->at(0).begin(), gameBoard->getData()->at(0).end(),
+				playerArmy.get()->getArmyContainer()->begin(), playerArmy.get()->getArmyContainer()->end() - 8
 			);
 		}
 		else {
-
+			placePieces(
+				gameBoard->getData()->at(6).begin(), gameBoard->getData()->at(6).end(),
+				playerArmy.get()->getArmyContainer()->begin() + 8, playerArmy.get()->getArmyContainer()->end()
+			);
+			placePieces(
+				gameBoard->getData()->at(7).begin(), gameBoard->getData()->at(7).end(),
+				playerArmy.get()->getArmyContainer()->begin(), playerArmy.get()->getArmyContainer()->end() - 8
+			);
 		}
 	}
 // protected
 // private
 	void Player::placePieces(
-		std::array<Cell*, 8>::iterator cellStart,
-		std::array<Cell*, 8>::iterator cellEnd,
-		std::vector<std::shared_ptr<Piece>>::iterator pieceStart,
-		std::vector<std::shared_ptr<Piece>>::iterator pieceEnd
+		std::array<Cell*, 8>::iterator cellStart, std::array<Cell*, 8>::iterator cellEnd,
+		std::vector<std::shared_ptr<Piece>>::iterator pieceStart, std::vector<std::shared_ptr<Piece>>::iterator pieceEnd
 	) {
 		if (cellEnd - cellStart == pieceEnd - pieceStart && cellStart < cellEnd && pieceStart < pieceEnd) {
-			std::vector<std::shared_ptr<Piece>>::iterator pieceIt = pieceStart;
-			for (std::array<Cell*, 8>::iterator it = cellStart; it < cellEnd; ++it) {
+			auto pieceIt = pieceStart;
+			for (auto it = cellStart; it < cellEnd; ++it) {
+				(*it)->setPiece(*pieceIt);
 				if (pieceIt != pieceEnd)
 					++pieceIt;
-				(*it)->setPiece(*pieceIt);
-				std::cout << (*pieceIt).get()->getRepresentation() << std::endl;
 			}
 		}
-		else
+		else {
 			perror("The given intervals does not match");
+			std::cout << cellEnd - cellStart << pieceEnd - pieceStart << std::endl;
+		}
 	}

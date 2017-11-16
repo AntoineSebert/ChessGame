@@ -30,5 +30,6 @@ class Army {
 			~Army();
 			std::vector<std::shared_ptr<Piece>>* getArmyContainer();
 			unsigned int getArmySize();
+			void displayArmy();
 };
 
