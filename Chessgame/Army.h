@@ -28,7 +28,7 @@ class Army {
 		public:
 			Army(unsigned int* newColor);
 			~Army();
-			std::vector<std::shared_ptr<Piece>>* getPiecesInArmy();
+			std::vector<std::shared_ptr<Piece>>* getArmyContainer();
 			unsigned int getArmySize();
 };
 

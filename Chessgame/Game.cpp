@@ -24,9 +24,10 @@
 	Game::Game() {}
 	Game::~Game() {}
 	void Game::gameLoop() {
-		while(turns < 500 || isGameFinished())
-		++turns;
-		gameBoard->display(turns);
+		while (turns < 500 || isGameFinished()) {
+			++turns;
+			gameBoard->display(turns);
+		}
 	}
 	bool Game::isGameFinished() {
 		// tester les deux rois

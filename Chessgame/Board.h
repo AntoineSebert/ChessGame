@@ -22,6 +22,7 @@ class Board : public Singleton<Board> {
 		public:
 			void initialize();
 			void display(unsigned int turns);
+			std::array<std::array<Cell*, 8>, 8>* getData();
 		private:
 			Board();
 			~Board();

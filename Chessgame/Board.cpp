@@ -29,6 +29,9 @@
 			}
 		}
 	}
+	std::array<std::array<Cell*, 8>, 8>* Board::getData() {
+		return &data;
+	}
 // protected
 // private
 	Board::Board() {}

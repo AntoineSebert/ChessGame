@@ -13,7 +13,7 @@
 		return color;
 	}
 	void Cell::displayContent() {
-		std::cout << (is_uninitialized(content) ? content._Get()->getRepresentation() : '*');
+		std::cout << (is_uninitialized(content) ? '*' : content._Get()->getRepresentation());
 	}
 	void Cell::setPiece(std::weak_ptr<Piece> newPiece) {
 		content = newPiece;

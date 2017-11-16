@@ -8,6 +8,7 @@
 
 #include <memory>
 #include <iostream>
+#include <iterator>
 #include <string>
 
 #include "Army.h"
@@ -28,5 +29,17 @@ class Player {
 			unsigned int getColor();
 			void initializeArmy(Board* gameBoard);
 		// protected
-		// private
+		private:
+			void placePieces(
+				std::array<Cell*, 8>::iterator cellStart,
+				std::array<Cell*, 8>::iterator cellEnd,
+				std::vector<std::shared_ptr<Piece>>::iterator pieceStart,
+				std::vector<std::shared_ptr<Piece>>::iterator pieceEnd
+			);
+			void placePieces(
+				std::array<Cell*, 8>::reverse_iterator cellStart,
+				std::array<Cell*, 8>::reverse_iterator cellEnd,
+				std::vector<std::shared_ptr<Piece>>::iterator pieceStart,
+				std::vector<std::shared_ptr<Piece>>::iterator pieceEnd
+			);
 };
