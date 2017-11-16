@@ -18,6 +18,7 @@ class King : public Piece {
 		public:
 			King(unsigned int* newColor);
 			~King();
+			char getRepresentation();
 		// protected
 		// private
 };

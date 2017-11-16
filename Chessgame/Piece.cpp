@@ -7,7 +7,3 @@
 #include "Piece.h"
 
 Piece::Piece() : representation('*') {}
-
-char Piece::getRepresentation() {
-	return representation;
-}

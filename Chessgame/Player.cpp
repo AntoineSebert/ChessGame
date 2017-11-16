@@ -19,9 +19,9 @@
 		if (color == 0) {
 			placePieces(
 				gameBoard->getData()->at(1).begin(),
-				gameBoard->getData()->at(1).end(),
+				gameBoard->getData()->at(1).end() - 1,
 				playerArmy.get()->getArmyContainer()->begin() + 8,
-				playerArmy.get()->getArmyContainer()->end()
+				playerArmy.get()->getArmyContainer()->end() - 1
 			);
 		}
 		else {
@@ -39,9 +39,10 @@
 		if (cellEnd - cellStart == pieceEnd - pieceStart && cellStart < cellEnd && pieceStart < pieceEnd) {
 			std::vector<std::shared_ptr<Piece>>::iterator pieceIt = pieceStart;
 			for (std::array<Cell*, 8>::iterator it = cellStart; it < cellEnd; ++it) {
-				++pieceIt;
-				// problem here
-				//(*it)->setPiece(*pieceIt);
+				if (pieceIt != pieceEnd)
+					++pieceIt;
+				(*it)->setPiece(*pieceIt);
+				std::cout << (*pieceIt).get()->getRepresentation() << std::endl;
 			}
 		}
 		else

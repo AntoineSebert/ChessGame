@@ -20,7 +20,7 @@ class Piece {
 		public:
 			Piece();
 			//virtual std::vector<Cell> const& possibleMoves() const = 0;
-			char getRepresentation();
+			virtual char getRepresentation() = 0;
 		// protected
 		// private
 };

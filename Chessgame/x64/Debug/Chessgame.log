@@ -1,2 +1,13 @@
-﻿  Player.cpp
+﻿  Rook.cpp
+  Queen.cpp
+  Knight.cpp
+  King.cpp
+  Bishop.cpp
+  Army.cpp
+c:\users\i\desktop\chessgame\chessgame\army.cpp(35): warning C4267: 'return' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  Génération de code en cours...
+  Ignoré... (aucune modification pertinente détectée)
+  main.cpp
+  Player.cpp
+  Game.cpp
   Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe

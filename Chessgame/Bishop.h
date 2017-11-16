@@ -18,6 +18,7 @@ class Bishop : public Piece {
 		public:
 			Bishop(unsigned int* newColor);
 			~Bishop();
+			char getRepresentation();
 		// protected
 		// private
 };

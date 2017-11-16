@@ -9,5 +9,8 @@
 // public
 	Rook::Rook(unsigned int* newColor) : color(newColor) {}
 	Rook::~Rook() {}
+	char Rook::getRepresentation() {
+		return representation;
+	}
 // protected
 // private

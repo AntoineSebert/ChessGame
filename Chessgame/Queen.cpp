@@ -9,5 +9,8 @@
 // public
 	Queen::Queen(unsigned int* newColor) : color(newColor) {}
 	Queen::~Queen() {}
+	char Queen::getRepresentation() {
+		return representation;
+	}
 // protected
 // private

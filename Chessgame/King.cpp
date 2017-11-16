@@ -9,5 +9,8 @@
 // public
 	King::King(unsigned int* newColor) : color(newColor) {}
 	King::~King() {}
+	char King::getRepresentation() {
+		return representation;
+	}
 // protected
 // private

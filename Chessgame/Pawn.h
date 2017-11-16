@@ -18,6 +18,7 @@ class Pawn : public Piece {
 		public:
 			Pawn(unsigned int* newColor);
 			~Pawn();
+			char getRepresentation();
 		// protected
 		// private
 };

@@ -24,13 +24,13 @@
 	Game::Game() {}
 	Game::~Game() {}
 	void Game::gameLoop() {
-		while (turns < 500 || isGameFinished()) {
+		while (turns < 1 || isGameFinished()) {
 			++turns;
 			gameBoard->display(turns);
 		}
 	}
 	bool Game::isGameFinished() {
-		// tester les deux rois
+		// tester les deux rois, si les pièces peuvent bouger, et d'autres trucs
 		return false;
 	}
 	// préparation

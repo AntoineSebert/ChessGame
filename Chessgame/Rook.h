@@ -18,6 +18,7 @@ class Rook : public Piece {
 		public:
 			Rook(unsigned int* newColor);
 			~Rook();
+			char getRepresentation();
 		// protected
 		// private
 };

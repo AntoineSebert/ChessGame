@@ -9,5 +9,8 @@
 // public
 	Knight::Knight(unsigned int* newColor) : color(newColor) {}
 	Knight::~Knight() {}
+	char Knight::getRepresentation() {
+		return representation;
+	}
 // protected
 // private

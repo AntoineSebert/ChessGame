@@ -9,5 +9,8 @@
 // public
 	Pawn::Pawn(unsigned int* newColor) : color(newColor) {}
 	Pawn::~Pawn() {}
+	char Pawn::getRepresentation() {
+		return representation;
+	}
 // protected
 // private

@@ -9,5 +9,8 @@
 // public
 	Bishop::Bishop(unsigned int* newColor) : color(newColor) {}
 	Bishop::~Bishop() {}
+	char Bishop::getRepresentation() {
+		return representation;
+	}
 // protected
 // private
