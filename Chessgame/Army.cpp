@@ -42,5 +42,14 @@
 			std::cout << piece.get()->getRepresentation();
 		std::cout << std::endl;
 	}
+	std::shared_ptr<Piece> Army::operator[](unsigned int index) {
+		return alivePieces.at(index);
+	}
+	std::vector<std::shared_ptr<Piece>>::iterator Army::getBegin() {
+		return alivePieces.begin();
+	}
+	std::vector<std::shared_ptr<Piece>>::iterator Army::getEnd() {
+		return alivePieces.end();
+	}
 // protected
 // private

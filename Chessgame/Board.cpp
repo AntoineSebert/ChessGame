@@ -32,7 +32,19 @@
 	std::array<std::array<Cell*, 8>, 8>* Board::getData() {
 		return &data;
 	}
-// protected
+	std::array<std::array<Cell*, 8>, 8>::iterator Board::getBegin() {
+		return data.begin();
+	}
+	std::array<Cell*, 8>::iterator Board::getBegin(unsigned int index) {
+		return data.at(index).begin();
+	}
+	std::array<std::array<Cell*, 8>, 8>::iterator Board::getEnd() {
+		return data.end();
+	}
+	std::array<Cell*, 8>::iterator Board::getEnd(unsigned int index) {
+		return data.at(index).end();
+	}
+	// protected
 // private
 	Board::Board() {}
 	Board::~Board() {

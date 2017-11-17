@@ -8,6 +8,7 @@
 
 #include <array>
 #include <iostream>
+#include <iterator>
 
 #include "Piece.h"
 #include "Bishop.h"
@@ -31,5 +32,8 @@ class Army {
 			std::vector<std::shared_ptr<Piece>>* getArmyContainer();
 			unsigned int getArmySize();
 			void displayArmy();
+			std::shared_ptr<Piece> operator[](unsigned int index);
+			std::vector<std::shared_ptr<Piece>>::iterator getBegin();
+			std::vector<std::shared_ptr<Piece>>::iterator getEnd();
 };
 

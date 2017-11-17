@@ -19,22 +19,22 @@
 		playerArmy.get()->displayArmy();
 		if (color == 0) {
 			placePieces(
-				gameBoard->getData()->at(1).begin(), gameBoard->getData()->at(1).end(),
-				playerArmy.get()->getArmyContainer()->begin() + 8, playerArmy.get()->getArmyContainer()->end()
+				gameBoard->getBegin(1), gameBoard->getEnd(1),
+				playerArmy.get()->getBegin() + 8, playerArmy.get()->getEnd()
 			);
 			placePieces(
-				gameBoard->getData()->at(0).begin(), gameBoard->getData()->at(0).end(),
-				playerArmy.get()->getArmyContainer()->begin(), playerArmy.get()->getArmyContainer()->end() - 8
+				gameBoard->getBegin(0), gameBoard->getEnd(0),
+				playerArmy.get()->getBegin(), playerArmy.get()->getEnd() - 8
 			);
 		}
 		else {
 			placePieces(
-				gameBoard->getData()->at(6).begin(), gameBoard->getData()->at(6).end(),
-				playerArmy.get()->getArmyContainer()->begin() + 8, playerArmy.get()->getArmyContainer()->end()
+				gameBoard->getBegin(6), gameBoard->getEnd(6),
+				playerArmy.get()->getBegin() + 8, playerArmy.get()->getEnd()
 			);
 			placePieces(
-				gameBoard->getData()->at(7).begin(), gameBoard->getData()->at(7).end(),
-				playerArmy.get()->getArmyContainer()->begin(), playerArmy.get()->getArmyContainer()->end() - 8
+				gameBoard->getBegin(7), gameBoard->getEnd(7),
+				playerArmy.get()->getBegin(), playerArmy.get()->getEnd() - 8
 			);
 		}
 	}
@@ -54,6 +54,6 @@
 		}
 		else {
 			perror("The given intervals does not match");
-			std::cout << cellEnd - cellStart << pieceEnd - pieceStart << std::endl;
+			std::cout << cellEnd - cellStart << ' ' << pieceEnd - pieceStart << std::endl;
 		}
 	}
