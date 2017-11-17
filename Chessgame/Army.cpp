@@ -35,10 +35,10 @@
 		return (unsigned int)alivePieces.size();
 	}
 	void Army::displayArmy() {
-		for (std::shared_ptr<Piece> piece : alivePieces)
+		for (auto piece : alivePieces)
 			std::cout << piece.get()->getRepresentation();
 		std::cout << std::endl;
-		for (std::shared_ptr<Piece> piece : deadPieces)
+		for (auto piece : deadPieces)
 			std::cout << piece.get()->getRepresentation();
 		std::cout << std::endl;
 	}

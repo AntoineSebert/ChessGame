@@ -31,7 +31,7 @@ class Player {
 		// protected
 		private:
 			void placePieces(
-				std::array<Cell*, 8>::iterator cellStart, std::array<Cell*, 8>::iterator cellEnd,
+				std::array<std::shared_ptr<Cell>, 8>::iterator cellStart, std::array<std::shared_ptr<Cell>, 8>::iterator cellEnd,
 				std::vector<std::shared_ptr<Piece>>::iterator pieceStart, std::vector<std::shared_ptr<Piece>>::iterator pieceEnd
 			);
 };

@@ -41,7 +41,7 @@
 // protected
 // private
 	void Player::placePieces(
-		std::array<Cell*, 8>::iterator cellStart, std::array<Cell*, 8>::iterator cellEnd,
+		std::array<std::shared_ptr<Cell>, 8>::iterator cellStart, std::array<std::shared_ptr<Cell>, 8>::iterator cellEnd,
 		std::vector<std::shared_ptr<Piece>>::iterator pieceStart, std::vector<std::shared_ptr<Piece>>::iterator pieceEnd
 	) {
 		if (cellEnd - cellStart == pieceEnd - pieceStart && cellStart < cellEnd && pieceStart < pieceEnd) {
@@ -53,7 +53,8 @@
 			}
 		}
 		else {
-			perror("The given intervals does not match");
+			perror("The given intervals does not match or the iterators are unordered");
 			std::cout << cellEnd - cellStart << ' ' << pieceEnd - pieceStart << std::endl;
+			std::cout << *cellEnd << ':' << *cellStart << ' ' << *pieceEnd << ':' << *pieceStart << std::endl;
 		}
 	}

@@ -80,7 +80,7 @@
 			std::vector<std::string> labels = {
 				"Select the player who will start playing first"
 			};
-			for (std::string name : *names)
+			for (auto name : *names)
 				labels.push_back(name);
 			return gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
 		}

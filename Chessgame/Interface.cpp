@@ -27,7 +27,7 @@
 	Interface::Interface() {}
 	Interface::~Interface() {}
 	void Interface::displayLabels(std::vector<std::string>* labels) {
-		for (std::vector<std::string>::iterator it = labels->begin(); it != labels->end(); ++it) {
+		for (auto it = labels->begin(); it != labels->end(); ++it) {
 			std::cout << ' ';
 			if (*it != labels->front())
 				std::cout << it - labels->begin() << " - ";
@@ -61,8 +61,8 @@
 		}
 	// second level input
 		bool Interface::isNumberString(std::string* input, unsigned int firstBound, unsigned int secondBound) {
-			for (size_t i = 0; i < input->size(); ++i) {
-				if (!isNumber(input->at(i)))
+			for (auto character : *input) {
+				if (!isNumber(character))
 					return false;
 			}
 			unsigned int numberInput = std::stoi(*input);
@@ -71,15 +71,15 @@
 			return true;
 		}
 		bool Interface::isAlphabeticalString(std::string* input) {
-			for (size_t i = 0; i < input->size(); ++i) {
-				if (!isAlphabetical(input->at(i)))
+			for (auto character : *input) {
+				if (!isAlphabetical(character))
 					return false;
 			}
 			return true;
 		}
 		bool Interface::isAlphanumeraicalString(std::string* input) {
-			for (size_t i = 0; i < input->size(); ++i) {
-				if (!isNumber(input->at(i)) || !isAlphabetical(input->at(i)))
+			for (auto character : *input) {
+				if (!isNumber(character) || !isAlphabetical(character))
 					return false;
 			}
 			return true;
