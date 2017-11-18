@@ -1,5 +1,11 @@
-﻿  Player.cpp
-  Interface.cpp
+﻿  main.cpp
+  Rook.cpp
+  Queen.cpp
+  Player.cpp
+  Piece.cpp
+  Pawn.cpp
+  Knight.cpp
+  King.cpp
   Game.cpp
   Cell.cpp
   Board.cpp
@@ -15,17 +21,7 @@ d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.
               _Ty=Cell
           ]
   c:\users\i\desktop\chessgame\chessgame\board.cpp(13): note: voir la référence à l'instanciation de la fonction modèle 'std::shared_ptr<Cell> std::make_shared<Cell,::size_t>(size_t &&)' en cours de compilation
+  Bishop.cpp
   Army.cpp
   Génération de code en cours...
-  Compilation en cours...
-  main.cpp
-  Génération de code en cours...
-  Ignoré... (aucune modification pertinente détectée)
-  Rook.cpp
-  Queen.cpp
-  Piece.cpp
-  Pawn.cpp
-  Knight.cpp
-  King.cpp
-  Bishop.cpp
   Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe

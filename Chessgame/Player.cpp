@@ -16,7 +16,6 @@
 	unsigned int Player::getColor() { return color; }
 	void Player::initializeArmy(Board* gameBoard) {
 		playerArmy = make_unique<Army>(&color);
-		playerArmy.get()->displayArmy();
 		if (color == 0) {
 			placePieces(
 				gameBoard->getBegin(1), gameBoard->getEnd(1),
@@ -37,6 +36,23 @@
 				playerArmy.get()->getBegin(), playerArmy.get()->getEnd() - 8
 			);
 		}
+	}
+	void Player::play() {
+
+		selectPiece(3, 'A');
+		/*
+		do {
+			//string input =
+		} while ();
+		*/
+		movePiece(3, 'A');
+	}
+	void Player::selectPiece(unsigned int x, char y) {
+		string test;
+		cin >> test;
+	}
+	void Player::movePiece(unsigned int x, char y) {
+
 	}
 // protected
 // private

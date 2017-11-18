@@ -30,6 +30,9 @@ class Player {
 			string getName();
 			unsigned int getColor();
 			void initializeArmy(Board* gameBoard);
+			void play();
+			void selectPiece(unsigned int x, char y);
+			void movePiece(unsigned int x, char y);
 		// protected
 		private:
 			void placePieces(

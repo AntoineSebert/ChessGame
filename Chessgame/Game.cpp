@@ -24,14 +24,18 @@
 	Game::Game() {}
 	Game::~Game() {}
 	void Game::gameLoop() {
-		while (turns < 1 || isGameFinished()) {
+		while (turns < 5 || isGameFinished()) {
 			++turns;
 			gameBoard->display(turns);
+			selectPlayerToPlay(turns);
 		}
 	}
 	bool Game::isGameFinished() {
 		// tester les deux rois, si les pièces peuvent bouger, et d'autres trucs
 		return false;
+	}
+	void Game::selectPlayerToPlay(unsigned int turns) {
+		players.at(turns % players.size()).get()->play();
 	}
 	// préparation
 		gameModes Game::setGameModes() {

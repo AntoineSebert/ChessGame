@@ -22,6 +22,9 @@
     <Filter Include="Fichiers sources\Pieces">
       <UniqueIdentifier>{2386e9c1-67f6-4d9b-8d20-ad91eb6e12e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\tools">
+      <UniqueIdentifier>{24d7b420-8b04-4f32-ba13-532d643ce8e9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -95,9 +98,6 @@
     <ClInclude Include="Cell.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Singleton.h">
-      <Filter>Fichiers d%27en-tête\constants</Filter>
-    </ClInclude>
     <ClInclude Include="Piece.h">
       <Filter>Fichiers d%27en-tête\Pieces</Filter>
     </ClInclude>
@@ -119,5 +119,16 @@
     <ClInclude Include="Queen.h">
       <Filter>Fichiers d%27en-tête\Pieces</Filter>
     </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Fichiers d%27en-tête\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Fichiers d%27en-tête\tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
   </ItemGroup>
 </Project>

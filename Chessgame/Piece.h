@@ -6,8 +6,11 @@
 
 #pragma once
 
-#include <vector>
 #include <memory>
+#include <string>
+#include <vector>
+
+using namespace std;
 
 class Piece {
 	// attributes
@@ -15,6 +18,7 @@ class Piece {
 		// protected
 		private:
 			char representation;
+			string position;
 
 	// members
 		public:

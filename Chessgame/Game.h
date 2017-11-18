@@ -44,6 +44,7 @@ class Game : public Singleton<Game> {
 			~Game();
 			void gameLoop();
 			bool isGameFinished();
+			void selectPlayerToPlay(unsigned int turns);
 			// préparation
 				void initializeBoard();
 				void initializePlayers();

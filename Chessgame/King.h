@@ -13,6 +13,8 @@ class King : public Piece {
 		private:
 			unsigned int* color;
 			char representation = 'K';
+			bool hasMoved = false;
+			bool hasBeenPutInCheck = false;
 
 	// members
 		public:
