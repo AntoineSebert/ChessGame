@@ -7,17 +7,17 @@
 #include "Interface.h"
 
 // public
-	unsigned int Interface::numberChoice(std::vector<std::string>* labels, unsigned int firstBound, unsigned int secondBound) {
+	unsigned int Interface::numberChoice(vector<string>* labels, unsigned int firstBound, unsigned int secondBound) {
 		if (labels->size() < 2)
-			throw std::logic_error("The given array must at least contain two values");
+			throw logic_error("The given array must at least contain two values");
 		displayLabels(labels);
 		return getNumberInput(firstBound, secondBound);
 	}
-	bool Interface::booleanChoice(std::vector<std::string>* labels) {
+	bool Interface::booleanChoice(vector<string>* labels) {
 		displayLabels(labels);
 		return getBooleanInput();
 	}
-	std::string Interface::alphanumericalChoice(std::vector<std::string>* labels) {
+	string Interface::alphanumericalChoice(vector<string>* labels) {
 		displayLabels(labels);
 		// put this fucking constant in a header file
 		return getStringInput(32);
@@ -26,65 +26,65 @@
 // private
 	Interface::Interface() {}
 	Interface::~Interface() {}
-	void Interface::displayLabels(std::vector<std::string>* labels) {
+	void Interface::displayLabels(vector<string>* labels) {
 		for (auto it = labels->begin(); it != labels->end(); ++it) {
-			std::cout << ' ';
+			cout << ' ';
 			if (*it != labels->front())
-				std::cout << it - labels->begin() << " - ";
-			std::cout << *it << std::endl << std::endl;
+				cout << it - labels->begin() << " - ";
+			cout << *it << endl << endl;
 		}
 	}
 	// first level input
 		unsigned int Interface::getNumberInput(unsigned int firstBound, unsigned int secondBound) {
-			std::string input;
+			string input;
 			do {
-				std::cout << " Please type a number between " << (secondBound == 0 ? 1 : firstBound) << " and " << (secondBound == 0 ? firstBound : secondBound) << " included" << std::endl;
-				std::cin >> input;
+				cout << " Please type a number between " << (secondBound == 0 ? 1 : firstBound) << " and " << (secondBound == 0 ? firstBound : secondBound) << " included" << endl;
+				cin >> input;
 			} while (!isNumberString(&input, firstBound, secondBound));
-			return std::stoi(input) - 1;
+			return stoi(input) - 1;
 		}
 		bool Interface::getBooleanInput() {
-			std::string input;
+			string input;
 			do {
-				std::cout << " Please type 0 or 1" << std::endl;
-				std::cin >> input;
+				cout << " Please type 0 or 1" << endl;
+				cin >> input;
 			} while (!isBoolean(&input));
-			return std::stoi(input);
+			return stoi(input);
 		}
-		std::string Interface::getStringInput(unsigned int maxChararacters) {
-			std::string input;
+		string Interface::getStringInput(unsigned int maxChararacters) {
+			string input;
 			do {
-				std::cout << " Please type an alphanumerical string shorter than " << maxChararacters << " characters" << std::endl;
-				std::cin >> input;
+				cout << " Please type an alphanumerical string shorter than " << maxChararacters << " characters" << endl;
+				cin >> input;
 			} while (!isAlphanumeraicalString(&input) && maxChararacters < input.size());
 			return input;
 		}
 	// second level input
-		bool Interface::isNumberString(std::string* input, unsigned int firstBound, unsigned int secondBound) {
+		bool Interface::isNumberString(string* input, unsigned int firstBound, unsigned int secondBound) {
 			for (auto character : *input) {
 				if (!isNumber(character))
 					return false;
 			}
-			unsigned int numberInput = std::stoi(*input);
+			unsigned int numberInput = stoi(*input);
 			if (firstBound != 0)
 				return (secondBound != 0 ? firstBound < numberInput && numberInput <= secondBound : 0 < numberInput && numberInput <= firstBound);
 			return true;
 		}
-		bool Interface::isAlphabeticalString(std::string* input) {
+		bool Interface::isAlphabeticalString(string* input) {
 			for (auto character : *input) {
 				if (!isAlphabetical(character))
 					return false;
 			}
 			return true;
 		}
-		bool Interface::isAlphanumeraicalString(std::string* input) {
+		bool Interface::isAlphanumeraicalString(string* input) {
 			for (auto character : *input) {
 				if (!isNumber(character) || !isAlphabetical(character))
 					return false;
 			}
 			return true;
 		}
-		bool Interface::isBoolean(std::string* input) {
+		bool Interface::isBoolean(string* input) {
 			return (input->size() == 1 && isNumberString(input) && input->front() < 32 ? *input == "1" : false);
 		}
 	// third level input

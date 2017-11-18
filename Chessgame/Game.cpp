@@ -35,7 +35,7 @@
 	}
 	// préparation
 		gameModes Game::setGameModes() {
-			std::vector<std::string> labels = {
+			vector<string> labels = {
 				"Select the gamemode",
 				"PVP",
 				"PVE",
@@ -44,22 +44,22 @@
 			return (gameModes)gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
 		}
 		void Game::initializePlayers() {
-			std::array<std::string, 2> names;
+			array<string, 2> names;
 			initializePlayersNames(&names);
 			unsigned int firstToPlayIndex = setWhoPlaysFirst(&names);
 			for (unsigned int i = 0; i < players.size(); ++i)
-				players[i] = std::make_shared<Player>(names[i], (i == firstToPlayIndex ? 0 : 1));
+				players[i] = make_shared<Player>(names[i], (i == firstToPlayIndex ? 0 : 1));
 			firstToPlay = players[firstToPlayIndex];
 		}
-		void Game::initializePlayersNames(std::array<std::string, 2>* names) {
+		void Game::initializePlayersNames(array<string, 2>* names) {
 			switch (gameMode) {
 				case PVP:
-					chooseHumanPlayerName(&names->at(0), &(std::vector<std::string>(names->begin(), names->end())));
-					chooseHumanPlayerName(&names->at(1), &(std::vector<std::string>(names->begin(), names->end())));
+					chooseHumanPlayerName(&names->at(0), &(vector<string>(names->begin(), names->end())));
+					chooseHumanPlayerName(&names->at(1), &(vector<string>(names->begin(), names->end())));
 					break;
 				case PVE:
 					names->at(0) = "HAL9000";
-					chooseHumanPlayerName(&names->at(1), &(std::vector<std::string>(names->begin(), names->end())));
+					chooseHumanPlayerName(&names->at(1), &(vector<string>(names->begin(), names->end())));
 					break;
 				case EVE:
 					for (unsigned int i = 0; i < players.size(); ++i)
@@ -67,17 +67,17 @@
 					break;
 			}
 		}
-		void Game::chooseHumanPlayerName(std::string* target, std::vector<std::string>* alreadyTakenNames) {
+		void Game::chooseHumanPlayerName(string* target, vector<string>* alreadyTakenNames) {
 			do {
 				*target = gameInterface->alphanumericalChoice(
-					&(std::vector<std::string>() = {
+					&(vector<string>() = {
 					"Type the name of the human player (names must be different)"
 				})
 				);
-			} while (std::find(alreadyTakenNames->begin(), alreadyTakenNames->end(), *target) != alreadyTakenNames->end());
+			} while (find(alreadyTakenNames->begin(), alreadyTakenNames->end(), *target) != alreadyTakenNames->end());
 		}
-		unsigned int Game::setWhoPlaysFirst(std::array<std::string, 2>* names) {
-			std::vector<std::string> labels = {
+		unsigned int Game::setWhoPlaysFirst(array<string, 2>* names) {
+			vector<string> labels = {
 				"Select the player who will start playing first"
 			};
 			for (auto name : *names)
@@ -86,7 +86,7 @@
 		}
 		difficulties Game::setDifficulty() {
 			if (gameMode != PVP) {
-				std::vector<std::string> labels = {
+				vector<string> labels = {
 					"Select the difficulty",
 					"RANDOM",
 					"EASY",

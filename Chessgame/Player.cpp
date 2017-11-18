@@ -7,15 +7,15 @@
 #include "Player.h"
 
 // public
-	Player::Player(std::string playerName, unsigned int newColor) {
+	Player::Player(string playerName, unsigned int newColor) {
 		name = playerName;
 		color = newColor;
 	}
 	Player::~Player() {}
-	std::string Player::getName() { return name; }
+	string Player::getName() { return name; }
 	unsigned int Player::getColor() { return color; }
 	void Player::initializeArmy(Board* gameBoard) {
-		playerArmy = std::make_unique<Army>(&color);
+		playerArmy = make_unique<Army>(&color);
 		playerArmy.get()->displayArmy();
 		if (color == 0) {
 			placePieces(
@@ -41,8 +41,8 @@
 // protected
 // private
 	void Player::placePieces(
-		std::array<std::shared_ptr<Cell>, 8>::iterator cellStart, std::array<std::shared_ptr<Cell>, 8>::iterator cellEnd,
-		std::vector<std::shared_ptr<Piece>>::iterator pieceStart, std::vector<std::shared_ptr<Piece>>::iterator pieceEnd
+		array<shared_ptr<Cell>, 8>::iterator cellStart, array<shared_ptr<Cell>, 8>::iterator cellEnd,
+		vector<shared_ptr<Piece>>::iterator pieceStart, vector<shared_ptr<Piece>>::iterator pieceEnd
 	) {
 		if (cellEnd - cellStart == pieceEnd - pieceStart && cellStart < cellEnd && pieceStart < pieceEnd) {
 			auto pieceIt = pieceStart;
@@ -54,7 +54,7 @@
 		}
 		else {
 			perror("The given intervals does not match or the iterators are unordered");
-			std::cout << cellEnd - cellStart << ' ' << pieceEnd - pieceStart << std::endl;
-			std::cout << *cellEnd << ':' << *cellStart << ' ' << *pieceEnd << ':' << *pieceStart << std::endl;
+			cout << cellEnd - cellStart << ' ' << pieceEnd - pieceStart << endl;
+			cout << *cellEnd << ':' << *cellStart << ' ' << *pieceEnd << ':' << *pieceStart << endl;
 		}
 	}

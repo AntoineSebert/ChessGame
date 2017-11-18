@@ -14,24 +14,26 @@
 #include "Army.h"
 #include "Board.h"
 
+using namespace std;
+
 class Player {
 	// attributes
 		private:
-			std::unique_ptr<Army> playerArmy;
+			unique_ptr<Army> playerArmy;
 			unsigned int color;
-			std::string name;
+			string name;
 
 	// members
 		public:
-			Player(std::string playerName, unsigned int newColor);
+			Player(string playerName, unsigned int newColor);
 			~Player();
-			std::string getName();
+			string getName();
 			unsigned int getColor();
 			void initializeArmy(Board* gameBoard);
 		// protected
 		private:
 			void placePieces(
-				std::array<std::shared_ptr<Cell>, 8>::iterator cellStart, std::array<std::shared_ptr<Cell>, 8>::iterator cellEnd,
-				std::vector<std::shared_ptr<Piece>>::iterator pieceStart, std::vector<std::shared_ptr<Piece>>::iterator pieceEnd
+				array<shared_ptr<Cell>, 8>::iterator cellStart, array<shared_ptr<Cell>, 8>::iterator cellEnd,
+				vector<shared_ptr<Piece>>::iterator pieceStart, vector<shared_ptr<Piece>>::iterator pieceEnd
 			);
 };
