@@ -7,7 +7,11 @@
 #include "Pawn.h"
 
 // public
-	Pawn::Pawn(unsigned int* newColor) : color(newColor) {}
+	Pawn::Pawn(unsigned int newPosition, unsigned int* newColor) {
+		color = newColor;
+		position = newPosition;
+		representation = 'B';
+	}
 	Pawn::~Pawn() {}
 	char Pawn::getRepresentation() {
 		return representation;

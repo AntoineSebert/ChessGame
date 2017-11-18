@@ -7,7 +7,11 @@
 #include "king.h"
 
 // public
-	King::King(unsigned int* newColor) : color(newColor) {}
+	King::King(unsigned int newPosition, unsigned int* newColor) {
+		color = newColor;
+		position = newPosition;
+		representation = 'B';
+	}
 	King::~King() {}
 	char King::getRepresentation() {
 		return representation;

@@ -6,4 +6,4 @@
 
 #include "Piece.h"
 
-Piece::Piece() : representation('*') {}
+Piece::Piece(unsigned int newPosition, unsigned int* newColor) : representation('*'), color(newColor), position(newPosition) {}

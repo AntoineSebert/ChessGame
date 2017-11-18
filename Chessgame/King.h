@@ -11,14 +11,12 @@
 class King : public Piece {
 	// attributes
 		private:
-			unsigned int* color;
-			char representation = 'K';
 			bool hasMoved = false;
 			bool hasBeenPutInCheck = false;
 
 	// members
 		public:
-			King(unsigned int* newColor);
+			King(unsigned int newPosition, unsigned int* newColor);
 			~King();
 			char getRepresentation();
 		// protected

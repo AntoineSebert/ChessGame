@@ -7,7 +7,11 @@
 #include "Bishop.h"
 
 // public
-	Bishop::Bishop(unsigned int* newColor) : color(newColor) {}
+	Bishop::Bishop(unsigned int newPosition, unsigned int* newColor) {
+		color = newColor;
+		position = newPosition;
+		representation = 'B';
+	}
 	Bishop::~Bishop() {}
 	char Bishop::getRepresentation() {
 		return representation;

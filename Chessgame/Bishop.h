@@ -9,14 +9,9 @@
 #include "Piece.h"
 
 class Bishop : public Piece {
-	// attributes
-		private:
-			unsigned int* color;
-			char representation = 'B';
-
 	// members
 		public:
-			Bishop(unsigned int* newColor);
+			Bishop(unsigned int newPosition, unsigned int* newColor);
 			~Bishop();
 			char getRepresentation();
 		// protected

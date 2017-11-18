@@ -7,7 +7,11 @@
 #include "Queen.h"
 
 // public
-	Queen::Queen(unsigned int* newColor) : color(newColor) {}
+	Queen::Queen(unsigned int newPosition, unsigned int* newColor) {
+		color = newColor;
+		position = newPosition;
+		representation = 'B';
+	}
 	Queen::~Queen() {}
 	char Queen::getRepresentation() {
 		return representation;

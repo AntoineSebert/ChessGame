@@ -9,14 +9,9 @@
 #include "Piece.h"
 
 class Rook : public Piece {
-	// attributes
-		private:
-			unsigned int* color;
-			char representation = 'R';
-
 	// members
 		public:
-			Rook(unsigned int* newColor);
+			Rook(unsigned int newPosition, unsigned int* newColor);
 			~Rook();
 			char getRepresentation();
 		// protected

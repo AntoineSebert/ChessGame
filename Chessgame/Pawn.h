@@ -9,14 +9,9 @@
 #include "Piece.h"
 
 class Pawn : public Piece {
-	// attributes
-		private:
-			unsigned int* color;
-			char representation = 'p';
-
 	// members
 		public:
-			Pawn(unsigned int* newColor);
+			Pawn(unsigned int newPosition, unsigned int* newColor);
 			~Pawn();
 			char getRepresentation();
 		// protected

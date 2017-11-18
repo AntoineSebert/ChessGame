@@ -9,14 +9,9 @@
 #include "Piece.h"
 
 class Queen : public Piece {
-	// attributes
-		private:
-			unsigned int* color;
-			char representation = 'Q';
-
 	// members
 		public:
-			Queen(unsigned int* newColor);
+			Queen(unsigned int newPosition, unsigned int* newColor);
 			~Queen();
 			char getRepresentation();
 		// protected

@@ -7,7 +7,11 @@
 #include "Rook.h"
 
 // public
-	Rook::Rook(unsigned int* newColor) : color(newColor) {}
+	Rook::Rook(unsigned int newPosition, unsigned int* newColor) {
+		color = newColor;
+		position = newPosition;
+		representation = 'B';
+	}
 	Rook::~Rook() {}
 	char Rook::getRepresentation() {
 		return representation;

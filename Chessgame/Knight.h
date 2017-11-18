@@ -9,14 +9,9 @@
 #include "Piece.h"
 
 class Knight : public Piece {
-	// attributes
-		private:
-			unsigned int* color;
-			char representation = 'k';
-
 	// members
 		public:
-			Knight(unsigned int* newColor);
+			Knight(unsigned int newPosition, unsigned int* newColor);
 			~Knight();
 			char getRepresentation();
 		// protected

@@ -14,17 +14,14 @@ using namespace std;
 
 class Piece {
 	// attributes
-		// public
-		// protected
-		private:
+		protected:
 			char representation;
-			string position;
+			unsigned int position;
+			unsigned int* color;
 
 	// members
 		public:
 			Piece();
 			//virtual vector<Cell> const& possibleMoves() const = 0;
 			virtual char getRepresentation() = 0;
-		// protected
-		// private
 };

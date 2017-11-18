@@ -1,27 +1,34 @@
-﻿  main.cpp
-  Rook.cpp
+﻿  Rook.cpp
+c:\users\i\desktop\chessgame\chessgame\rook.cpp(10): error C2512: 'Piece' : aucun constructeur par défaut approprié disponible
+  c:\users\i\desktop\chessgame\chessgame\piece.h(15): note: voir la déclaration de 'Piece'
   Queen.cpp
-  Player.cpp
-  Piece.cpp
+c:\users\i\desktop\chessgame\chessgame\queen.cpp(10): error C2512: 'Piece' : aucun constructeur par défaut approprié disponible
+  c:\users\i\desktop\chessgame\chessgame\piece.h(15): note: voir la déclaration de 'Piece'
   Pawn.cpp
+c:\users\i\desktop\chessgame\chessgame\pawn.cpp(10): error C2512: 'Piece' : aucun constructeur par défaut approprié disponible
+  c:\users\i\desktop\chessgame\chessgame\piece.h(15): note: voir la déclaration de 'Piece'
   Knight.cpp
+c:\users\i\desktop\chessgame\chessgame\knight.cpp(10): error C2512: 'Piece' : aucun constructeur par défaut approprié disponible
+  c:\users\i\desktop\chessgame\chessgame\piece.h(15): note: voir la déclaration de 'Piece'
   King.cpp
-  Game.cpp
-  Cell.cpp
-  Board.cpp
-d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1712): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
-  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1778): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<unsigned __int64>(unsigned __int64 &&)' en cours de compilation
-          with
-          [
-              _Ty=Cell
-          ]
-  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1778): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<unsigned __int64>(unsigned __int64 &&)' en cours de compilation
-          with
-          [
-              _Ty=Cell
-          ]
-  c:\users\i\desktop\chessgame\chessgame\board.cpp(13): note: voir la référence à l'instanciation de la fonction modèle 'std::shared_ptr<Cell> std::make_shared<Cell,::size_t>(size_t &&)' en cours de compilation
+c:\users\i\desktop\chessgame\chessgame\king.cpp(10): error C2512: 'Piece' : aucun constructeur par défaut approprié disponible
+  c:\users\i\desktop\chessgame\chessgame\piece.h(15): note: voir la déclaration de 'Piece'
   Bishop.cpp
+c:\users\i\desktop\chessgame\chessgame\bishop.cpp(10): error C2512: 'Piece' : aucun constructeur par défaut approprié disponible
+  c:\users\i\desktop\chessgame\chessgame\piece.h(15): note: voir la déclaration de 'Piece'
   Army.cpp
+d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1712): error C2664: 'Bishop::Bishop(const Bishop &)' : impossible de convertir l'argument 1 de 'unsigned int *' en 'const Bishop &'
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1712): note: Raison : impossible de convertir de 'unsigned int *' en 'const Bishop'
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1712): note: Aucun constructeur n'a pu prendre le type de source, ou la résolution de la surcharge du constructeur était ambiguë
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1778): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<unsigned int*&>(unsigned int *&)' en cours de compilation
+          with
+          [
+              _Ty=Bishop
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1778): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<unsigned int*&>(unsigned int *&)' en cours de compilation
+          with
+          [
+              _Ty=Bishop
+          ]
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(13): note: voir la référence à l'instanciation de la fonction modèle 'std::shared_ptr<Bishop> std::make_shared<Bishop,unsigned int*&>(unsigned int *&)' en cours de compilation
   Génération de code en cours...
-  Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe
