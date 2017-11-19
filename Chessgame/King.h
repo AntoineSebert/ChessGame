@@ -16,7 +16,7 @@ class King : public Piece {
 
 	// members
 		public:
-			King(unsigned int newPosition, unsigned int* newColor);
+			King(unsigned int* newColor);
 			~King();
 			char getRepresentation();
 		// protected

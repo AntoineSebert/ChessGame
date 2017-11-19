@@ -11,7 +11,7 @@
 class Pawn : public Piece {
 	// members
 		public:
-			Pawn(unsigned int newPosition, unsigned int* newColor);
+			Pawn(unsigned int* newColor);
 			~Pawn();
 			char getRepresentation();
 		// protected

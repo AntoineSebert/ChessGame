@@ -11,7 +11,7 @@
 class Queen : public Piece {
 	// members
 		public:
-			Queen(unsigned int newPosition, unsigned int* newColor);
+			Queen(unsigned int* newColor);
 			~Queen();
 			char getRepresentation();
 		// protected

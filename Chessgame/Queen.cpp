@@ -7,9 +7,8 @@
 #include "Queen.h"
 
 // public
-	Queen::Queen(unsigned int newPosition, unsigned int* newColor) {
+	Queen::Queen(unsigned int* newColor) {
 		color = newColor;
-		position = newPosition;
 		representation = 'B';
 	}
 	Queen::~Queen() {}

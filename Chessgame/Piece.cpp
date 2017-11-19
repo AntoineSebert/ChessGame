@@ -6,4 +6,12 @@
 
 #include "Piece.h"
 
-Piece::Piece(unsigned int newPosition, unsigned int* newColor) : representation('*'), color(newColor), position(newPosition) {}
+Piece::Piece() {}
+
+tuple<unsigned int, unsigned int> Piece::getPosition() {
+	return position;
+}
+
+void Piece::setPosition(tuple<unsigned int, unsigned int> newPosition) {
+	position = newPosition;
+}

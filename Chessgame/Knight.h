@@ -11,7 +11,7 @@
 class Knight : public Piece {
 	// members
 		public:
-			Knight(unsigned int newPosition, unsigned int* newColor);
+			Knight(unsigned int* newColor);
 			~Knight();
 			char getRepresentation();
 		// protected

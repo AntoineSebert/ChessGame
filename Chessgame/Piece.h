@@ -8,6 +8,7 @@
 
 #include <memory>
 #include <string>
+#include <tuple>
 #include <vector>
 
 using namespace std;
@@ -16,7 +17,7 @@ class Piece {
 	// attributes
 		protected:
 			char representation;
-			unsigned int position;
+			tuple<unsigned int, unsigned int> position;
 			unsigned int* color;
 
 	// members
@@ -24,4 +25,6 @@ class Piece {
 			Piece();
 			//virtual vector<Cell> const& possibleMoves() const = 0;
 			virtual char getRepresentation() = 0;
+			tuple<unsigned int, unsigned int> getPosition();
+			void setPosition(tuple<unsigned int, unsigned int> newPosition);
 };

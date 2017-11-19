@@ -7,9 +7,8 @@
 #include "Knight.h"
 
 // public
-	Knight::Knight(unsigned int newPosition, unsigned int* newColor) {
+	Knight::Knight(unsigned int* newColor) {
 		color = newColor;
-		position = newPosition;
 		representation = 'B';
 	}
 	Knight::~Knight() {}

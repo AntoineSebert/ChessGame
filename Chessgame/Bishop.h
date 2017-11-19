@@ -11,7 +11,7 @@
 class Bishop : public Piece {
 	// members
 		public:
-			Bishop(unsigned int newPosition, unsigned int* newColor);
+			Bishop(unsigned int* newColor);
 			~Bishop();
 			char getRepresentation();
 		// protected
