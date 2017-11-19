@@ -125,6 +125,9 @@
     <ClInclude Include="json.hpp">
       <Filter>Fichiers d%27en-tête\tools</Filter>
     </ClInclude>
+    <ClInclude Include="iterator_range.hpp">
+      <Filter>Fichiers d%27en-tête\tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="TODO.txt">

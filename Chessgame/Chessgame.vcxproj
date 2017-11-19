@@ -136,6 +136,7 @@
     <ClInclude Include="gameModes.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="Interface.h" />
+    <ClInclude Include="iterator_range.hpp" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="King.h" />
     <ClInclude Include="Knight.h" />

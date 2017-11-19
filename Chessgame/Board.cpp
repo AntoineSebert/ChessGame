@@ -14,19 +14,16 @@
 		}
 	}
 	void Board::display(unsigned int turns) {
-		if (turns % 2 == 0) {
-			for (auto array : data) {
-				for (auto cell : array)
-					cell->displayContent();
-				cout << endl;
-			}
-		}
-		else {
-			for (auto it = data.rbegin(); it != data.rend(); ++it) {
-				for (auto cell : *it)
-					cell->displayContent();
-				cout << endl;
-			}
+		for (unsigned int i = 0; i < data.size() + 1; ++i)
+			cout << (i == 0 ? ' ' : (char)(i + 64));
+		cout << endl;
+		auto begin = (turns % 2 == 0 ? 0 : data.size() - 1);
+		auto end = (turns % 2 == 0 ? data.size() : -1);
+		for (; begin != end; (turns % 2 == 0 ? ++begin : --begin)) {
+			cout << begin;
+			for (shared_ptr<Cell> cell : data.at(begin))
+				cell->displayContent();
+			cout << endl;
 		}
 	}
 	array<array<shared_ptr<Cell>, 8>, 8>* Board::getData() { return &data; }

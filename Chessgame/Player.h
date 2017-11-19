@@ -36,6 +36,7 @@ class Player {
 		// protected
 		private:
 			void placePieces(
+				unsigned int rowNumber,
 				array<shared_ptr<Cell>, 8>::iterator cellStart, array<shared_ptr<Cell>, 8>::iterator cellEnd,
 				vector<shared_ptr<Piece>>::iterator pieceStart, vector<shared_ptr<Piece>>::iterator pieceEnd
 			);

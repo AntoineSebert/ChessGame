@@ -16,26 +16,18 @@
 	unsigned int Player::getColor() { return color; }
 	void Player::initializeArmy(Board* gameBoard) {
 		playerArmy = make_unique<Army>(&color);
-		if (color == 0) {
-			placePieces(
-				gameBoard->getBegin(1), gameBoard->getEnd(1),
-				playerArmy->getBegin() + 8, playerArmy->getEnd()
-			);
-			placePieces(
-				gameBoard->getBegin(0), gameBoard->getEnd(0),
-				playerArmy->getBegin(), playerArmy->getEnd() - 8
-			);
-		}
-		else {
-			placePieces(
-				gameBoard->getBegin(6), gameBoard->getEnd(6),
-				playerArmy->getBegin() + 8, playerArmy->getEnd()
-			);
-			placePieces(
-				gameBoard->getBegin(7), gameBoard->getEnd(7),
-				playerArmy->getBegin(), playerArmy->getEnd() - 8
-			);
-		}
+		unsigned int pawnRowNumber = (color == 0 ? 1 : 6);
+		unsigned int bourgeoisieRowNumber = (color == 0 ? 0 : 7);
+		placePieces(
+			pawnRowNumber,
+			gameBoard->getBegin(pawnRowNumber), gameBoard->getEnd(pawnRowNumber),
+			playerArmy->getBegin() + 8, playerArmy->getEnd()
+		);
+		placePieces(
+			bourgeoisieRowNumber,
+			gameBoard->getBegin(bourgeoisieRowNumber), gameBoard->getEnd(bourgeoisieRowNumber),
+			playerArmy->getBegin(), playerArmy->getEnd() - 8
+		);
 	}
 	void Player::play() {
 
@@ -57,12 +49,14 @@
 // protected
 // private
 	void Player::placePieces(
+		unsigned int rowNumber,
 		array<shared_ptr<Cell>, 8>::iterator cellStart, array<shared_ptr<Cell>, 8>::iterator cellEnd,
 		vector<shared_ptr<Piece>>::iterator pieceStart, vector<shared_ptr<Piece>>::iterator pieceEnd
 	) {
 		if (cellEnd - cellStart == pieceEnd - pieceStart && cellStart < cellEnd && pieceStart < pieceEnd) {
 			auto pieceIt = pieceStart;
 			for (auto it = cellStart; it < cellEnd; ++it) {
+				(*pieceIt)->setPosition(forward_as_tuple(rowNumber, distance(cellStart, it)));
 				(*it)->setPiece(*pieceIt);
 				if (pieceIt != pieceEnd)
 					++pieceIt;
