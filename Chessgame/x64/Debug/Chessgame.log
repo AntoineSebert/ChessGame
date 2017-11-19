@@ -1,29 +1,4 @@
-﻿  Rook.cpp
-  Queen.cpp
-  Piece.cpp
-  Pawn.cpp
-  Knight.cpp
-  King.cpp
-  Bishop.cpp
+﻿  Game.cpp
   Army.cpp
-  Génération de code en cours...
-  Compilation en cours...
-  main.cpp
-  Player.cpp
-  Game.cpp
-  Cell.cpp
-  Board.cpp
-d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1712): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
-  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1778): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<unsigned __int64>(unsigned __int64 &&)' en cours de compilation
-          with
-          [
-              _Ty=Cell
-          ]
-  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1778): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<unsigned __int64>(unsigned __int64 &&)' en cours de compilation
-          with
-          [
-              _Ty=Cell
-          ]
-  c:\users\i\desktop\chessgame\chessgame\board.cpp(13): note: voir la référence à l'instanciation de la fonction modèle 'std::shared_ptr<Cell> std::make_shared<Cell,::size_t>(size_t &&)' en cours de compilation
   Génération de code en cours...
   Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe

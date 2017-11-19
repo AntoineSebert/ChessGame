@@ -36,10 +36,10 @@
 	}
 	void Army::displayArmy() {
 		for (auto piece : alivePieces)
-			cout << piece.get()->getRepresentation();
+			cout << piece->getRepresentation();
 		cout << endl;
 		for (auto piece : deadPieces)
-			cout << piece.get()->getRepresentation();
+			cout << piece->getRepresentation();
 		cout << endl;
 	}
 	shared_ptr<Piece> Army::operator[](unsigned int index) {

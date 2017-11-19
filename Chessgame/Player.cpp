@@ -19,21 +19,21 @@
 		if (color == 0) {
 			placePieces(
 				gameBoard->getBegin(1), gameBoard->getEnd(1),
-				playerArmy.get()->getBegin() + 8, playerArmy.get()->getEnd()
+				playerArmy->getBegin() + 8, playerArmy->getEnd()
 			);
 			placePieces(
 				gameBoard->getBegin(0), gameBoard->getEnd(0),
-				playerArmy.get()->getBegin(), playerArmy.get()->getEnd() - 8
+				playerArmy->getBegin(), playerArmy->getEnd() - 8
 			);
 		}
 		else {
 			placePieces(
 				gameBoard->getBegin(6), gameBoard->getEnd(6),
-				playerArmy.get()->getBegin() + 8, playerArmy.get()->getEnd()
+				playerArmy->getBegin() + 8, playerArmy->getEnd()
 			);
 			placePieces(
 				gameBoard->getBegin(7), gameBoard->getEnd(7),
-				playerArmy.get()->getBegin(), playerArmy.get()->getEnd() - 8
+				playerArmy->getBegin(), playerArmy->getEnd() - 8
 			);
 		}
 	}

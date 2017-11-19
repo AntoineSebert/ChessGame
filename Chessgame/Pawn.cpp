@@ -9,7 +9,7 @@
 // public
 	Pawn::Pawn(unsigned int* newColor) {
 		color = newColor;
-		representation = 'B';
+		representation = 'p';
 	}
 	Pawn::~Pawn() {}
 	char Pawn::getRepresentation() {

@@ -9,7 +9,7 @@
 // public
 	Knight::Knight(unsigned int* newColor) {
 		color = newColor;
-		representation = 'B';
+		representation = 'k';
 	}
 	Knight::~Knight() {}
 	char Knight::getRepresentation() {

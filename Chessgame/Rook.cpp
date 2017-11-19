@@ -9,7 +9,7 @@
 // public
 	Rook::Rook(unsigned int* newColor) {
 		color = newColor;
-		representation = 'B';
+		representation = 'R';
 	}
 	Rook::~Rook() {}
 	char Rook::getRepresentation() {

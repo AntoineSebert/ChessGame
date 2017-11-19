@@ -35,7 +35,7 @@
 		return false;
 	}
 	void Game::selectPlayerToPlay(unsigned int turns) {
-		players.at(turns % players.size()).get()->play();
+		players.at(turns % players.size())->play();
 	}
 	// préparation
 		gameModes Game::setGameModes() {
@@ -106,5 +106,5 @@
 		}
 		void Game::initializeArmies() {
 			for (unsigned int i = 0; i < players.size(); ++i)
-				players.at(i).get()->initializeArmy(gameBoard);
+				players.at(i)->initializeArmy(gameBoard);
 		}

@@ -9,7 +9,7 @@
 // public
 	King::King(unsigned int* newColor) {
 		color = newColor;
-		representation = 'B';
+		representation = 'K';
 	}
 	King::~King() {}
 	char King::getRepresentation() {

@@ -9,7 +9,7 @@
 // public
 	Queen::Queen(unsigned int* newColor) {
 		color = newColor;
-		representation = 'B';
+		representation = 'Q';
 	}
 	Queen::~Queen() {}
 	char Queen::getRepresentation() {
