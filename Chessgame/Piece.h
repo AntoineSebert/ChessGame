@@ -18,7 +18,7 @@ class Piece {
 		protected:
 			char representation;
 			tuple<unsigned int, unsigned int> position;
-			unsigned int* color;
+			unsigned int* color = nullptr;
 
 	// members
 		public:

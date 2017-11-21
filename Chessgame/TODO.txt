@@ -1,9 +1,10 @@
 prendre en compte la taille max des conteneurs lors du remplissage par des boucles
 passer couleurs joueurs/pièces/armées en smart pointers
 virer les // inutiles dans les classes
+import/export partie
+replay partie
 
-proc
-
+proc :
 tant que pas sélectionné de pièce, ne rien faire
 	quand pièce sélectionnée, montrer coups possibles
 	choix coup ou désélection pièce ou sélection autre pièce

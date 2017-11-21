@@ -6,3 +6,17 @@
 
 #pragma once
 
+#include <iterator>
+
+template<typename T> struct iterator_range {
+	// attributes
+		private:
+			T::iterator first;
+			T::iterator second;
+
+	// membres
+		public:
+			iterator_range(T::iterator newFirst, T::iterator newSecond) : first(newFirst), second(newSecond);
+			T::iterator first();
+			T::iterator second();
+};

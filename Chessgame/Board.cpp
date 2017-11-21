@@ -33,7 +33,7 @@
 	array<shared_ptr<Cell>, 8>::iterator Board::getBegin(unsigned int index) { return data.at(index).begin(); }
 	array<array<shared_ptr<Cell>, 8>, 8>::iterator Board::getEnd() { return data.end(); }
 	array<shared_ptr<Cell>, 8>::iterator Board::getEnd(unsigned int index) { return data.at(index).end(); }
-	// protected
+// protected
 // private
 	Board::Board() {}
 	Board::~Board() {}

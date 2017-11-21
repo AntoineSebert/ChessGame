@@ -52,7 +52,7 @@
 			initializePlayersNames(&names);
 			unsigned int firstToPlayIndex = setWhoPlaysFirst(&names);
 			for (unsigned int i = 0; i < players.size(); ++i)
-				players[i] = make_shared<Player>(names[i], (i == firstToPlayIndex ? 0 : 1));
+				players[i] = make_shared<Player>(names[i], (i == firstToPlayIndex ? 0 : 1), gameInterface);
 			firstToPlay = players[firstToPlayIndex];
 		}
 		void Game::initializePlayersNames(array<string, 2>* names) {

@@ -13,6 +13,8 @@
 
 #include "Army.h"
 #include "Board.h"
+#include "Interface.h"
+#include "Piece.h"
 
 using namespace std;
 
@@ -22,17 +24,19 @@ class Player {
 			unique_ptr<Army> playerArmy;
 			unsigned int color;
 			string name;
+			Interface* gameInterface = nullptr;
+			weak_ptr<Piece> selectedPiece;
 
 	// members
 		public:
-			Player(string playerName, unsigned int newColor);
+			Player(string playerName, unsigned int newColor, Interface* newGameInterface);
 			~Player();
 			string getName();
 			unsigned int getColor();
 			void initializeArmy(Board* gameBoard);
 			void play();
-			void selectPiece(unsigned int x, char y);
-			void movePiece(unsigned int x, char y);
+			void selectPiece(unsigned int number);
+			void movePiece(unsigned int number);
 		// protected
 		private:
 			void placePieces(
@@ -40,4 +44,5 @@ class Player {
 				array<shared_ptr<Cell>, 8>::iterator cellStart, array<shared_ptr<Cell>, 8>::iterator cellEnd,
 				vector<shared_ptr<Piece>>::iterator pieceStart, vector<shared_ptr<Piece>>::iterator pieceEnd
 			);
+			vector<unsigned int> possibleMoves(shared_ptr<Piece>);
 };

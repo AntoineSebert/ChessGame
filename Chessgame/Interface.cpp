@@ -20,18 +20,18 @@
 	string Interface::alphanumericalChoice(vector<string>* labels) {
 		displayLabels(labels);
 		// put this fucking constant in a header file
-		return getStringInput(32);
+		return getStringInput(16);
 	}
 // protected
 // private
 	Interface::Interface() {}
 	Interface::~Interface() {}
-	void Interface::displayLabels(vector<string>* labels) {
+	void Interface::displayLabels(vector<string>* labels, unsigned int rows) {
 		for (auto it = labels->begin(); it != labels->end(); ++it) {
 			cout << ' ';
 			if (*it != labels->front())
 				cout << it - labels->begin() << " - ";
-			cout << *it << endl << endl;
+			cout << *it << endl;
 		}
 	}
 	// first level input

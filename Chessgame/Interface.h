@@ -6,30 +6,26 @@
 
 #pragma once
 
-#include <functional>
 #include <iostream>
 #include <string>
 #include <vector>
 
 #include "Singleton.h"
+#include "Piece.h"
 
 using namespace std;
 
 class Interface : public Singleton<Interface> {
 	friend class Singleton<Interface>;
-	// attributes
-		// private
-
 	// members
 		public:
 			unsigned int numberChoice(vector<string>* labels, unsigned int firstBound, unsigned int secondBound = 0);
 			bool booleanChoice(vector<string>* labels);
 			string alphanumericalChoice(vector<string>* labels);
-		// protected
 		private:
 			Interface();
 			~Interface();
-			void displayLabels(vector<string>* labels);
+			void displayLabels(vector<string>* labels, unsigned int rows = 0);
 			// first level input
 				unsigned int getNumberInput(unsigned int firstBound, unsigned int secondBound = 0);
 				bool getBooleanInput();

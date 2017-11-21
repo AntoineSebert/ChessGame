@@ -7,10 +7,7 @@
 #include "Player.h"
 
 // public
-	Player::Player(string playerName, unsigned int newColor) {
-		name = playerName;
-		color = newColor;
-	}
+	Player::Player(string playerName, unsigned int newColor, Interface* newGameInterface) : name(playerName), color(newColor), gameInterface(newGameInterface) {}
 	Player::~Player() {}
 	string Player::getName() { return name; }
 	unsigned int Player::getColor() { return color; }
@@ -30,20 +27,27 @@
 		);
 	}
 	void Player::play() {
-
-		selectPiece(3, 'A');
-		/*
+		vector<string> labels;
+		unsigned int moveChoice;
 		do {
-			//string input =
-		} while ();
-		*/
-		movePiece(3, 'A');
+			labels = { "Chosse a piece to select" };
+			for (shared_ptr<Piece> piece : *playerArmy->getArmyContainer())
+				labels.push_back(
+					to_string(get<0>(piece->getPosition())) + (char)(get<1>(piece->getPosition()) + 65)
+				);
+			selectPiece(gameInterface->numberChoice(&labels, labels.size() - 1));
+			labels = { "Chosse a move or deselect piece" };
+			// for
+			labels.push_back("Deselect");
+			moveChoice = gameInterface->numberChoice(&labels, labels.size() - 1);
+		} while (moveChoice < labels.size() - 2);
+		movePiece(moveChoice);
+		selectedPiece.reset();
 	}
-	void Player::selectPiece(unsigned int x, char y) {
-		string test;
-		cin >> test;
+	void Player::selectPiece(unsigned int number) {
+		selectedPiece = (*playerArmy)[number];
 	}
-	void Player::movePiece(unsigned int x, char y) {
+	void Player::movePiece(unsigned int number) {
 
 	}
 // protected
