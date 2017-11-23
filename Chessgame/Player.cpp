@@ -37,6 +37,7 @@
 				);
 			selectPiece(gameInterface->numberChoice(&labels, labels.size() - 1));
 			labels = { "Chosse a move or deselect piece" };
+			possibleMoves(selectedPiece);
 			// for
 			labels.push_back("Deselect");
 			moveChoice = gameInterface->numberChoice(&labels, labels.size() - 1);
@@ -71,4 +72,9 @@
 			cout << cellEnd - cellStart << ' ' << pieceEnd - pieceStart << endl;
 			cout << *cellEnd << ':' << *cellStart << ' ' << *pieceEnd << ':' << *pieceStart << endl;
 		}
+	}
+
+	vector<unsigned int> Player::possibleMoves(weak_ptr<Piece> piece) {
+		//for 
+		return vector<unsigned int>();
 	}

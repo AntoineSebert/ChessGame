@@ -1,2 +1,244 @@
-﻿  Interface.cpp
-  Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe
+﻿  Player.cpp
+c:\users\i\desktop\chessgame\chessgame\player.cpp(38): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\i\desktop\chessgame\chessgame\player.cpp(43): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(158): warning C4244: 'initialisation' : conversion de '__int64' en 'unsigned int', perte possible de données
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(278): note: voir la référence à l'instanciation de la fonction modèle 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' en cours de compilation
+          with
+          [
+              _This=unsigned int,
+              _Ty=__int64,
+              _Other=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(277): note: voir la référence à l'instanciation de la fonction modèle 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' en cours de compilation
+          with
+          [
+              _This=unsigned int,
+              _Ty=__int64,
+              _Other=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(278): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int>::tuple<std::_Exact_args_t,_Ty,,0>(_Tag,_This2 &&)' en cours de compilation
+          with
+          [
+              _Ty=__int64,
+              _Tag=std::_Exact_args_t,
+              _This2=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(276): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int>::tuple<std::_Exact_args_t,_Ty,,0>(_Tag,_This2 &&)' en cours de compilation
+          with
+          [
+              _Ty=__int64,
+              _Tag=std::_Exact_args_t,
+              _This2=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(842): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Exact_args_t,unsigned int&,__int64,0>(_Tag,_This2,__int64 &&)' en cours de compilation
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=unsigned int &
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(841): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Exact_args_t,unsigned int&,__int64,0>(_Tag,_This2,__int64 &&)' en cours de compilation
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=unsigned int &
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(293): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,_Ty,0,1,0>(_Tag,_Tpl &&,std::integer_sequence<unsigned __int64,0,1>)' en cours de compilation
+          with
+          [
+              _Ty=std::tuple<unsigned int &,__int64 &&>,
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<unsigned int &,__int64 &&>
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(291): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,_Ty,0,1,0>(_Tag,_Tpl &&,std::integer_sequence<unsigned __int64,0,1>)' en cours de compilation
+          with
+          [
+              _Ty=std::tuple<unsigned int &,__int64 &&>,
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<unsigned int &,__int64 &&>
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(453): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,std::tuple<unsigned int &,__int64 &&>,0>(_Tag,_Tpl &&)' en cours de compilation
+          with
+          [
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<unsigned int &,__int64 &&>
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(452): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,std::tuple<unsigned int &,__int64 &&>,0>(_Tag,_Tpl &&)' en cours de compilation
+          with
+          [
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<unsigned int &,__int64 &&>
+          ]
+  c:\users\i\desktop\chessgame\chessgame\player.cpp(64): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<unsigned int&,__int64&&,0,0>(std::tuple<unsigned int &,__int64 &&> &&)' en cours de compilation
+  c:\users\i\desktop\chessgame\chessgame\player.cpp(64): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<unsigned int&,__int64&&,0,0>(std::tuple<unsigned int &,__int64 &&> &&)' en cours de compilation
+  Génération de code en cours...
+  Compilation en cours...
+  main.cpp
+  Rook.cpp
+  Queen.cpp
+  Piece.cpp
+  Pawn.cpp
+  Knight.cpp
+  King.cpp
+  Interface.cpp
+  Game.cpp
+  Cell.cpp
+  Board.cpp
+d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1712): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1778): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<unsigned __int64>(unsigned __int64 &&)' en cours de compilation
+          with
+          [
+              _Ty=Cell
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\memory(1778): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<unsigned __int64>(unsigned __int64 &&)' en cours de compilation
+          with
+          [
+              _Ty=Cell
+          ]
+  c:\users\i\desktop\chessgame\chessgame\board.cpp(13): note: voir la référence à l'instanciation de la fonction modèle 'std::shared_ptr<Cell> std::make_shared<Cell,::size_t>(size_t &&)' en cours de compilation
+  Bishop.cpp
+  Army.cpp
+c:\users\i\desktop\chessgame\chessgame\army.h(26): error C2065: 'shared_ptr' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.h(26): error C2275: 'Piece' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\piece.h(16): note: voir la déclaration de 'Piece'
+c:\users\i\desktop\chessgame\chessgame\army.h(26): error C2974: 'std::vector' : argument modèle non valide pour '_Ty', type attendu
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vector(659): note: voir la déclaration de 'std::vector'
+c:\users\i\desktop\chessgame\chessgame\army.h(26): error C3203: 'allocator' : la classe modèle non spécialisée ne peut pas être utilisée comme argument modèle pour le paramètre modèle '_Alloc' ; type réel attendu
+c:\users\i\desktop\chessgame\chessgame\army.h(26): error C2059: erreur de syntaxe : '>'
+c:\users\i\desktop\chessgame\chessgame\army.h(26): error C2238: jetons inattendus avant ';'
+c:\users\i\desktop\chessgame\chessgame\army.h(27): error C2065: 'shared_ptr' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.h(27): error C2275: 'Piece' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\piece.h(16): note: voir la déclaration de 'Piece'
+c:\users\i\desktop\chessgame\chessgame\army.h(27): error C2974: 'std::vector' : argument modèle non valide pour '_Ty', type attendu
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vector(659): note: voir la déclaration de 'std::vector'
+c:\users\i\desktop\chessgame\chessgame\army.h(27): error C3203: 'allocator' : la classe modèle non spécialisée ne peut pas être utilisée comme argument modèle pour le paramètre modèle '_Alloc' ; type réel attendu
+c:\users\i\desktop\chessgame\chessgame\army.h(27): error C2059: erreur de syntaxe : '>'
+c:\users\i\desktop\chessgame\chessgame\army.h(27): error C2238: jetons inattendus avant ';'
+c:\users\i\desktop\chessgame\chessgame\army.h(34): error C2065: 'shared_ptr' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.h(34): error C2275: 'Piece' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\piece.h(16): note: voir la déclaration de 'Piece'
+c:\users\i\desktop\chessgame\chessgame\army.h(34): error C2974: 'std::vector' : argument modèle non valide pour '_Ty', type attendu
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vector(659): note: voir la déclaration de 'std::vector'
+c:\users\i\desktop\chessgame\chessgame\army.h(34): error C3203: 'allocator' : la classe modèle non spécialisée ne peut pas être utilisée comme argument modèle pour le paramètre modèle '_Alloc' ; type réel attendu
+c:\users\i\desktop\chessgame\chessgame\army.h(34): error C2059: erreur de syntaxe : '>'
+c:\users\i\desktop\chessgame\chessgame\army.h(34): error C2238: jetons inattendus avant ';'
+c:\users\i\desktop\chessgame\chessgame\army.h(37): error C2143: erreur de syntaxe : absence de ';' avant '<'
+c:\users\i\desktop\chessgame\chessgame\army.h(37): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+c:\users\i\desktop\chessgame\chessgame\army.h(37): error C2238: jetons inattendus avant ';'
+c:\users\i\desktop\chessgame\chessgame\army.h(38): error C2065: 'shared_ptr' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.h(38): error C2275: 'Piece' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\piece.h(16): note: voir la déclaration de 'Piece'
+c:\users\i\desktop\chessgame\chessgame\army.h(38): error C2974: 'std::vector' : argument modèle non valide pour '_Ty', type attendu
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vector(659): note: voir la déclaration de 'std::vector'
+c:\users\i\desktop\chessgame\chessgame\army.h(38): error C3203: 'allocator' : la classe modèle non spécialisée ne peut pas être utilisée comme argument modèle pour le paramètre modèle '_Alloc' ; type réel attendu
+c:\users\i\desktop\chessgame\chessgame\army.h(38): error C2059: erreur de syntaxe : '>'
+c:\users\i\desktop\chessgame\chessgame\army.h(38): error C2238: jetons inattendus avant ';'
+c:\users\i\desktop\chessgame\chessgame\army.h(39): error C2065: 'shared_ptr' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.h(39): error C2275: 'Piece' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\piece.h(16): note: voir la déclaration de 'Piece'
+c:\users\i\desktop\chessgame\chessgame\army.h(39): error C2974: 'std::vector' : argument modèle non valide pour '_Ty', type attendu
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vector(659): note: voir la déclaration de 'std::vector'
+c:\users\i\desktop\chessgame\chessgame\army.h(39): error C3203: 'allocator' : la classe modèle non spécialisée ne peut pas être utilisée comme argument modèle pour le paramètre modèle '_Alloc' ; type réel attendu
+c:\users\i\desktop\chessgame\chessgame\army.h(39): error C2059: erreur de syntaxe : '>'
+c:\users\i\desktop\chessgame\chessgame\army.h(39): error C2238: jetons inattendus avant ';'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(11): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(11): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(11): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(11): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(11): error C2275: 'Rook' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\rook.h(11): note: voir la déclaration de 'Rook'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(12): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(12): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(12): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(12): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(12): error C2275: 'Knight' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\knight.h(11): note: voir la déclaration de 'Knight'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(13): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(13): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(13): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(13): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(13): error C2275: 'Bishop' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\bishop.h(11): note: voir la déclaration de 'Bishop'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(16): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(16): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(16): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(16): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(16): error C2275: 'Queen' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\queen.h(11): note: voir la déclaration de 'Queen'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(17): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(17): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(17): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(17): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(17): error C2275: 'King' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\king.h(11): note: voir la déclaration de 'King'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(21): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(21): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(21): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(21): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(21): error C2275: 'King' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\king.h(11): note: voir la déclaration de 'King'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(22): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(22): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(22): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(22): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(22): error C2275: 'Queen' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\queen.h(11): note: voir la déclaration de 'Queen'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(24): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(24): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(24): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(24): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(24): error C2275: 'Bishop' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\bishop.h(11): note: voir la déclaration de 'Bishop'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(25): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(25): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(25): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(25): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(25): error C2275: 'Knight' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\knight.h(11): note: voir la déclaration de 'Knight'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(26): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(26): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(26): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(26): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(26): error C2275: 'Rook' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\rook.h(11): note: voir la déclaration de 'Rook'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(28): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(28): error C2228: la partie gauche de '.push_back' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(28): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(28): error C2065: 'make_shared' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(28): error C2275: 'Pawn' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\pawn.h(11): note: voir la déclaration de 'Pawn'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(31): error C2065: 'shared_ptr' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(31): error C2275: 'Piece' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\piece.h(16): note: voir la déclaration de 'Piece'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(31): error C2974: 'std::vector' : argument modèle non valide pour '_Ty', type attendu
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vector(659): note: voir la déclaration de 'std::vector'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(31): error C3203: 'allocator' : la classe modèle non spécialisée ne peut pas être utilisée comme argument modèle pour le paramètre modèle '_Alloc' ; type réel attendu
+c:\users\i\desktop\chessgame\chessgame\army.cpp(31): error C2059: erreur de syntaxe : '>'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(31): error C2039: 'getArmyContainer' : n'est pas membre de 'Army'
+  c:\users\i\desktop\chessgame\chessgame\army.h(23): note: voir la déclaration de 'Army'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(31): error C2143: erreur de syntaxe : absence de ';' avant '{'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(31): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+c:\users\i\desktop\chessgame\chessgame\army.cpp(35): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(35): error C2228: la partie gauche de '.size' doit avoir un class/struct/union
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(35): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(38): error C2065: 'alivePieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(39): error C3312: aucune fonction 'begin' pouvant être appelée n'a été trouvée pour le type 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(39): error C3312: aucune fonction 'end' pouvant être appelée n'a été trouvée pour le type 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(39): error C2065: 'piece' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(39): error C2227: la partie gauche de '->getRepresentation' doit pointer vers un type class/struct/union/générique
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(39): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(41): error C2065: 'deadPieces' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(42): error C3312: aucune fonction 'begin' pouvant être appelée n'a été trouvée pour le type 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(42): error C3312: aucune fonction 'end' pouvant être appelée n'a été trouvée pour le type 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(42): error C2065: 'piece' : identificateur non déclaré
+c:\users\i\desktop\chessgame\chessgame\army.cpp(42): error C2227: la partie gauche de '->getRepresentation' doit pointer vers un type class/struct/union/générique
+  c:\users\i\desktop\chessgame\chessgame\army.cpp(42): note: le type est 'unknown-type'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(45): error C2143: erreur de syntaxe : absence de ';' avant '<'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(45): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+c:\users\i\desktop\chessgame\chessgame\army.cpp(45): error C2039: '[]' : n'est pas membre de 'Army'
+  c:\users\i\desktop\chessgame\chessgame\army.h(23): note: voir la déclaration de 'Army'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(45): error C2143: erreur de syntaxe : absence de ';' avant '{'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(45): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+c:\users\i\desktop\chessgame\chessgame\army.cpp(48): error C2275: 'Piece' : utilisation non conforme de ce type comme expression
+  c:\users\i\desktop\chessgame\chessgame\piece.h(16): note: voir la déclaration de 'Piece'
+c:\users\i\desktop\chessgame\chessgame\army.cpp(48): fatal error C1003: le nombre d'erreurs est supérieur à 100 ; arrêt de la compilation
+  Génération de code en cours...

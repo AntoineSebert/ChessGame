@@ -44,5 +44,5 @@ class Player {
 				array<shared_ptr<Cell>, 8>::iterator cellStart, array<shared_ptr<Cell>, 8>::iterator cellEnd,
 				vector<shared_ptr<Piece>>::iterator pieceStart, vector<shared_ptr<Piece>>::iterator pieceEnd
 			);
-			vector<unsigned int> possibleMoves(shared_ptr<Piece>);
+			vector<unsigned int> possibleMoves(weak_ptr<Piece> piece);
 };

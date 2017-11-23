@@ -9,6 +9,7 @@
 #include <array>
 #include <iostream>
 #include <iterator>
+#include <memory>
 
 #include "Piece.h"
 #include "Bishop.h"

@@ -6,8 +6,8 @@
 
 #pragma once
 
-#include <memory>
 #include <string>
+#include <functional>
 #include <tuple>
 #include <vector>
 
@@ -23,7 +23,7 @@ class Piece {
 	// members
 		public:
 			Piece();
-			//virtual vector<Cell> const& possibleMoves() const = 0;
+			virtual vector<function<unsigned int(unsigned int)>> const& movement() const = 0;
 			virtual char getRepresentation() = 0;
 			tuple<unsigned int, unsigned int> getPosition();
 			void setPosition(tuple<unsigned int, unsigned int> newPosition);
