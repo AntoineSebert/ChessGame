@@ -14,6 +14,5 @@ class Knight : public Piece {
 			Knight(unsigned int* newColor);
 			~Knight();
 			char getRepresentation();
-		// protected
-		// private
+			vector<tuple<unsigned int, unsigned int>> const movement() const;
 };

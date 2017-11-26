@@ -15,5 +15,6 @@
 	char Rook::getRepresentation() {
 		return representation;
 	}
-// protected
-// private
+	vector<tuple<unsigned int, unsigned int>> const Rook::movement() const {
+		return const_cast<vector<tuple<unsigned int, unsigned int>>&>(linesPositions());
+	}

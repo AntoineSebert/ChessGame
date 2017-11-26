@@ -15,5 +15,8 @@
 	char Bishop::getRepresentation() {
 		return representation;
 	}
+	vector<tuple<unsigned int, unsigned int>> const Bishop::movement() const {
+		return vector<tuple<unsigned int, unsigned int>>();
+	}
 // protected
 // private

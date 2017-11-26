@@ -15,5 +15,8 @@
 	char King::getRepresentation() {
 		return representation;
 	}
+	vector<tuple<unsigned int, unsigned int>> const King::movement() const {
+		return vector<tuple<unsigned int, unsigned int>>();
+	}
 // protected
 // private

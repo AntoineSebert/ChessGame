@@ -23,8 +23,10 @@ class Piece {
 	// members
 		public:
 			Piece();
-			virtual vector<function<unsigned int(unsigned int)>> const& movement() const = 0;
+			virtual vector<tuple<unsigned int, unsigned int>> const movement() const = 0;
 			virtual char getRepresentation() = 0;
 			tuple<unsigned int, unsigned int> getPosition();
 			void setPosition(tuple<unsigned int, unsigned int> newPosition);
+		protected:
+			vector<tuple<unsigned int, unsigned int>> const& linesPositions() const;
 };

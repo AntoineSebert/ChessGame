@@ -15,5 +15,8 @@
 	char Pawn::getRepresentation() {
 		return representation;
 	}
+	vector<tuple<unsigned int, unsigned int>> const Pawn::movement() const {
+		return vector<tuple<unsigned int, unsigned int>>();
+	}
 // protected
 // private

@@ -26,27 +26,28 @@
 			playerArmy->getBegin(), playerArmy->getEnd() - 8
 		);
 	}
-	void Player::play() {
+	void Player::play(Board* gameBoard) {
 		vector<string> labels;
 		unsigned int moveChoice;
 		do {
 			labels = { "Chosse a piece to select" };
 			for (shared_ptr<Piece> piece : *playerArmy->getArmyContainer())
 				labels.push_back(
-					to_string(get<0>(piece->getPosition())) + (char)(get<1>(piece->getPosition()) + 65)
+					(char)(get<0>(piece->getPosition()) + 65) + to_string(get<1>(piece->getPosition()))
 				);
-			selectPiece(gameInterface->numberChoice(&labels, labels.size() - 1));
+			selectPiece(gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1));
 			labels = { "Chosse a move or deselect piece" };
 			possibleMoves(selectedPiece);
 			// for
 			labels.push_back("Deselect");
-			moveChoice = gameInterface->numberChoice(&labels, labels.size() - 1);
+			moveChoice = gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
 		} while (moveChoice < labels.size() - 2);
 		movePiece(moveChoice);
 		selectedPiece.reset();
 	}
 	void Player::selectPiece(unsigned int number) {
 		selectedPiece = (*playerArmy)[number];
+		cout << selectedPiece._Get()->getRepresentation() << endl;
 	}
 	void Player::movePiece(unsigned int number) {
 
@@ -61,7 +62,7 @@
 		if (cellEnd - cellStart == pieceEnd - pieceStart && cellStart < cellEnd && pieceStart < pieceEnd) {
 			auto pieceIt = pieceStart;
 			for (auto it = cellStart; it < cellEnd; ++it) {
-				(*pieceIt)->setPosition(forward_as_tuple(rowNumber, distance(cellStart, it)));
+				(*pieceIt)->setPosition(forward_as_tuple(distance(cellStart, it), rowNumber));
 				(*it)->setPiece(*pieceIt);
 				if (pieceIt != pieceEnd)
 					++pieceIt;
@@ -73,8 +74,15 @@
 			cout << *cellEnd << ':' << *cellStart << ' ' << *pieceEnd << ':' << *pieceStart << endl;
 		}
 	}
-
 	vector<unsigned int> Player::possibleMoves(weak_ptr<Piece> piece) {
-		//for 
+		/*
+
+		switch (typeid(piece).name()) {
+
+		}
+		*/
+		//for
+		for (tuple<unsigned int, unsigned int> move : piece._Get()->movement())
+			cout << (char)(get<0>(move) + 65) << ':' << get<1>(move) << endl;
 		return vector<unsigned int>();
 	}

@@ -9,11 +9,14 @@
 #include "Piece.h"
 
 class Pawn : public Piece {
+	// attributes
+		private:
+			bool hasMoved = false;
+
 	// members
 		public:
 			Pawn(unsigned int* newColor);
 			~Pawn();
 			char getRepresentation();
-		// protected
-		// private
+			vector<tuple<unsigned int, unsigned int>> const movement() const;
 };

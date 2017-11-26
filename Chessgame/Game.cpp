@@ -24,7 +24,7 @@
 	Game::Game() {}
 	Game::~Game() {}
 	void Game::gameLoop() {
-		while (turns < 5 || isGameFinished()) {
+		while (turns < 3 || isGameFinished()) {
 			++turns;
 			gameBoard->display(turns);
 			selectPlayerToPlay(turns);
@@ -35,7 +35,7 @@
 		return false;
 	}
 	void Game::selectPlayerToPlay(unsigned int turns) {
-		players.at(turns % players.size())->play();
+		players.at(turns % players.size())->play(gameBoard);
 	}
 	// préparation
 		gameModes Game::setGameModes() {

@@ -14,6 +14,5 @@ class Queen : public Piece {
 			Queen(unsigned int* newColor);
 			~Queen();
 			char getRepresentation();
-		// protected
-		// private
+			vector<tuple<unsigned int, unsigned int>> const movement() const;
 };

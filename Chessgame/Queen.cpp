@@ -15,5 +15,27 @@
 	char Queen::getRepresentation() {
 		return representation;
 	}
+	vector<tuple<unsigned int, unsigned int>> const Queen::movement() const {
+		vector<tuple<unsigned int, unsigned int>> moves;
+		vector<tuple<unsigned int, unsigned int>> temp = const_cast<vector<tuple<unsigned int, unsigned int>>&>(linesPositions());
+		moves.reserve(moves.size() + temp.size());
+		std::move(temp.begin(), temp.end(), std::back_inserter(moves));
+
+		unsigned int i;
+		unsigned int ii;
+		// bottom left
+			i = (get<0>(position) < get<1>(position) ? get<0>(position) : get<1>(position));
+			ii = (get<0>(position) >= get<1>(position) ? get<0>(position) : get<1>(position));
+			for (; 0 < i;)
+				moves.push_back((get<0>(position) < get<1>(position) ? make_tuple(--i, --ii) : make_tuple(--ii, --i)));
+		// bottom right
+		// top left
+		// top right
+			i = (get<0>(position) < get<1>(position) ? get<1>(position) : get<0>(position));
+			ii = (get<0>(position) >= get<1>(position) ? get<1>(position) : get<0>(position));
+			for (; i < 7;)
+				moves.push_back((get<0>(position) < get<1>(position) ? make_tuple(++ii, ++i) : make_tuple(++i, ++ii)));
+		return moves;
+	}
 // protected
 // private

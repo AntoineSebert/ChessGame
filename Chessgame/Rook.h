@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <iostream>
+
 #include "Piece.h"
 
 class Rook : public Piece {
@@ -14,6 +16,5 @@ class Rook : public Piece {
 			Rook(unsigned int* newColor);
 			~Rook();
 			char getRepresentation();
-		// protected
-		// private
+			vector<tuple<unsigned int, unsigned int>> const movement() const;
 };
