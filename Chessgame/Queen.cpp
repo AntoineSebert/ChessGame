@@ -17,7 +17,7 @@
 	}
 	vector<tuple<unsigned int, unsigned int>> const Queen::movement() const {
 		vector<tuple<unsigned int, unsigned int>> moves;
-		vector<tuple<unsigned int, unsigned int>> temp = const_cast<vector<tuple<unsigned int, unsigned int>>&>(linesPositions());
+		vector<tuple<unsigned int, unsigned int>> temp = linesPositions()/* const_cast<vector<tuple<unsigned int, unsigned int>>&>(linesPositions())*/;
 		moves.reserve(moves.size() + temp.size());
 		std::move(temp.begin(), temp.end(), std::back_inserter(moves));
 
