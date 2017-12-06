@@ -45,7 +45,7 @@
 				"PVE",
 				"EVE"
 			};
-			return (gameModes)gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
+			return (gameModes)gameInterface->choiceMenu(&labels);
 		}
 		void Game::initializePlayers() {
 			array<string, 2> names;

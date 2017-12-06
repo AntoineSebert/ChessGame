@@ -22,6 +22,10 @@
 		// put this fucking constant in a header file
 		return getStringInput(16);
 	}
+	unsigned int Interface::choiceMenu(vector<string>* labels) {
+		
+		return 0;
+	}
 // protected
 // private
 	Interface::Interface() {}
@@ -33,6 +37,9 @@
 				cout << it - labels->begin() << " - ";
 			cout << *it << endl;
 		}
+	}
+	void Interface::drawSquareButton(string text) {
+		glutDisplayFunc(drawRectangle);
 	}
 	// first level input
 		unsigned int Interface::getNumberInput(unsigned int firstBound, unsigned int secondBound) {

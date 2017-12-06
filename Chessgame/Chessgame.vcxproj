@@ -139,6 +139,7 @@
     <ClInclude Include="difficulties.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="gameModes.h" />
+    <ClInclude Include="glut.hpp" />
     <ClInclude Include="header.h" />
     <ClInclude Include="Interface.h" />
     <ClInclude Include="iterator_range.hpp" />

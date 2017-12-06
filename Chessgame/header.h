@@ -6,8 +6,9 @@
 
 #pragma once
 
-#include <iostream>
+#include <utility>
 #include <GL\glew.h>
 #include <GL\freeglut.h>
 
 #include "Game.h"
+#include "glut.hpp"

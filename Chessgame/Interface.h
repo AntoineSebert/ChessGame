@@ -9,9 +9,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <GL\glew.h>
+#include <GL\freeglut.h>
 
 #include "Singleton.h"
 #include "Piece.h"
+#include "glut.hpp"
 
 using namespace std;
 
@@ -22,10 +25,12 @@ class Interface : public Singleton<Interface> {
 			unsigned int numberChoice(vector<string>* labels, unsigned int firstBound, unsigned int secondBound = 0);
 			bool booleanChoice(vector<string>* labels);
 			string alphanumericalChoice(vector<string>* labels);
+			unsigned int choiceMenu(vector<string>* labels);
 		private:
 			Interface();
 			~Interface();
 			void displayLabels(vector<string>* labels, unsigned int rows = 0);
+			void drawSquareButton(string text);
 			// first level input
 				unsigned int getNumberInput(unsigned int firstBound, unsigned int secondBound = 0);
 				bool getBooleanInput();

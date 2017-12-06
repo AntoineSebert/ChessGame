@@ -6,31 +6,28 @@
 
 #include "header.h"
 
-void displayMe(void) {
-	glClear(GL_COLOR_BUFFER_BIT);
-	glBegin(GL_POLYGON);
-	glVertex2f(0.0, 0.0);
-	glVertex2f(0.5, 0.0);
-	glVertex2f(0.5, 0.5);
-	glVertex2f(0.0, 0.5);
-	glEnd();
-	glFlush();
+void display(void) {
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //Efface le frame buffer et le Z-buffer
+	glMatrixMode(GL_MODELVIEW); //Choisit la matrice MODELVIEW
+	glLoadIdentity(); //Réinitialise la matrice
+	gluLookAt(0, 0, -10, 0, 0, 0, 0, 1, 0);
+	//drawTriangle(std::forward_as_tuple(0, 1), std::forward_as_tuple(-1, 0), std::forward_as_tuple(1, 0));
+	glutSwapBuffers(); //Attention : pas SwapBuffers(DC) !
+	glutPostRedisplay();
 }
 
 int main(int argc, char *argv[]) {
+	initializeGlut(argc, argv);
 
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_SINGLE);
-	glutInitWindowSize(300, 300);
-	glutInitWindowPosition(500, 500);
-	glutCreateWindow("test");
-	glutDisplayFunc(displayMe);
+	glutDisplayFunc(display);
+	glutReshapeFunc(reshape);
+	//InitGL();
+
+	//Game* game = &Game::getInstance();
+	//game->initialize();
+
+	//system("pause");
+
 	glutMainLoop();
-
-	Game* game = &Game::getInstance();
-	game->initialize();
-
-	system("pause");
-
 	return 0;
 }

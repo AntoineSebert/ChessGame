@@ -16,13 +16,11 @@
 		return representation;
 	}
 	vector<tuple<unsigned int, unsigned int>> const Queen::movement() const {
-		vector<tuple<unsigned int, unsigned int>> moves;
-		vector<tuple<unsigned int, unsigned int>> temp = linesPositions()/* const_cast<vector<tuple<unsigned int, unsigned int>>&>(linesPositions())*/;
+		vector<tuple<unsigned int, unsigned int>> moves, temp = linesPositions();
 		moves.reserve(moves.size() + temp.size());
 		std::move(temp.begin(), temp.end(), std::back_inserter(moves));
 
-		unsigned int i;
-		unsigned int ii;
+		unsigned int i, ii;
 		// bottom left
 			i = (get<0>(position) < get<1>(position) ? get<0>(position) : get<1>(position));
 			ii = (get<0>(position) >= get<1>(position) ? get<0>(position) : get<1>(position));
