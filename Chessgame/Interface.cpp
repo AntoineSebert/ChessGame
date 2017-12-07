@@ -23,7 +23,8 @@
 		return getStringInput(16);
 	}
 	unsigned int Interface::choiceMenu(vector<string>* labels) {
-		
+
+		drawDifficultyMenu();
 		return 0;
 	}
 // protected
@@ -37,9 +38,6 @@
 				cout << it - labels->begin() << " - ";
 			cout << *it << endl;
 		}
-	}
-	void Interface::drawSquareButton(string text) {
-		glutDisplayFunc(drawRectangle);
 	}
 	// first level input
 		unsigned int Interface::getNumberInput(unsigned int firstBound, unsigned int secondBound) {

@@ -9,6 +9,7 @@
 // public
 	void Game::initialize() {
 		gameInterface = &Interface::getInstance();
+		//gameInterface.initGL();
 		gameMode = setGameModes();
 		initializePlayers();
 		difficulty = setDifficulty();

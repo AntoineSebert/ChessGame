@@ -69,6 +69,9 @@
     <ClCompile Include="Queen.cpp">
       <Filter>Fichiers sources\Pieces</Filter>
     </ClCompile>
+    <ClCompile Include="glut.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h">
@@ -128,8 +131,8 @@
     <ClInclude Include="iterator_range.hpp">
       <Filter>Fichiers d%27en-tête\tools</Filter>
     </ClInclude>
-    <ClInclude Include="glut.hpp">
-      <Filter>Fichiers d%27en-tête\tools</Filter>
+    <ClInclude Include="glut.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

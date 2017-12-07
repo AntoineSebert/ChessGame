@@ -11,7 +11,6 @@ void display(void) {
 	glMatrixMode(GL_MODELVIEW); //Choisit la matrice MODELVIEW
 	glLoadIdentity(); //Réinitialise la matrice
 	gluLookAt(0, 0, -10, 0, 0, 0, 0, 1, 0);
-	//drawTriangle(std::forward_as_tuple(0, 1), std::forward_as_tuple(-1, 0), std::forward_as_tuple(1, 0));
 	glutSwapBuffers(); //Attention : pas SwapBuffers(DC) !
 	glutPostRedisplay();
 }

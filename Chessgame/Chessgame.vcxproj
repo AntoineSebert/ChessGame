@@ -121,6 +121,7 @@
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="glut.cpp" />
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="King.cpp" />
     <ClCompile Include="Knight.cpp" />
@@ -139,7 +140,7 @@
     <ClInclude Include="difficulties.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="gameModes.h" />
-    <ClInclude Include="glut.hpp" />
+    <ClInclude Include="glut.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="Interface.h" />
     <ClInclude Include="iterator_range.hpp" />

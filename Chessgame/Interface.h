@@ -14,7 +14,7 @@
 
 #include "Singleton.h"
 #include "Piece.h"
-#include "glut.hpp"
+#include "glut.h"
 
 using namespace std;
 
