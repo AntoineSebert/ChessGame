@@ -1,4 +1,64 @@
-﻿  main.cpp
+﻿  Game.cpp
+  Génération de code en cours...
+  Compilation en cours...
+  main.cpp
   glut.cpp
+  Player.cpp
+d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(158): warning C4244: 'initialisation' : conversion de '__int64' en 'unsigned int', perte possible de données
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(278): note: voir la référence à l'instanciation de la fonction modèle 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' en cours de compilation
+          with
+          [
+              _This=unsigned int,
+              _Ty=__int64,
+              _Other=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(277): note: voir la référence à l'instanciation de la fonction modèle 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' en cours de compilation
+          with
+          [
+              _This=unsigned int,
+              _Ty=__int64,
+              _Other=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(842): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Exact_args_t,__int64,unsigned int&,0>(_Tag,_This2 &&,unsigned int &)' en cours de compilation
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(841): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Exact_args_t,__int64,unsigned int&,0>(_Tag,_This2 &&,unsigned int &)' en cours de compilation
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(293): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,_Ty,0,1,0>(_Tag,_Tpl &&,std::integer_sequence<unsigned __int64,0,1>)' en cours de compilation
+          with
+          [
+              _Ty=std::tuple<__int64 &&,unsigned int &>,
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<__int64 &&,unsigned int &>
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(291): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,_Ty,0,1,0>(_Tag,_Tpl &&,std::integer_sequence<unsigned __int64,0,1>)' en cours de compilation
+          with
+          [
+              _Ty=std::tuple<__int64 &&,unsigned int &>,
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<__int64 &&,unsigned int &>
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(453): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,std::tuple<__int64 &&,unsigned int &>,0>(_Tag,_Tpl &&)' en cours de compilation
+          with
+          [
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<__int64 &&,unsigned int &>
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(452): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,std::tuple<__int64 &&,unsigned int &>,0>(_Tag,_Tpl &&)' en cours de compilation
+          with
+          [
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<__int64 &&,unsigned int &>
+          ]
+  c:\users\i\desktop\chessgame\chessgame\player.cpp(67): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<__int64&&,unsigned int&,0,0>(std::tuple<__int64 &&,unsigned int &> &&)' en cours de compilation
+  c:\users\i\desktop\chessgame\chessgame\player.cpp(67): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<__int64&&,unsigned int&,0,0>(std::tuple<__int64 &&,unsigned int &> &&)' en cours de compilation
+  Interface.cpp
   Génération de code en cours...
   Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe

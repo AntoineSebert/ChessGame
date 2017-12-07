@@ -25,9 +25,7 @@ using namespace std;
 		return getStringInput(16);
 	}
 	unsigned int Interface::choiceMenu(vector<string>* labels) {
-		cout << "===========" << endl;
 		glutDisplayFunc(drawDifficultyMenu);
-		cout << "===========" << endl;
 		return 0;
 	}
 // protected

@@ -12,8 +12,8 @@
 #include <GL\freeglut.h>
 
 // data
-	const unsigned int WINDOW_WIDTH = 600;
-	const unsigned int WINDOW_HEIGHT = 600;
+	const unsigned int WINDOW_WIDTH = 1200;
+	const unsigned int WINDOW_HEIGHT = 800;
 	const char WINDOW_NAME[] = "1705851";
 
 	//void* parameter;
@@ -25,6 +25,7 @@
 		void initializeGlut(int argc, char *argv[]);
 	// event
 		void reshape(int width, int height);
+		void difficutyMenuClick(int button, int state, int x, int y);
 	// drawing
 		// high level
 			void drawDifficultyMenu();

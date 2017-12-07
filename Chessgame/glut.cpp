@@ -43,20 +43,22 @@ using namespace std;
 				float(width) / float(height),
 				0.1,
 				100
-			); //Pour les explications, lire le tutorial sur OGL et win
+			);
 			glMatrixMode(GL_MODELVIEW);
 		}
+		void difficutyMenuClick(int button, int state, int x, int y) {}
 	// drawing
 		// high level
 			void drawDifficultyMenu() {
-				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //Efface le frame buffer et le Z-buffer
+				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Efface le frame buffer et le Z-buffer
 				glMatrixMode(GL_MODELVIEW);
-				glLoadIdentity(); //Réinitialise la matrice
+				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, -10, 0, 0, 0, 0, 1, 0);
 
-				drawButton(0, 0, 1, 3);
+				drawButton(0, 4, 1, 4);
+				glutMouseFunc(difficutyMenuClick);
 
-				glutSwapBuffers(); //Attention : pas SwapBuffers(DC) !
+				glutSwapBuffers();
 				glutPostRedisplay();
 			}
 		// medium level

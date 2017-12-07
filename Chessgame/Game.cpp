@@ -27,7 +27,7 @@ using namespace std;
 	Game::Game() {}
 	Game::~Game() {}
 	void Game::gameLoop() {
-		while (turns < 3 || isGameFinished()) {
+		while (turns < 0 || isGameFinished()) {
 			++turns;
 			gameBoard->display(turns);
 			selectPlayerToPlay(turns);
