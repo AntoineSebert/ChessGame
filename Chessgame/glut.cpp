@@ -29,7 +29,7 @@ using namespace std;
 		}
 		void initializeGlut(int argc, char *argv[]) {
 			glutInit(&argc, argv);
-			glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
+			glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
 			initializeWindow();
 			initializeViewPort();
 		}
@@ -49,7 +49,15 @@ using namespace std;
 	// drawing
 		// high level
 			void drawDifficultyMenu() {
-				drawButton(0, 0, 2, 5);
+				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //Efface le frame buffer et le Z-buffer
+				glMatrixMode(GL_MODELVIEW);
+				glLoadIdentity(); //Réinitialise la matrice
+				gluLookAt(0, 0, -10, 0, 0, 0, 0, 1, 0);
+
+				drawButton(0, 0, 1, 3);
+
+				glutSwapBuffers(); //Attention : pas SwapBuffers(DC) !
+				glutPostRedisplay();
 			}
 		// medium level
 			void drawButton(int posx, int posy, int height, int width) {
