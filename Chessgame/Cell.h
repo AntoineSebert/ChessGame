@@ -11,13 +11,11 @@
 
 #include "Piece.h"
 
-using namespace std;
-
 class Cell {
 	// attributes
 		private:
 			unsigned int color;
-			weak_ptr<Piece> content;
+			std::weak_ptr<Piece> content;
 
 	// methods
 		public:
@@ -25,8 +23,8 @@ class Cell {
 			~Cell();
 			unsigned int getColor();
 			void displayContent();
-			void setPiece(weak_ptr<Piece> newPiece);
+			void setPiece(std::weak_ptr<Piece> newPiece);
 			void removePiece();
 		private:
-			template <typename T> bool is_uninitialized(weak_ptr<T> const& weak);
+			template <typename T> bool is_uninitialized(std::weak_ptr<T> const& weak);
 };

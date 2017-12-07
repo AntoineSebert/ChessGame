@@ -6,6 +6,8 @@
 
 #include "king.h"
 
+using namespace std;
+
 // public
 	King::King(unsigned int* newColor) {
 		color = newColor;

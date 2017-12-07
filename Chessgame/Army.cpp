@@ -6,6 +6,8 @@
 
 #include "Army.h"
 
+using namespace std;
+
 // public
 	Army::Army(unsigned int* newColor) : color(newColor) {
 		alivePieces.push_back(make_shared<Rook>(color));

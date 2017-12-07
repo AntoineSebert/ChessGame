@@ -18,5 +18,5 @@ class Pawn : public Piece {
 			Pawn(unsigned int* newColor);
 			~Pawn();
 			char getRepresentation();
-			vector<tuple<unsigned int, unsigned int>> const movement() const;
+			std::vector<std::tuple<unsigned int, unsigned int>> const movement() const;
 };

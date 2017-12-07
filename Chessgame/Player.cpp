@@ -6,6 +6,8 @@
 
 #include "Player.h"
 
+using namespace std;
+
 // public
 	Player::Player(string playerName, unsigned int newColor, Interface* newGameInterface) : name(playerName), color(newColor), gameInterface(newGameInterface) {}
 	Player::~Player() {}

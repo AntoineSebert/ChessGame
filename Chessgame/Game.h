@@ -21,16 +21,14 @@
 #include "Player.h"
 #include "Interface.h"
 
-using namespace std;
-
 class Game : public Singleton<Game> {
 	friend class Singleton<Game>;
 	// attributes
 		private:
 			Board* gameBoard = nullptr;
 			Interface* gameInterface = nullptr;
-			array<shared_ptr<Player>, 2> players;
-			weak_ptr<Player> firstToPlay;
+			std::array<std::shared_ptr<Player>, 2> players;
+			std::weak_ptr<Player> firstToPlay;
 			difficulties difficulty;
 			gameModes gameMode;
 			unsigned int turns = 0;
@@ -50,9 +48,9 @@ class Game : public Singleton<Game> {
 			// préparation
 				void initializeBoard();
 				void initializePlayers();
-				void initializePlayersNames(array<string, 2>* names);
-				void chooseHumanPlayerName(string* target, vector<string>* alreadyTakenNames);
-				unsigned int setWhoPlaysFirst(array<string, 2>* names);
+				void initializePlayersNames(std::array<std::string, 2>* names);
+				void chooseHumanPlayerName(std::string* target, std::vector<std::string>* alreadyTakenNames);
+				unsigned int setWhoPlaysFirst(std::array<std::string, 2>* names);
 				void initializeArmies();
 				difficulties setDifficulty();
 				gameModes setGameModes();

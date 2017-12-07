@@ -6,6 +6,8 @@
 
 #include "Cell.h"
 
+using namespace std;
+
 // public
 	Cell::Cell(unsigned int newColor) : color(newColor) {}
 	Cell::~Cell() {}

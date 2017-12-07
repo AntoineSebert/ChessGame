@@ -6,6 +6,8 @@
 
 #include "Pawn.h"
 
+using namespace std;
+
 // public
 	Pawn::Pawn(unsigned int* newColor) {
 		color = newColor;

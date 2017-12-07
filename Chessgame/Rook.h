@@ -16,5 +16,5 @@ class Rook : public Piece {
 			Rook(unsigned int* newColor);
 			~Rook();
 			char getRepresentation();
-			vector<tuple<unsigned int, unsigned int>> const movement() const;
+			std::vector<std::tuple<unsigned int, unsigned int>> const movement() const;
 };

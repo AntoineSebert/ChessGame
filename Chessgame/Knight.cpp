@@ -6,6 +6,8 @@
 
 #include "Knight.h"
 
+using namespace std;
+
 // public
 	Knight::Knight(unsigned int* newColor) {
 		color = newColor;

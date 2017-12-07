@@ -6,6 +6,8 @@
 
 #include "Rook.h"
 
+using namespace std;
+
 // public
 	Rook::Rook(unsigned int* newColor) {
 		color = newColor;

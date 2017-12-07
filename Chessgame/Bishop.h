@@ -14,5 +14,5 @@ class Bishop : public Piece {
 			Bishop(unsigned int* newColor);
 			~Bishop();
 			char getRepresentation();
-			vector<tuple<unsigned int, unsigned int>> const movement() const;
+			std::vector<std::tuple<unsigned int, unsigned int>> const movement() const;
 };

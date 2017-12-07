@@ -6,6 +6,8 @@
 
 #include "Queen.h"
 
+using namespace std;
+
 // public
 	Queen::Queen(unsigned int* newColor) {
 		color = newColor;

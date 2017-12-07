@@ -19,24 +19,22 @@
 #include "Queen.h"
 #include "Rook.h"
 
-using namespace std;
-
 class Army {
 	// attributes
 		private:
-			vector<shared_ptr<Piece>> alivePieces;
-			vector<shared_ptr<Piece>> deadPieces;
+			std::vector<std::shared_ptr<Piece>> alivePieces;
+			std::vector<std::shared_ptr<Piece>> deadPieces;
 			unsigned int* color;
 
 	// membres
 		public:
 			Army(unsigned int* newColor);
 			~Army();
-			vector<shared_ptr<Piece>>* getArmyContainer();
+			std::vector<std::shared_ptr<Piece>>* getArmyContainer();
 			unsigned int getArmySize();
 			void displayArmy();
-			shared_ptr<Piece> operator[](unsigned int index);
-			vector<shared_ptr<Piece>>::iterator getBegin();
-			vector<shared_ptr<Piece>>::iterator getEnd();
+			std::shared_ptr<Piece> operator[](unsigned int index);
+			std::vector<std::shared_ptr<Piece>>::iterator getBegin();
+			std::vector<std::shared_ptr<Piece>>::iterator getEnd();
 };
 

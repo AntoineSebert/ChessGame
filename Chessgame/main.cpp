@@ -22,8 +22,8 @@ int main(int argc, char *argv[]) {
 	glutReshapeFunc(reshape);
 	//InitGL();
 
-	//Game* game = &Game::getInstance();
-	//game->initialize();
+	Game* game = &Game::getInstance();
+	game->initialize();
 
 	//system("pause");
 

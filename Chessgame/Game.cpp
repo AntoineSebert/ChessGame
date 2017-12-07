@@ -6,6 +6,8 @@
 
 #include "Game.h"
 
+using namespace std;
+
 // public
 	void Game::initialize() {
 		gameInterface = &Interface::getInstance();

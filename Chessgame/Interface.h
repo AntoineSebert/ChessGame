@@ -16,30 +16,27 @@
 #include "Piece.h"
 #include "glut.h"
 
-using namespace std;
-
 class Interface : public Singleton<Interface> {
 	friend class Singleton<Interface>;
 	// members
 		public:
-			unsigned int numberChoice(vector<string>* labels, unsigned int firstBound, unsigned int secondBound = 0);
-			bool booleanChoice(vector<string>* labels);
-			string alphanumericalChoice(vector<string>* labels);
-			unsigned int choiceMenu(vector<string>* labels);
+			unsigned int numberChoice(std::vector<std::string>* labels, unsigned int firstBound, unsigned int secondBound = 0);
+			bool booleanChoice(std::vector<std::string>* labels);
+			std::string alphanumericalChoice(std::vector<std::string>* labels);
+			unsigned int choiceMenu(std::vector<std::string>* labels);
 		private:
 			Interface();
 			~Interface();
-			void displayLabels(vector<string>* labels, unsigned int rows = 0);
-			void drawSquareButton(string text);
+			void displayLabels(std::vector<std::string>* labels, unsigned int rows = 0);
 			// first level input
 				unsigned int getNumberInput(unsigned int firstBound, unsigned int secondBound = 0);
 				bool getBooleanInput();
-				string getStringInput(unsigned int maxChararacters);
+				std::string getStringInput(unsigned int maxChararacters);
 			// second level input
-				bool isNumberString(string* input, unsigned int firstBound = 0, unsigned int secondBound = 0);
-				bool isAlphabeticalString(string* input);
-				bool isAlphanumeraicalString(string* input);
-				bool isBoolean(string* input);
+				bool isNumberString(std::string* input, unsigned int firstBound = 0, unsigned int secondBound = 0);
+				bool isAlphabeticalString(std::string* input);
+				bool isAlphanumeraicalString(std::string* input);
+				bool isBoolean(std::string* input);
 			// third level input
 				bool isNumber(char character);
 				bool isAlphabetical(char character);

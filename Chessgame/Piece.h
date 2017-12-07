@@ -11,22 +11,20 @@
 #include <tuple>
 #include <vector>
 
-using namespace std;
-
 class Piece {
 	// attributes
 		protected:
 			char representation;
-			tuple<unsigned int, unsigned int> position;
+			std::tuple<unsigned int, unsigned int> position;
 			unsigned int* color = nullptr;
 
 	// members
 		public:
 			Piece();
-			virtual vector<tuple<unsigned int, unsigned int>> const movement() const = 0;
+			virtual std::vector<std::tuple<unsigned int, unsigned int>> const movement() const = 0;
 			virtual char getRepresentation() = 0;
-			tuple<unsigned int, unsigned int> getPosition();
-			void setPosition(tuple<unsigned int, unsigned int> newPosition);
+			std::tuple<unsigned int, unsigned int> getPosition();
+			void setPosition(std::tuple<unsigned int, unsigned int> newPosition);
 		protected:
-			vector<tuple<unsigned int, unsigned int>> const& linesPositions() const;
+			std::vector<std::tuple<unsigned int, unsigned int>> const& linesPositions() const;
 };

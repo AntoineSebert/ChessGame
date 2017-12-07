@@ -6,6 +6,8 @@
 
 #include "Bishop.h"
 
+using namespace std;
+
 // public
 	Bishop::Bishop(unsigned int* newColor) {
 		color = newColor;

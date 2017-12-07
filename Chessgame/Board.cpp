@@ -6,6 +6,8 @@
 
 #include "Board.h"
 
+using namespace std;
+
 // public
 	void Board::initialize() {
 		for (size_t i = 0; i < data.size(); ++i) {

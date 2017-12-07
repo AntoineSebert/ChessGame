@@ -6,6 +6,8 @@
 
 #include "Interface.h"
 
+using namespace std;
+
 // public
 	unsigned int Interface::numberChoice(vector<string>* labels, unsigned int firstBound, unsigned int secondBound) {
 		if (labels->size() < 2)
