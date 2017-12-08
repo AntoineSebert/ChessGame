@@ -26,6 +26,7 @@ using namespace std;
 	}
 	unsigned int Interface::choiceMenu(vector<string>* labels) {
 		glutDisplayFunc(drawDifficultyMenu);
+		glutMouseFunc(difficutyMenuClick);
 		return 0;
 	}
 // protected

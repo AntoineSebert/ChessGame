@@ -55,24 +55,49 @@ using namespace std;
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, -10, 0, 0, 0, 0, 1, 0);
 
-				drawButton(0, 4, 1, 4);
-				glutMouseFunc(difficutyMenuClick);
+				drawButton(0, 0, 1, 4, &(array<double, 4>() = { 1.0, 0.8, 0.0, 0.8 }));
+				drawButton(1, 2, 1, 4, &(array<double, 4>() = { 1.0, 0.8, 0.0, 0.8 }));
+				drawGrid(-5, 5);
+				drawOrigin();
 
 				glutSwapBuffers();
 				glutPostRedisplay();
 			}
 		// medium level
-			void drawButton(int posx, int posy, int height, int width) {
+			void drawButton(int posx, int posy, int height, int width, array<double, 4>* color) {
 				list<tuple<int, int>> coords = {
 					make_tuple(posx, posy),
 					make_tuple(posx + width, posy),
-					make_tuple(posx + width, posy - height),
-					make_tuple(posx, posy - height)
+					make_tuple(posx + width, posy + height),
+					make_tuple(posx, posy + height)
 				};
-				drawGeometric(&coords);
+				drawGeometric(&coords, color);
+			}
+			void drawGrid(int start, int end) {
+				if (start < end) {
+					for (int i = start; i < end; ++i) {
+						for (int ii = start; ii < end; ++ii)
+							drawGeometric(
+								&(list<tuple<int, int>>() = { make_tuple(i, ii) }),
+								&(array<double, 4>() = { 1.0, 1.0, 1.0, 1.0 })
+							);
+					}
+				}
+			}
+			void drawOrigin() {
+				list<tuple<int, int>> coords = {
+					make_tuple(-1, 0),
+					make_tuple(1, 0),
+				};
+				drawGeometric(&coords, &(array<double, 4>() = { 1.0, 1.0, 1.0, 1.0 }));
+				coords = {
+					make_tuple(0, -1),
+					make_tuple(0, 1),
+				};
+				drawGeometric(&coords, &(array<double, 4>() = { 1.0, 1.0, 1.0, 1.0 }));
 			}
 		// low level
-			void drawGeometric(list<tuple<int, int>>* vertices) {
+			void drawGeometric(list<tuple<int, int>>* vertices, array<double, 4>* color) {
 				switch (vertices->size()) {
 					case 1:
 						glBegin(GL_POINTS);
@@ -90,6 +115,12 @@ using namespace std;
 						glBegin(GL_POLYGON);
 						break;
 				}
+				glColor4d(
+					color->at(0),
+					color->at(1),
+					color->at(2),
+					color->at(3)
+				);
 				for (auto vertex : *vertices)
 					glVertex2i(get<0>(vertex), get<1>(vertex));
 				glEnd();

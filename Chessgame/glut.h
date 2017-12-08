@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <array>
 #include <list>
 #include <tuple>
 #include <GL\glew.h>
@@ -30,6 +31,8 @@
 		// high level
 			void drawDifficultyMenu();
 		// medium level
-			void drawButton(int posx, int posy, int height, int width);
+			void drawButton(int posx, int posy, int height, int width, std::array<double, 4>* color);
+			void drawGrid(int start, int end);
+			void drawOrigin();
 		// low level
-			void drawGeometric(std::list<std::tuple<int, int>>* vertices);
+			void drawGeometric(std::list<std::tuple<int, int>>* vertices, std::array<double, 4>* color);

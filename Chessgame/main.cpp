@@ -10,7 +10,6 @@ int main(int argc, char *argv[]) {
 	initializeGlut(argc, argv);
 
 	glutReshapeFunc(reshape);
-	//InitGL();
 
 	Game* game = &Game::getInstance();
 	game->initialize();

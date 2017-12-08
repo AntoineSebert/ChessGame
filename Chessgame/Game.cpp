@@ -11,14 +11,13 @@ using namespace std;
 // public
 	void Game::initialize() {
 		gameInterface = &Interface::getInstance();
-		//gameInterface.initGL();
 		gameMode = setGameModes();
-		initializePlayers();
-		difficulty = setDifficulty();
+		//initializePlayers();
+		//difficulty = setDifficulty();
 		gameBoard = &gameBoard->getInstance();
-		initializeBoard();
-		initializeArmies();
-		gameLoop();
+		//initializeBoard();
+		//initializeArmies();
+		//gameLoop();
 	}
 	difficulties Game::getDifficulty() { return difficulty; }
 	gameModes Game::getGameMode() { return gameMode; }
