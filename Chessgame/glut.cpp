@@ -53,51 +53,56 @@ using namespace std;
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Efface le frame buffer et le Z-buffer
 				glMatrixMode(GL_MODELVIEW);
 				glLoadIdentity(); // Réinitialise la matrice
-				gluLookAt(0, 0, -10, 0, 0, 0, 0, 1, 0);
+				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
-				drawButton(0, 0, 1, 4, &(array<double, 4>() = { 1.0, 0.8, 0.0, 0.8 }));
-				drawButton(1, 2, 1, 4, &(array<double, 4>() = { 1.0, 0.8, 0.0, 0.8 }));
-				drawGrid(-5, 5);
+				drawButton(0, 0, 1, 4, &(rgba() = { 1.0, 0.8, 0.0, 0.8 }));
+				drawButton(1, 2, 1, 4, &(rgba() = { 1.0, 0.8, 0.0, 0.8 }));
+				drawGrid(-40, 40);
 				drawOrigin();
+				drawCircle(10, 10, 2, 32);
 
 				glutSwapBuffers();
 				glutPostRedisplay();
 			}
 		// medium level
-			void drawButton(int posx, int posy, int height, int width, array<double, 4>* color) {
-				list<tuple<int, int>> coords = {
+			void drawButton(int posx, int posy, int height, int width, rgba* color) {
+				list<point> coords = {
 					make_tuple(posx, posy),
 					make_tuple(posx + width, posy),
 					make_tuple(posx + width, posy + height),
 					make_tuple(posx, posy + height)
 				};
 				drawGeometric(&coords, color);
+				// draw text
 			}
 			void drawGrid(int start, int end) {
 				if (start < end) {
 					for (int i = start; i < end; ++i) {
 						for (int ii = start; ii < end; ++ii)
 							drawGeometric(
-								&(list<tuple<int, int>>() = { make_tuple(i, ii) }),
-								&(array<double, 4>() = { 1.0, 1.0, 1.0, 1.0 })
+								&(list<point>() = { make_tuple(i, ii) }),
+								&(rgba() = { 1.0, 1.0, 1.0, 1.0 })
 							);
 					}
 				}
 			}
 			void drawOrigin() {
-				list<tuple<int, int>> coords = {
+				list<point> coords = {
 					make_tuple(-1, 0),
 					make_tuple(1, 0),
 				};
-				drawGeometric(&coords, &(array<double, 4>() = { 1.0, 1.0, 1.0, 1.0 }));
+				drawGeometric(&coords, &(rgba() = { 1.0, 1.0, 1.0, 1.0 }));
 				coords = {
 					make_tuple(0, -1),
 					make_tuple(0, 1),
 				};
-				drawGeometric(&coords, &(array<double, 4>() = { 1.0, 1.0, 1.0, 1.0 }));
+				drawGeometric(&coords, &(rgba() = { 1.0, 1.0, 1.0, 1.0 }));
+			}
+			void drawPiece(rgba* color, char representation) {
+				drawCircle(10, 10, 2, 32);
 			}
 		// low level
-			void drawGeometric(list<tuple<int, int>>* vertices, array<double, 4>* color) {
+			void drawGeometric(list<point>* vertices, rgba* color) {
 				switch (vertices->size()) {
 					case 1:
 						glBegin(GL_POINTS);
@@ -123,5 +128,17 @@ using namespace std;
 				);
 				for (auto vertex : *vertices)
 					glVertex2i(get<0>(vertex), get<1>(vertex));
+				glEnd();
+			}
+			void drawCircle(float cx, float cy, float r, unsigned int segments) {
+				glBegin(GL_LINE_LOOP);
+				for (unsigned int i = 0; i < segments; ++i) {
+					float theta = 2.0f * 3.1415926f * float(i) / float(segments);
+
+					float x = r * cosf(theta);
+					float y = r * sinf(theta);
+
+					glVertex2f(x + cx, y + cy);
+				}
 				glEnd();
 			}

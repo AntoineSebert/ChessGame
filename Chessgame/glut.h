@@ -19,6 +19,10 @@
 
 	//void* parameter;
 
+	typedef std::array<double, 4> rgba;
+	typedef std::array<double, 3> rgb;
+	typedef std::tuple<int, int> point;
+
 // functions
 	// initialization
 		void initializeViewPort();
@@ -31,8 +35,10 @@
 		// high level
 			void drawDifficultyMenu();
 		// medium level
-			void drawButton(int posx, int posy, int height, int width, std::array<double, 4>* color);
+			void drawButton(int posx, int posy, int height, int width, rgba* color);
 			void drawGrid(int start, int end);
 			void drawOrigin();
+			void drawPiece(rgba* color, char representation);
 		// low level
-			void drawGeometric(std::list<std::tuple<int, int>>* vertices, std::array<double, 4>* color);
+			void drawGeometric(std::list<point>* vertices, rgba* color);
+			void drawCircle(float cx, float cy, float r, unsigned int num_segments);
