@@ -57,10 +57,12 @@ using namespace std;
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
-				drawButton(forward_as_tuple(1, 2), 1, 4, YELLOW);
 				drawGrid(forward_as_tuple(-60, -40), 120, 80);
 				drawOrigin();
-				drawCircle(10, 10, 2, 32);
+
+				drawButton(forward_as_tuple(-40, -10), 80, 20,  YELLOW);
+
+				//drawCircle(10, 10, 2, 32);
 
 				glutSwapBuffers();
 				glutPostRedisplay();
@@ -69,7 +71,7 @@ using namespace std;
 
 			}
 		// medium level
-			void drawButton(coord origin, unsigned int height, unsigned int width, rgba color) {
+			void drawButton(coord origin, unsigned int width, unsigned int height, rgba color) {
 				list<coord> coords = {
 					make_tuple(get<0>(origin), get<1>(origin)),
 					make_tuple(get<0>(origin) + width, get<1>(origin)),
@@ -109,6 +111,14 @@ using namespace std;
 					make_tuple(get<0>(origin) + width, get<1>(origin) + width),
 				};
 				drawGeometric(&coords, color);
+			}
+			void drawText(string text) {
+				glPushMatrix();
+					glRasterPos2f(0.0, 0.0);
+					glScalef(0.005, 0.005, 1.0);
+					for (char c : text)
+						glutStrokeCharacter(GLUT_STROKE_ROMAN, c);
+				glPopMatrix();
 			}
 		// low level
 			void drawGeometric(list<coord>* vertices, rgba color) {

@@ -9,6 +9,7 @@
 #include <array>
 #include <iostream>
 #include <list>
+#include <string>
 #include <tuple>
 #include <GL\glew.h>
 #include <GL\freeglut.h>
@@ -48,11 +49,12 @@
 			void drawDifficultyMenu();
 			void drawBoard();
 		// medium level
-			void drawButton(coord origin, unsigned int height, unsigned int width, rgba color);
+			void drawButton(coord origin, unsigned int width, unsigned int height, rgba color);
 			void drawGrid(coord origin, int width, int height);
 			void drawOrigin();
 			void drawPiece(char representation, rgba color);
 			void drawCase(coord origin, unsigned int width, rgba color);
+			void drawText(std::string text);
 		// low level
 			void drawGeometric(std::list<coord>* vertices, rgba color);
 			void drawCircle(float cx, float cy, float r, unsigned int num_segments);
