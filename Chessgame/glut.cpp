@@ -55,39 +55,40 @@ using namespace std;
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
-				drawButton(0, 0, 1, 4, &(rgba() = { 1.0, 0.8, 0.0, 0.8 }));
-				drawButton(1, 2, 1, 4, &(rgba() = { 1.0, 0.8, 0.0, 0.8 }));
-				drawGrid(-40, 40);
+				drawButton(forward_as_tuple(0, 0), 1, 4, &(rgba() = { 1.0, 0.8, 0.0, 0.8 }));
+				drawButton(forward_as_tuple(1, 2), 1, 4, &(rgba() = { 1.0, 0.8, 0.0, 0.8 }));
+				drawGrid(forward_as_tuple(-40, 40), 10, 20);
 				drawOrigin();
 				drawCircle(10, 10, 2, 32);
 
 				glutSwapBuffers();
 				glutPostRedisplay();
 			}
+			void drawBoard(Board* gameBoard) {
+
+			}
 		// medium level
-			void drawButton(int posx, int posy, int height, int width, rgba* color) {
-				list<point> coords = {
-					make_tuple(posx, posy),
-					make_tuple(posx + width, posy),
-					make_tuple(posx + width, posy + height),
-					make_tuple(posx, posy + height)
+			void drawButton(coord origin, unsigned int height, unsigned int width, rgba* color) {
+				list<coord> coords = {
+					make_tuple(get<0>(origin), get<1>(origin)),
+					make_tuple(get<0>(origin) + width, get<1>(origin)),
+					make_tuple(get<0>(origin) + width, get<1>(origin) + height),
+					make_tuple(get<0>(origin), get<1>(origin) + height)
 				};
 				drawGeometric(&coords, color);
 				// draw text
 			}
-			void drawGrid(int start, int end) {
-				if (start < end) {
-					for (int i = start; i < end; ++i) {
-						for (int ii = start; ii < end; ++ii)
-							drawGeometric(
-								&(list<point>() = { make_tuple(i, ii) }),
-								&(rgba() = { 1.0, 1.0, 1.0, 1.0 })
-							);
-					}
+			void drawGrid(coord origin, unsigned int height, unsigned int width) {
+				for (int i = get<0>(origin); i < width; ++i) {
+					for (int ii = get<1>(origin); ii < height; ++ii)
+						drawGeometric(
+							&(list<coord>() = { make_tuple(i, ii) }),
+							&WHITE
+						);
 				}
 			}
 			void drawOrigin() {
-				list<point> coords = {
+				list<coord> coords = {
 					make_tuple(-1, 0),
 					make_tuple(1, 0),
 				};
@@ -101,8 +102,15 @@ using namespace std;
 			void drawPiece(rgba* color, char representation) {
 				drawCircle(10, 10, 2, 32);
 			}
+			void drawCase(coord origin, unsigned int width, rgba* color) {
+				list<coord> coords = {
+					make_tuple(get<0>(origin), get<1>(origin)),
+					make_tuple(get<0>(origin) + width, get<1>(origin) + width),
+				};
+				drawGeometric(&coords, color);
+			}
 		// low level
-			void drawGeometric(list<point>* vertices, rgba* color) {
+			void drawGeometric(list<coord>* vertices, const rgba* color) {
 				switch (vertices->size()) {
 					case 1:
 						glBegin(GL_POINTS);

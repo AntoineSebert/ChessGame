@@ -1,2 +1,4 @@
 ﻿  glut.cpp
+c:\users\i\desktop\chessgame\chessgame\glut.cpp(82): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\i\desktop\chessgame\chessgame\glut.cpp(83): warning C4018: '<' : incompatibilité signed/unsigned
   Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe

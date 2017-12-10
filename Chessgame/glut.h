@@ -12,6 +12,8 @@
 #include <GL\glew.h>
 #include <GL\freeglut.h>
 
+#include "Board.h"
+
 // data
 	const unsigned int WINDOW_WIDTH = 1200;
 	const unsigned int WINDOW_HEIGHT = 800;
@@ -21,7 +23,10 @@
 
 	typedef std::array<double, 4> rgba;
 	typedef std::array<double, 3> rgb;
-	typedef std::tuple<int, int> point;
+	typedef std::tuple<int, int> coord;
+
+	const rgba WHITE = { 1.0, 1.0, 1.0, 1.0 };
+	const rgba BLACK = { 0.0, 0.0, 0.0, 0.0 };
 
 // functions
 	// initialization
@@ -34,11 +39,13 @@
 	// drawing
 		// high level
 			void drawDifficultyMenu();
+			void drawBoard(Board* gameBoard);
 		// medium level
-			void drawButton(int posx, int posy, int height, int width, rgba* color);
-			void drawGrid(int start, int end);
+			void drawButton(coord origin, unsigned int height, unsigned int width, rgba* color);
+			void drawGrid(coord origin, unsigned int height, unsigned int width);
 			void drawOrigin();
 			void drawPiece(rgba* color, char representation);
+			void drawCase(coord origin, unsigned int width, rgba* color);
 		// low level
-			void drawGeometric(std::list<point>* vertices, rgba* color);
+			void drawGeometric(std::list<coord>* vertices, const rgba* color);
 			void drawCircle(float cx, float cy, float r, unsigned int num_segments);
