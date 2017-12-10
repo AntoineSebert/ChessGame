@@ -60,7 +60,7 @@ using namespace std;
 				drawGrid(forward_as_tuple(-60, -40), 120, 80);
 				drawOrigin();
 
-				drawButton(forward_as_tuple(-40, -10), 80, 20,  YELLOW);
+				drawButton(forward_as_tuple(-20, -5), 40, 10,  YELLOW);
 
 				//drawCircle(10, 10, 2, 32);
 

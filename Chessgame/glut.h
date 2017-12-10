@@ -15,6 +15,7 @@
 #include <GL\freeglut.h>
 
 #include "Board.h"
+#include "palettes.h"
 
 // data
 	const unsigned int WINDOW_WIDTH = 1200;
@@ -23,18 +24,7 @@
 
 	//void* parameter;
 
-	typedef std::array<double, 4> rgba;
-	typedef std::array<double, 3> rgb;
 	typedef std::tuple<int, int> coord;
-
-	const rgba BLACK = { 0.0, 0.0, 0.0, 1.0 };
-	const rgba BLEU = { 0.0, 0.0, 1.0, 1.0 };
-	const rgba GREEN = { 0.0, 1.0, 0.0, 1.0 };
-	const rgba CYAN = { 0.0, 1.0, 1.0, 1.0 };
-	const rgba RED = { 1.0, 0.0, 0.0, 1.0 };
-	const rgba MAGENTA = { 1.0, 0.0, 1.0, 1.0 };
-	const rgba YELLOW = { 1.0, 1.0, 0.0, 1.0 };
-	const rgba WHITE = { 1.0, 1.0, 1.0, 1.0 };
 
 // functions
 	// initialization

@@ -1,8 +1,9 @@
-﻿  glut.cpp
-c:\users\i\desktop\chessgame\chessgame\glut.cpp(118): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
+﻿  Game.cpp
   Génération de code en cours...
   Compilation en cours...
   main.cpp
+  glut.cpp
+c:\users\i\desktop\chessgame\chessgame\glut.cpp(118): warning C4305: 'argument' : troncation de 'double' à 'GLfloat'
   Player.cpp
 d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(158): warning C4244: 'initialisation' : conversion de '__int64' en 'unsigned int', perte possible de données
   d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\tuple(278): note: voir la référence à l'instanciation de la fonction modèle 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' en cours de compilation
@@ -60,6 +61,5 @@ d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.
   c:\users\i\desktop\chessgame\chessgame\player.cpp(67): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<__int64&&,unsigned int&,0,0>(std::tuple<__int64 &&,unsigned int &> &&)' en cours de compilation
   c:\users\i\desktop\chessgame\chessgame\player.cpp(67): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<__int64&&,unsigned int&,0,0>(std::tuple<__int64 &&,unsigned int &> &&)' en cours de compilation
   Interface.cpp
-  Game.cpp
   Génération de code en cours...
   Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe
