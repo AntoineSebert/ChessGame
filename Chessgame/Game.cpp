@@ -39,6 +39,12 @@ using namespace std;
 	void Game::selectPlayerToPlay(unsigned int turns) {
 		players.at(turns % players.size())->play(gameBoard);
 	}
+	void Game::reinitializeCallbacks() {
+		glutDisplayFunc(NULL);
+		glutMouseFunc(NULL);
+		glutMotionFunc(NULL);
+		glutPassiveMotionFunc(NULL);
+	}
 	// préparation
 		gameModes Game::setGameModes() {
 			vector<string> labels = {
@@ -47,7 +53,11 @@ using namespace std;
 				"PVE",
 				"EVE"
 			};
-			return (gameModes)gameInterface->choiceMenu(&labels);
+			glutDisplayFunc(drawDifficultyMenu);
+			glutMouseFunc(difficutyMenuClick);
+			//glutMotionFunc(); // button held down
+			//glutPassiveMotionFunc(); // no button held down
+			return EVE;
 		}
 		void Game::initializePlayers() {
 			array<string, 2> names;

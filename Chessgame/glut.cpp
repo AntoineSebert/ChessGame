@@ -57,7 +57,6 @@ using namespace std;
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
-				drawButton(forward_as_tuple(0, 0), 1, 4, YELLOW);
 				drawButton(forward_as_tuple(1, 2), 1, 4, YELLOW);
 				drawGrid(forward_as_tuple(-60, -40), 120, 80);
 				drawOrigin();
@@ -65,6 +64,9 @@ using namespace std;
 
 				glutSwapBuffers();
 				glutPostRedisplay();
+			}
+			void drawBoard() {
+
 			}
 		// medium level
 			void drawButton(coord origin, unsigned int height, unsigned int width, rgba color) {

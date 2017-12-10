@@ -26,12 +26,14 @@
 	typedef std::array<double, 3> rgb;
 	typedef std::tuple<int, int> coord;
 
-	enum colors {
-
-	};
+	const rgba BLACK = { 0.0, 0.0, 0.0, 1.0 };
+	const rgba BLEU = { 0.0, 0.0, 1.0, 1.0 };
+	const rgba GREEN = { 0.0, 1.0, 0.0, 1.0 };
+	const rgba CYAN = { 0.0, 1.0, 1.0, 1.0 };
+	const rgba RED = { 1.0, 0.0, 0.0, 1.0 };
+	const rgba MAGENTA = { 1.0, 0.0, 1.0, 1.0 };
+	const rgba YELLOW = { 1.0, 1.0, 0.0, 1.0 };
 	const rgba WHITE = { 1.0, 1.0, 1.0, 1.0 };
-	const rgba BLACK = { 0.0, 0.0, 0.0, 0.0 };
-	const rgba YELLOW = { 1.0, 0.8, 0.0, 0.8 };
 
 // functions
 	// initialization
@@ -44,6 +46,7 @@
 	// drawing
 		// high level
 			void drawDifficultyMenu();
+			void drawBoard();
 		// medium level
 			void drawButton(coord origin, unsigned int height, unsigned int width, rgba color);
 			void drawGrid(coord origin, int width, int height);
