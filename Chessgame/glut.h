@@ -7,6 +7,7 @@
 #pragma once
 
 #include <array>
+#include <iostream>
 #include <list>
 #include <tuple>
 #include <GL\glew.h>
@@ -25,8 +26,12 @@
 	typedef std::array<double, 3> rgb;
 	typedef std::tuple<int, int> coord;
 
+	enum colors {
+
+	};
 	const rgba WHITE = { 1.0, 1.0, 1.0, 1.0 };
 	const rgba BLACK = { 0.0, 0.0, 0.0, 0.0 };
+	const rgba YELLOW = { 1.0, 0.8, 0.0, 0.8 };
 
 // functions
 	// initialization
@@ -39,13 +44,12 @@
 	// drawing
 		// high level
 			void drawDifficultyMenu();
-			void drawBoard(Board* gameBoard);
 		// medium level
-			void drawButton(coord origin, unsigned int height, unsigned int width, rgba* color);
-			void drawGrid(coord origin, unsigned int height, unsigned int width);
+			void drawButton(coord origin, unsigned int height, unsigned int width, rgba color);
+			void drawGrid(coord origin, int width, int height);
 			void drawOrigin();
-			void drawPiece(rgba* color, char representation);
-			void drawCase(coord origin, unsigned int width, rgba* color);
+			void drawPiece(char representation, rgba color);
+			void drawCase(coord origin, unsigned int width, rgba color);
 		// low level
-			void drawGeometric(std::list<coord>* vertices, const rgba* color);
+			void drawGeometric(std::list<coord>* vertices, rgba color);
 			void drawCircle(float cx, float cy, float r, unsigned int num_segments);

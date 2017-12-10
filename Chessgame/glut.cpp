@@ -46,7 +46,9 @@ using namespace std;
 			);
 			glMatrixMode(GL_MODELVIEW);
 		}
-		void difficutyMenuClick(int button, int state, int x, int y) {}
+		void difficutyMenuClick(int button, int state, int x, int y) {
+			cout << x << ':' << y << endl;
+		}
 	// drawing
 		// high level
 			void drawDifficultyMenu() {
@@ -55,20 +57,17 @@ using namespace std;
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
-				drawButton(forward_as_tuple(0, 0), 1, 4, &(rgba() = { 1.0, 0.8, 0.0, 0.8 }));
-				drawButton(forward_as_tuple(1, 2), 1, 4, &(rgba() = { 1.0, 0.8, 0.0, 0.8 }));
-				drawGrid(forward_as_tuple(-40, 40), 10, 20);
+				drawButton(forward_as_tuple(0, 0), 1, 4, YELLOW);
+				drawButton(forward_as_tuple(1, 2), 1, 4, YELLOW);
+				drawGrid(forward_as_tuple(-60, -40), 120, 80);
 				drawOrigin();
 				drawCircle(10, 10, 2, 32);
 
 				glutSwapBuffers();
 				glutPostRedisplay();
 			}
-			void drawBoard(Board* gameBoard) {
-
-			}
 		// medium level
-			void drawButton(coord origin, unsigned int height, unsigned int width, rgba* color) {
+			void drawButton(coord origin, unsigned int height, unsigned int width, rgba color) {
 				list<coord> coords = {
 					make_tuple(get<0>(origin), get<1>(origin)),
 					make_tuple(get<0>(origin) + width, get<1>(origin)),
@@ -78,12 +77,12 @@ using namespace std;
 				drawGeometric(&coords, color);
 				// draw text
 			}
-			void drawGrid(coord origin, unsigned int height, unsigned int width) {
-				for (int i = get<0>(origin); i < width; ++i) {
-					for (int ii = get<1>(origin); ii < height; ++ii)
+			void drawGrid(coord origin, int width, int height) {
+				for (int ii = get<1>(origin); ii < get<1>(origin) + height; ++ii) {
+					for (int i = get<0>(origin); i < get<0>(origin) + width; ++i)
 						drawGeometric(
 							&(list<coord>() = { make_tuple(i, ii) }),
-							&WHITE
+							WHITE
 						);
 				}
 			}
@@ -92,17 +91,17 @@ using namespace std;
 					make_tuple(-1, 0),
 					make_tuple(1, 0),
 				};
-				drawGeometric(&coords, &(rgba() = { 1.0, 1.0, 1.0, 1.0 }));
+				drawGeometric(&coords, WHITE);
 				coords = {
 					make_tuple(0, -1),
 					make_tuple(0, 1),
 				};
-				drawGeometric(&coords, &(rgba() = { 1.0, 1.0, 1.0, 1.0 }));
+				drawGeometric(&coords, WHITE);
 			}
-			void drawPiece(rgba* color, char representation) {
+			void drawPiece(char representation, rgba color) {
 				drawCircle(10, 10, 2, 32);
 			}
-			void drawCase(coord origin, unsigned int width, rgba* color) {
+			void drawCase(coord origin, unsigned int width, rgba color) {
 				list<coord> coords = {
 					make_tuple(get<0>(origin), get<1>(origin)),
 					make_tuple(get<0>(origin) + width, get<1>(origin) + width),
@@ -110,7 +109,7 @@ using namespace std;
 				drawGeometric(&coords, color);
 			}
 		// low level
-			void drawGeometric(list<coord>* vertices, const rgba* color) {
+			void drawGeometric(list<coord>* vertices, rgba color) {
 				switch (vertices->size()) {
 					case 1:
 						glBegin(GL_POINTS);
@@ -129,10 +128,10 @@ using namespace std;
 						break;
 				}
 				glColor4d(
-					color->at(0),
-					color->at(1),
-					color->at(2),
-					color->at(3)
+					color.at(0),
+					color.at(1),
+					color.at(2),
+					color.at(3)
 				);
 				for (auto vertex : *vertices)
 					glVertex2i(get<0>(vertex), get<1>(vertex));
