@@ -44,7 +44,8 @@
 			void drawOrigin();
 			void drawPiece(char representation, rgba color);
 			void drawCase(coord origin, unsigned int width, rgba color);
-			void drawText(std::string text);
 		// low level
+			void drawText(coord origin, std::string text, rgba color);
 			void drawGeometric(std::list<coord>* vertices, rgba color);
-			void drawCircle(float cx, float cy, float r, unsigned int num_segments);
+			void drawCircle(coord origin, float r, unsigned int num_segments);
+			void setColor(rgba color);

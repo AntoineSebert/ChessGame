@@ -57,12 +57,14 @@ using namespace std;
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
-				drawGrid(forward_as_tuple(-60, -40), 120, 80);
-				drawOrigin();
-
-				drawButton(forward_as_tuple(-20, -5), 40, 10,  YELLOW);
+				drawButton(forward_as_tuple(-20, 20), 40, 10, CYAN);
+				drawButton(forward_as_tuple(-20, -5), 40, 10, YELLOW);
+				drawButton(forward_as_tuple(-20, -30), 40, 10, GREEN);
 
 				//drawCircle(10, 10, 2, 32);
+
+				drawGrid(forward_as_tuple(-60, -40), 120, 80);
+				drawOrigin();
 
 				glutSwapBuffers();
 				glutPostRedisplay();
@@ -79,7 +81,7 @@ using namespace std;
 					make_tuple(get<0>(origin), get<1>(origin) + height)
 				};
 				drawGeometric(&coords, color);
-				// draw text
+				drawText(forward_as_tuple(-20, -50), "PVP", RED);
 			}
 			void drawGrid(coord origin, int width, int height) {
 				for (int ii = get<1>(origin); ii < get<1>(origin) + height; ++ii) {
@@ -103,7 +105,7 @@ using namespace std;
 				drawGeometric(&coords, WHITE);
 			}
 			void drawPiece(char representation, rgba color) {
-				drawCircle(10, 10, 2, 32);
+				drawCircle(forward_as_tuple(10, 10), 2, 32);
 			}
 			void drawCase(coord origin, unsigned int width, rgba color) {
 				list<coord> coords = {
@@ -112,15 +114,16 @@ using namespace std;
 				};
 				drawGeometric(&coords, color);
 			}
-			void drawText(string text) {
+		// low level
+			void drawText(coord origin, string text, rgba color) {
 				glPushMatrix();
-					glRasterPos2f(0.0, 0.0);
-					glScalef(0.005, 0.005, 1.0);
-					for (char c : text)
-						glutStrokeCharacter(GLUT_STROKE_ROMAN, c);
+				setColor(color);
+				glRasterPos2i(get<0>(origin), get<1>(origin)); // pk ça marche pas ?
+				glScalef((GLfloat)0.05, (GLfloat)0.05, 1.0);
+				for (char c : text)
+					glutStrokeCharacter(GLUT_STROKE_ROMAN, c);
 				glPopMatrix();
 			}
-		// low level
 			void drawGeometric(list<coord>* vertices, rgba color) {
 				switch (vertices->size()) {
 					case 1:
@@ -139,25 +142,29 @@ using namespace std;
 						glBegin(GL_POLYGON);
 						break;
 				}
+				setColor(color);
+				for (auto vertex : *vertices)
+					glVertex2i(get<0>(vertex), get<1>(vertex));
+				glEnd();
+			}
+			void drawCircle(coord origin, float r, unsigned int segments) {
+				glBegin(GL_LINE_LOOP);
+				float x, y;
+				for (unsigned int i = 0; i < segments; ++i) {
+					float theta = 2.0f * 3.1415926f * float(i) / float(segments);
+
+					x = r * cosf(theta);
+					y = r * sinf(theta);
+
+					glVertex2f(x + get<0>(origin), y + get<1>(origin));
+				}
+				glEnd();
+			}
+			void setColor(rgba color) {
 				glColor4d(
 					color.at(0),
 					color.at(1),
 					color.at(2),
 					color.at(3)
 				);
-				for (auto vertex : *vertices)
-					glVertex2i(get<0>(vertex), get<1>(vertex));
-				glEnd();
-			}
-			void drawCircle(float cx, float cy, float r, unsigned int segments) {
-				glBegin(GL_LINE_LOOP);
-				for (unsigned int i = 0; i < segments; ++i) {
-					float theta = 2.0f * 3.1415926f * float(i) / float(segments);
-
-					float x = r * cosf(theta);
-					float y = r * sinf(theta);
-
-					glVertex2f(x + cx, y + cy);
-				}
-				glEnd();
 			}
