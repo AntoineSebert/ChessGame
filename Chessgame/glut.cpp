@@ -57,9 +57,9 @@ using namespace std;
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
-				drawButton(forward_as_tuple(-20, 20), 40, 10, CYAN);
-				drawButton(forward_as_tuple(-20, -5), 40, 10, YELLOW);
-				drawButton(forward_as_tuple(-20, -30), 40, 10, GREEN);
+				drawButton(forward_as_tuple(-20, 20), 40, 10, CYAN, "PVP", BLACK);
+				drawButton(forward_as_tuple(-20, -5), 40, 10, YELLOW, "PVE", BLACK);
+				drawButton(forward_as_tuple(-20, -30), 40, 10, GREEN, "EVE", BLACK);
 
 				//drawCircle(10, 10, 2, 32);
 
@@ -73,15 +73,15 @@ using namespace std;
 
 			}
 		// medium level
-			void drawButton(coord origin, unsigned int width, unsigned int height, rgba color) {
+			void drawButton(coord origin, unsigned int width, unsigned int height, rgba frameColor, string text, rgba textColor) {
 				list<coord> coords = {
 					make_tuple(get<0>(origin), get<1>(origin)),
 					make_tuple(get<0>(origin) + width, get<1>(origin)),
 					make_tuple(get<0>(origin) + width, get<1>(origin) + height),
 					make_tuple(get<0>(origin), get<1>(origin) + height)
 				};
-				drawGeometric(&coords, color);
-				drawText(forward_as_tuple(-20, -50), "PVP", RED);
+				drawGeometric(&coords, frameColor);
+				drawText(origin, text, textColor);
 			}
 			void drawGrid(coord origin, int width, int height) {
 				for (int ii = get<1>(origin); ii < get<1>(origin) + height; ++ii) {
@@ -97,12 +97,12 @@ using namespace std;
 					make_tuple(-1, 0),
 					make_tuple(1, 0),
 				};
-				drawGeometric(&coords, WHITE);
+				drawGeometric(&coords, BLACK);
 				coords = {
 					make_tuple(0, -1),
 					make_tuple(0, 1),
 				};
-				drawGeometric(&coords, WHITE);
+				drawGeometric(&coords, BLACK);
 			}
 			void drawPiece(char representation, rgba color) {
 				drawCircle(forward_as_tuple(10, 10), 2, 32);
@@ -116,13 +116,11 @@ using namespace std;
 			}
 		// low level
 			void drawText(coord origin, string text, rgba color) {
-				glPushMatrix();
 				setColor(color);
-				glRasterPos2i(get<0>(origin), get<1>(origin)); // pk ça marche pas ?
-				glScalef((GLfloat)0.05, (GLfloat)0.05, 1.0);
+				glRasterPos2f(get<0>(origin) + 18, get<1>(origin) + 5);
 				for (char c : text)
-					glutStrokeCharacter(GLUT_STROKE_ROMAN, c);
-				glPopMatrix();
+					glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, c);
+				
 			}
 			void drawGeometric(list<coord>* vertices, rgba color) {
 				switch (vertices->size()) {

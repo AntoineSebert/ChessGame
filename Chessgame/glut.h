@@ -39,7 +39,7 @@
 			void drawDifficultyMenu();
 			void drawBoard();
 		// medium level
-			void drawButton(coord origin, unsigned int width, unsigned int height, rgba color);
+			void drawButton(coord origin, unsigned int width, unsigned int height, rgba frameColor, std::string text, rgba textColor);
 			void drawGrid(coord origin, int width, int height);
 			void drawOrigin();
 			void drawPiece(char representation, rgba color);
