@@ -22,8 +22,6 @@
 	const unsigned int WINDOW_HEIGHT = 800;
 	const char WINDOW_NAME[] = "1705851";
 
-	//void* parameter;
-
 	typedef std::tuple<int, int> coord;
 
 // functions
@@ -34,6 +32,7 @@
 	// event
 		void reshape(int width, int height);
 		void difficutyMenuClick(int button, int state, int x, int y);
+		void boardClick(int button, int state, int x, int y);
 	// drawing
 		// high level
 			void drawDifficultyMenu();
@@ -47,5 +46,5 @@
 		// low level
 			void drawText(coord origin, std::string text, rgba color);
 			void drawGeometric(std::list<coord>* vertices, rgba color);
-			void drawCircle(coord origin, float r, unsigned int num_segments);
+			void drawCircle(coord origin, float r, unsigned int num_segments, rgba color);
 			void setColor(rgba color);
