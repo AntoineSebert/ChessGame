@@ -22,6 +22,8 @@
 	const unsigned int WINDOW_HEIGHT = 800;
 	const char WINDOW_NAME[] = "1705851";
 
+	const long double PI = 3.1415926535897932384626433832795;
+
 	typedef std::tuple<int, int> coord;
 
 // functions
@@ -46,5 +48,7 @@
 		// low level
 			void drawText(coord origin, std::string text, rgba color);
 			void drawGeometric(std::list<coord>* vertices, rgba color);
-			void drawCircle(coord origin, float r, unsigned int num_segments, rgba color);
+			void drawStrokedCircle(coord origin, float r, unsigned int segments, rgba color);
+			void drawCircleStroke(coord origin, float r, unsigned int segments, rgba color);
+			void drawFullCircle(coord origin, float r, unsigned int segments, rgba color);
 			void setColor(rgba color);

@@ -21,7 +21,7 @@ using namespace std;
 	}
 	string Interface::alphanumericalChoice(vector<string>* labels) {
 		displayLabels(labels);
-		// put this fucking constant in a header file
+		// put this constant in a header file
 		return getStringInput(16);
 	}
 	unsigned int Interface::choiceMenu(vector<string>* labels) {

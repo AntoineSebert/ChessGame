@@ -82,10 +82,17 @@ using namespace std;
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
+				unsigned int caseWidth = 8;
+
 				for (unsigned int ii = 0; ii < 8; ++ii) {
 					for (unsigned int i = 0; i < 8; ++i) {
-						drawCase(forward_as_tuple((i * 8) - 32, (ii * 8) - 32), 8, RED);
-						drawCircle(forward_as_tuple((i * 8) - 28, (ii * 8) - 28), 3, 16, BLACK);
+						drawCase(forward_as_tuple((i * caseWidth) - 32, (ii * caseWidth) - 32), caseWidth, ((i + ii) % 2 == 0 ? WHITE : BLACK));
+						drawStrokedCircle(
+							forward_as_tuple((i * caseWidth) - 28, (ii * caseWidth) - 28),
+							(float)(caseWidth / 2) - 1,
+							16,
+							BLACK
+						);
 					}
 				}
 
@@ -128,7 +135,8 @@ using namespace std;
 				drawGeometric(&coords, BLACK);
 			}
 			void drawPiece(char representation, rgba color) {
-				drawCircle(forward_as_tuple(10, 10), 2, 32, BLACK);
+				drawStrokedCircle(forward_as_tuple(10, 10), 2, 32, BLACK);
+				drawText(forward_as_tuple(10, 10), string(&representation), RED);
 			}
 			void drawCase(coord origin, unsigned int width, rgba color) {
 				list<coord> coords = {
@@ -163,7 +171,7 @@ using namespace std;
 		// low level
 			void drawText(coord origin, string text, rgba color) {
 				setColor(color);
-				glRasterPos2f(get<0>(origin) + 18, get<1>(origin) + 5);
+				glRasterPos2f((GLfloat)get<0>(origin) + 18, (GLfloat)get<1>(origin) + 5);
 				for (char c : text)
 					glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, c);
 				
@@ -191,7 +199,11 @@ using namespace std;
 					glVertex2i(get<0>(vertex), get<1>(vertex));
 				glEnd();
 			}
-			void drawCircle(coord origin, float r, unsigned int segments, rgba color) {
+			void drawStrokedCircle(coord origin, float r, unsigned int segments, rgba color) {
+				drawFullCircle(origin, r, segments, color);
+				drawCircleStroke(origin, r, segments, YELLOW);
+			}
+			void drawCircleStroke(coord origin, float r, unsigned int segments, rgba color) {
 				glBegin(GL_LINE_LOOP);
 				setColor(color);
 				float x, y;
@@ -203,6 +215,13 @@ using namespace std;
 
 					glVertex2f(x + get<0>(origin), y + get<1>(origin));
 				}
+				glEnd();
+			}
+			void drawFullCircle(coord origin, float r, unsigned int segments, rgba color) {
+				glBegin(GL_POLYGON);
+				setColor(color);
+				for (double i = 0; i < 2 * PI; i += PI / segments)
+					glVertex3f((GLfloat)(get<0>(origin) + (cos(i) * r)), (GLfloat)(get<1>(origin) + (sin(i) * r)), 0.0);
 				glEnd();
 			}
 			void setColor(rgba color) {
