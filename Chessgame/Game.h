@@ -8,8 +8,10 @@
 
 #include <algorithm>
 #include <array>
+#include <list>
 #include <memory>
 #include <string>
+#include <tuple>
 #include <vector>
 #include <GL\glew.h>
 #include <GL\freeglut.h>
@@ -32,6 +34,7 @@ class Game : public Singleton<Game> {
 			difficulties difficulty;
 			gameModes gameMode;
 			unsigned int turns = 0;
+			std::list<std::tuple<boardCoord, boardCoord>> gameProgress;
 
 	// members
 		public:
@@ -44,7 +47,7 @@ class Game : public Singleton<Game> {
 			~Game();
 			void gameLoop();
 			bool isGameFinished();
-			void selectPlayerToPlay(unsigned int turns);
+			std::weak_ptr<Player> selectPlayerToPlay(unsigned int turns);
 			void reinitializeCallbacks();
 			// préparation
 				void initializeBoard();

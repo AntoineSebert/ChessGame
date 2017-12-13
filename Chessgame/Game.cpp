@@ -29,15 +29,15 @@ using namespace std;
 		while (turns < 0 || isGameFinished()) {
 			++turns;
 			gameBoard->display(turns);
-			selectPlayerToPlay(turns);
+			selectPlayerToPlay(turns).lock()->play(gameBoard);
 		}
 	}
 	bool Game::isGameFinished() {
 		// tester les deux rois, si les pièces peuvent bouger, et d'autres trucs
 		return false;
 	}
-	void Game::selectPlayerToPlay(unsigned int turns) {
-		players.at(turns % players.size())->play(gameBoard);
+	std::weak_ptr<Player> Game::selectPlayerToPlay(unsigned int turns) {
+		return players.at(turns % players.size());
 	}
 	void Game::reinitializeCallbacks() {
 		glutDisplayFunc(NULL);

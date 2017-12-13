@@ -28,7 +28,7 @@ using namespace std;
 			playerArmy->getBegin(), playerArmy->getEnd() - 8
 		);
 	}
-	void Player::play(Board* gameBoard) {
+	tuple<boardCoord, boardCoord> Player::play(Board* gameBoard) {
 		vector<string> labels;
 		unsigned int moveChoice;
 		do {
@@ -46,6 +46,7 @@ using namespace std;
 		} while (moveChoice < labels.size() - 2);
 		movePiece(moveChoice);
 		selectedPiece.reset();
+		return tuple<boardCoord, boardCoord>();
 	}
 	void Player::selectPiece(unsigned int number) {
 		selectedPiece = (*playerArmy)[number];
@@ -84,7 +85,7 @@ using namespace std;
 		}
 		*/
 		//for
-		for (tuple<unsigned int, unsigned int> move : piece.lock()->movement())
+		for (boardCoord move : piece.lock()->movement())
 			cout << (char)(get<0>(move) + 65) << ':' << get<1>(move) << endl;
 		return vector<unsigned int>();
 	}

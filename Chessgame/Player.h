@@ -10,6 +10,7 @@
 #include <iostream>
 #include <iterator>
 #include <string>
+#include <tuple>
 
 #include "Army.h"
 #include "Board.h"
@@ -32,7 +33,7 @@ class Player {
 			std::string getName();
 			unsigned int getColor();
 			void initializeArmy(Board* gameBoard);
-			void play(Board* gameBoard);
+			std::tuple<boardCoord, boardCoord> play(Board* gameBoard);
 			void selectPiece(unsigned int number);
 			void movePiece(unsigned int number);
 		// protected

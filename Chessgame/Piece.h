@@ -17,7 +17,7 @@ class Piece {
 	// attributes
 		protected:
 			char representation;
-			std::tuple<unsigned int, unsigned int> position;
+			boardCoord position;
 			unsigned int* color = nullptr;
 
 	// members
