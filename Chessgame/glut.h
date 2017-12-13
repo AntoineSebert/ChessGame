@@ -21,7 +21,6 @@
 	const unsigned int WINDOW_WIDTH = 1200;
 	const unsigned int WINDOW_HEIGHT = 800;
 	const char WINDOW_NAME[] = "1705851";
-
 	const long double PI = 3.1415926535897932384626433832795;
 
 	typedef std::tuple<int, int> coord;

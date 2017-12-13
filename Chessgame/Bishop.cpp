@@ -17,8 +17,8 @@ using namespace std;
 	char Bishop::getRepresentation() {
 		return representation;
 	}
-	vector<tuple<unsigned int, unsigned int>> const Bishop::movement() const {
-		return vector<tuple<unsigned int, unsigned int>>();
+	vector<boardCoord> const Bishop::movement() const {
+		return vector<boardCoord>();
 	}
 // protected
 // private

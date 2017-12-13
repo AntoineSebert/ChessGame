@@ -17,8 +17,8 @@ using namespace std;
 	char King::getRepresentation() {
 		return representation;
 	}
-	vector<tuple<unsigned int, unsigned int>> const King::movement() const {
-		return vector<tuple<unsigned int, unsigned int>>();
+	vector<boardCoord> const King::movement() const {
+		return vector<boardCoord>();
 	}
 // protected
 // private

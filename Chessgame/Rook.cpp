@@ -17,6 +17,6 @@ using namespace std;
 	char Rook::getRepresentation() {
 		return representation;
 	}
-	vector<tuple<unsigned int, unsigned int>> const Rook::movement() const {
-		return const_cast<vector<tuple<unsigned int, unsigned int>>&>(linesPositions());
+	vector<boardCoord> const Rook::movement() const {
+		return const_cast<vector<boardCoord>&>(linesPositions());
 	}

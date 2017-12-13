@@ -15,7 +15,7 @@ using namespace std;
 		return color;
 	}
 	void Cell::displayContent() {
-		cout << (is_uninitialized(content) ? '*' : content._Get()->getRepresentation());
+		cout << (isUninitialized(content) ? '*' : content.lock()->getRepresentation());
 	}
 	void Cell::setPiece(weak_ptr<Piece> newPiece) {
 		content = newPiece;
@@ -26,7 +26,7 @@ using namespace std;
 // protected
 // private
 	template<typename T>
-	inline bool Cell::is_uninitialized(weak_ptr<T> const & weak) {
+	inline bool Cell::isUninitialized(weak_ptr<T> const & weak) {
 		using wt = weak_ptr<T>;
 		return !weak.owner_before(wt{}) && !wt{}.owner_before(weak);
 	}

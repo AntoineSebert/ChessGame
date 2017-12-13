@@ -19,6 +19,6 @@ class King : public Piece {
 			King(unsigned int* newColor);
 			~King();
 			char getRepresentation();
-			std::vector<std::tuple<unsigned int, unsigned int>> const movement() const;
+			std::vector<boardCoord> const movement() const;
 };
 

@@ -26,5 +26,5 @@ class Cell {
 			void setPiece(std::weak_ptr<Piece> newPiece);
 			void removePiece();
 		private:
-			template <typename T> bool is_uninitialized(std::weak_ptr<T> const& weak);
+			template <typename T> bool isUninitialized(std::weak_ptr<T> const& weak);
 };

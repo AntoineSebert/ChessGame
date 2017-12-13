@@ -11,10 +11,14 @@
 #include "Piece.h"
 
 class Rook : public Piece {
+	// attributes
+		private:
+			bool hasMoved = false;
+
 	// members
 		public:
 			Rook(unsigned int* newColor);
 			~Rook();
 			char getRepresentation();
-			std::vector<std::tuple<unsigned int, unsigned int>> const movement() const;
+			std::vector<boardCoord> const movement() const;
 };

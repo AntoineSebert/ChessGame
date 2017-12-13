@@ -11,6 +11,8 @@
 #include <tuple>
 #include <vector>
 
+typedef std::tuple<unsigned int, unsigned int> boardCoord;
+
 class Piece {
 	// attributes
 		protected:
@@ -21,10 +23,10 @@ class Piece {
 	// members
 		public:
 			Piece();
-			virtual std::vector<std::tuple<unsigned int, unsigned int>> const movement() const = 0;
+			virtual std::vector<boardCoord> const movement() const = 0;
 			virtual char getRepresentation() = 0;
-			std::tuple<unsigned int, unsigned int> getPosition();
-			void setPosition(std::tuple<unsigned int, unsigned int> newPosition);
+			boardCoord getPosition();
+			void setPosition(boardCoord newPosition);
 		protected:
-			std::vector<std::tuple<unsigned int, unsigned int>> const& linesPositions() const;
+			std::vector<boardCoord> const& linesPositions() const;
 };

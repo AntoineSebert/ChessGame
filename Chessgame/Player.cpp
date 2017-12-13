@@ -49,7 +49,7 @@ using namespace std;
 	}
 	void Player::selectPiece(unsigned int number) {
 		selectedPiece = (*playerArmy)[number];
-		cout << selectedPiece._Get()->getRepresentation() << endl;
+		cout << selectedPiece.lock()->getRepresentation() << endl;
 	}
 	void Player::movePiece(unsigned int number) {
 
@@ -84,7 +84,7 @@ using namespace std;
 		}
 		*/
 		//for
-		for (tuple<unsigned int, unsigned int> move : piece._Get()->movement())
+		for (tuple<unsigned int, unsigned int> move : piece.lock()->movement())
 			cout << (char)(get<0>(move) + 65) << ':' << get<1>(move) << endl;
 		return vector<unsigned int>();
 	}

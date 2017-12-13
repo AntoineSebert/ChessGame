@@ -17,8 +17,8 @@ using namespace std;
 	char Queen::getRepresentation() {
 		return representation;
 	}
-	vector<tuple<unsigned int, unsigned int>> const Queen::movement() const {
-		vector<tuple<unsigned int, unsigned int>> moves, temp = linesPositions();
+	vector<boardCoord> const Queen::movement() const {
+		vector<boardCoord> moves, temp = linesPositions();
 		moves.reserve(moves.size() + temp.size());
 		std::move(temp.begin(), temp.end(), std::back_inserter(moves));
 
@@ -37,5 +37,3 @@ using namespace std;
 				moves.push_back((get<0>(position) < get<1>(position) ? make_tuple(++ii, ++i) : make_tuple(++i, ++ii)));
 		return moves;
 	}
-// protected
-// private

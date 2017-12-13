@@ -23,7 +23,6 @@ class Interface : public Singleton<Interface> {
 			unsigned int numberChoice(std::vector<std::string>* labels, unsigned int firstBound, unsigned int secondBound = 0);
 			bool booleanChoice(std::vector<std::string>* labels);
 			std::string alphanumericalChoice(std::vector<std::string>* labels);
-			unsigned int choiceMenu(std::vector<std::string>* labels);
 		private:
 			Interface();
 			~Interface();

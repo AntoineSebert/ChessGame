@@ -24,11 +24,6 @@ using namespace std;
 		// put this constant in a header file
 		return getStringInput(16);
 	}
-	unsigned int Interface::choiceMenu(vector<string>* labels) {
-		glutDisplayFunc(drawDifficultyMenu);
-		glutMouseFunc(difficutyMenuClick);
-		return 0;
-	}
 // protected
 // private
 	Interface::Interface() {}

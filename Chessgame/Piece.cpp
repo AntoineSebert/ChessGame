@@ -8,18 +8,17 @@
 
 using namespace std;
 
-Piece::Piece() {}
-
 // public
-	tuple<unsigned int, unsigned int> Piece::getPosition() {
+	Piece::Piece() {}
+	boardCoord Piece::getPosition() {
 		return position;
 	}
-	void Piece::setPosition(tuple<unsigned int, unsigned int> newPosition) {
+	void Piece::setPosition(boardCoord newPosition) {
 		position = newPosition;
 	}
 // protected
-	vector<tuple<unsigned int, unsigned int>> const& Piece::linesPositions() const {
-		vector<tuple<unsigned int, unsigned int>> moves;
+	vector<boardCoord> const& Piece::linesPositions() const {
+		vector<boardCoord> moves;
 		// left - right
 		for (unsigned int i = get<0>(position); 0 < i;)
 			moves.push_back(make_tuple(--i, get<1>(position)));
