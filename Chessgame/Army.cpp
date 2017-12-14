@@ -10,22 +10,23 @@ using namespace std;
 
 // public
 	Army::Army(unsigned int* newColor) : color(newColor) {
+		// place pieces in alive pieces container
 		alivePieces.push_back(make_shared<Rook>(color));
 		alivePieces.push_back(make_shared<Knight>(color));
 		alivePieces.push_back(make_shared<Bishop>(color));
+		// place monarchs according to the player color
 		if (*color == 0) {
-			// à vérifier
 			alivePieces.push_back(make_shared<Queen>(color));
 			alivePieces.push_back(make_shared<King>(color));
 		}
 		else {
-			// à vérifier
 			alivePieces.push_back(make_shared<King>(color));
 			alivePieces.push_back(make_shared<Queen>(color));
 		}
 		alivePieces.push_back(make_shared<Bishop>(color));
 		alivePieces.push_back(make_shared<Knight>(color));
 		alivePieces.push_back(make_shared<Rook>(color));
+		// place pawns
 		for (unsigned int i = 0; i < 8; ++i)
 			alivePieces.push_back(make_shared<Pawn>(color));
 	}
@@ -37,9 +38,10 @@ using namespace std;
 		return (unsigned int)alivePieces.size();
 	}
 	void Army::displayArmy() {
+		cout << "====" << endl;
 		for (auto piece : alivePieces)
 			cout << piece->getRepresentation();
-		cout << endl;
+		cout << endl << "====" << endl;
 		for (auto piece : deadPieces)
 			cout << piece->getRepresentation();
 		cout << endl;

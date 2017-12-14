@@ -15,6 +15,7 @@ using namespace std;
 		return color;
 	}
 	void Cell::displayContent() {
+		// if a piece is on the cell, display its representation, or '*' otherwise
 		cout << (isUninitialized(content) ? '*' : content.lock()->getRepresentation());
 	}
 	void Cell::setPiece(weak_ptr<Piece> newPiece) {
@@ -27,6 +28,7 @@ using namespace std;
 // private
 	template<typename T>
 	inline bool Cell::isUninitialized(weak_ptr<T> const & weak) {
+		// check is weak_ptr holds a reference to something
 		using wt = weak_ptr<T>;
 		return !weak.owner_before(wt{}) && !wt{}.owner_before(weak);
 	}

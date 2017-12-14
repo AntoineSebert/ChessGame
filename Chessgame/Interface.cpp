@@ -10,6 +10,7 @@ using namespace std;
 
 // public
 	unsigned int Interface::numberChoice(vector<string>* labels, unsigned int firstBound, unsigned int secondBound) {
+		// must be at least a title and a possible answer
 		if (labels->size() < 2)
 			throw logic_error("The given array must at least contain two values");
 		displayLabels(labels);
