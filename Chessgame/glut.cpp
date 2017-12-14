@@ -21,6 +21,7 @@ using namespace std;
 		}
 		void initializeWindow() {
 			glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+			// center window
 			glutInitWindowPosition(
 				(glutGet(GLUT_SCREEN_WIDTH) - WINDOW_WIDTH) / 2,
 				(glutGet(GLUT_SCREEN_HEIGHT) - WINDOW_HEIGHT) / 2
@@ -35,6 +36,7 @@ using namespace std;
 		}
 	// event
 		void reshape(int width, int height) {
+			// adapt content to new size
 			glViewport(0, 0, width, height);
 			glMatrixMode(GL_PROJECTION);
 			glLoadIdentity();
@@ -61,29 +63,34 @@ using namespace std;
 	// drawing
 		// high level
 			void drawDifficultyMenu() {
-				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Efface le frame buffer et le Z-buffer
+				// preparation
+				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 				glMatrixMode(GL_MODELVIEW);
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
+				// buttons
 				drawButton(forward_as_tuple(-20, 20), 40, 10, CYAN, "PVP", BLACK);
 				drawButton(forward_as_tuple(-20, -5), 40, 10, YELLOW, "PVE", BLACK);
 				drawButton(forward_as_tuple(-20, -30), 40, 10, GREEN, "EVE", BLACK);
 
+				// grid and origin
 				drawGrid(forward_as_tuple(-60, -40), 120, 80);
 				drawOrigin();
 
+				// refresh
 				glutSwapBuffers();
 				glutPostRedisplay();
 			}
 			void drawBoard() {
-				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Efface le frame buffer et le Z-buffer
+				// preparation
+				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 				glMatrixMode(GL_MODELVIEW);
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
+				// draw board
 				unsigned int caseWidth = 8;
-
 				for (unsigned int ii = 0; ii < 8; ++ii) {
 					for (unsigned int i = 0; i < 8; ++i) {
 						drawCase(forward_as_tuple((i * caseWidth) - 32, (ii * caseWidth) - 32), caseWidth, ((i + ii) % 2 == 0 ? WHITE : BLACK));
@@ -96,14 +103,17 @@ using namespace std;
 					}
 				}
 
+				// grid and origin
 				drawGrid(forward_as_tuple(-60, -40), 120, 80);
 				drawOrigin();
 
+				// refresh
 				glutSwapBuffers();
 				glutPostRedisplay();
 			}
 		// medium level
 			void drawButton(coord origin, unsigned int width, unsigned int height, rgba frameColor, string text, rgba textColor) {
+				// rectangle vertices
 				list<coord> coords = {
 					make_tuple(get<0>(origin), get<1>(origin)),
 					make_tuple(get<0>(origin) + width, get<1>(origin)),
@@ -123,11 +133,13 @@ using namespace std;
 				}
 			}
 			void drawOrigin() {
+				// first segment
 				list<coord> coords = {
 					make_tuple(-1, 0),
 					make_tuple(1, 0),
 				};
 				drawGeometric(&coords, BLACK);
+				// second segment
 				coords = {
 					make_tuple(0, -1),
 					make_tuple(0, 1),
@@ -139,6 +151,7 @@ using namespace std;
 				drawText(forward_as_tuple(10, 10), string(&representation), RED);
 			}
 			void drawCase(coord origin, unsigned int width, rgba color) {
+				// fill cell
 				list<coord> coords = {
 					make_tuple(get<0>(origin), get<1>(origin)),
 					make_tuple(get<0>(origin) + width, get<1>(origin)),
@@ -147,6 +160,7 @@ using namespace std;
 				};
 				drawGeometric(&coords, color);
 
+				// stroke cell
 				coords = {
 					make_tuple(get<0>(origin), get<1>(origin)),
 					make_tuple(get<0>(origin) + width, get<1>(origin))
@@ -171,12 +185,15 @@ using namespace std;
 		// low level
 			void drawText(coord origin, string text, rgba color) {
 				setColor(color);
+				// determine text position
 				glRasterPos2f((GLfloat)get<0>(origin) + 18, (GLfloat)get<1>(origin) + 5);
+				// render each character
 				for (char c : text)
 					glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, c);
 				
 			}
 			void drawGeometric(list<coord>* vertices, rgba color) {
+				// determine figure to draw
 				switch (vertices->size()) {
 					case 1:
 						glBegin(GL_POINTS);
@@ -195,6 +212,7 @@ using namespace std;
 						break;
 				}
 				setColor(color);
+				// add vertices
 				for (auto vertex : *vertices)
 					glVertex2i(get<0>(vertex), get<1>(vertex));
 				glEnd();
@@ -208,20 +226,19 @@ using namespace std;
 				setColor(color);
 				float x, y;
 				for (unsigned int i = 0; i < segments; ++i) {
+					// determine angle
 					float theta = 2.0f * 3.1415926f * float(i) / float(segments);
-
-					x = r * cosf(theta);
-					y = r * sinf(theta);
-
-					glVertex2f(x + get<0>(origin), y + get<1>(origin));
+					// determine coordinates of vertex and add it
+					glVertex2f((r * cosf(theta)) + get<0>(origin), (r * sinf(theta)) + get<1>(origin));
 				}
 				glEnd();
 			}
 			void drawFullCircle(coord origin, float r, unsigned int segments, rgba color) {
 				glBegin(GL_POLYGON);
 				setColor(color);
+				// determine coordinates of vertices and add them
 				for (double i = 0; i < 2 * PI; i += PI / segments)
-					glVertex3f((GLfloat)(get<0>(origin) + (cos(i) * r)), (GLfloat)(get<1>(origin) + (sin(i) * r)), 0.0);
+					glVertex3f((get<0>(origin) + (cosf(i) * r)), (get<1>(origin) + (sinf(i) * r)), 0.0);
 				glEnd();
 			}
 			void setColor(rgba color) {

@@ -30,6 +30,7 @@ using namespace std;
 	Interface::Interface() {}
 	Interface::~Interface() {}
 	void Interface::displayLabels(vector<string>* labels, unsigned int rows) {
+		// displaying text
 		for (auto it = labels->begin(); it != labels->end(); ++it) {
 			cout << ' ';
 			if (*it != labels->front())
@@ -40,6 +41,7 @@ using namespace std;
 	// first level input
 		unsigned int Interface::getNumberInput(unsigned int firstBound, unsigned int secondBound) {
 			string input;
+			// while input is not a number between zero and 'firstBound', or between 'firstBound' and 'secondBound'
 			do {
 				cout << " Please type a number between " << (secondBound == 0 ? 1 : firstBound) << " and " << (secondBound == 0 ? firstBound : secondBound) << " included" << endl;
 				cin >> input;
@@ -48,6 +50,7 @@ using namespace std;
 		}
 		bool Interface::getBooleanInput() {
 			string input;
+			// while input is not '0' or '1'
 			do {
 				cout << " Please type 0 or 1" << endl;
 				cin >> input;
@@ -56,6 +59,7 @@ using namespace std;
 		}
 		string Interface::getStringInput(unsigned int maxChararacters) {
 			string input;
+			// while the input is not an alphanumerical string shorter than 'maxChararacters'
 			do {
 				cout << " Please type an alphanumerical string shorter than " << maxChararacters << " characters" << endl;
 				cin >> input;
@@ -64,16 +68,19 @@ using namespace std;
 		}
 	// second level input
 		bool Interface::isNumberString(string* input, unsigned int firstBound, unsigned int secondBound) {
+			// check if input is number
 			for (auto character : *input) {
 				if (!isNumber(character))
 					return false;
 			}
+			// convert input to 'unsigned int', then check bounds
 			unsigned int numberInput = stoi(*input);
 			if (firstBound != 0)
 				return (secondBound != 0 ? firstBound < numberInput && numberInput <= secondBound : 0 < numberInput && numberInput <= firstBound);
 			return true;
 		}
 		bool Interface::isAlphabeticalString(string* input) {
+			// check if input is alphabetical
 			for (auto character : *input) {
 				if (!isAlphabetical(character))
 					return false;
@@ -81,6 +88,7 @@ using namespace std;
 			return true;
 		}
 		bool Interface::isAlphanumeraicalString(string* input) {
+			// check if input is alphanumerical
 			for (auto character : *input) {
 				if (!isNumber(character) || !isAlphabetical(character))
 					return false;
