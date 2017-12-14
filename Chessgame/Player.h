@@ -35,7 +35,7 @@ class Player {
 			void initializeArmy(Board* gameBoard);
 			std::tuple<boardCoord, boardCoord> play(Board* gameBoard);
 			void selectPiece(unsigned int number);
-			void movePiece(unsigned int number);
+			boardCoord movePiece(unsigned int number);
 		// protected
 		private:
 			void placePieces(

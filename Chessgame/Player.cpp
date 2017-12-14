@@ -30,7 +30,7 @@ using namespace std;
 	}
 	tuple<boardCoord, boardCoord> Player::play(Board* gameBoard) {
 		vector<string> labels;
-		unsigned int moveChoice;
+		unsigned int choice;
 		do {
 			labels = { "Chosse a piece to select" };
 			for (shared_ptr<Piece> piece : *playerArmy->getArmyContainer())
@@ -38,21 +38,23 @@ using namespace std;
 					(char)(get<0>(piece->getPosition()) + 65) + to_string(get<1>(piece->getPosition()))
 				);
 			selectPiece(gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1));
+
 			labels = { "Chosse a move or deselect piece" };
 			possibleMoves(selectedPiece);
 			// for
 			labels.push_back("Deselect");
-			moveChoice = gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
-		} while (moveChoice < labels.size() - 2);
-		movePiece(moveChoice);
+			choice = gameInterface->numberChoice(&labels, (unsigned int)labels.size() - 1);
+		} while (choice < labels.size() - 2);
+		boardCoord moveChoice = movePiece(choice);
+		boardCoord initialPosition = selectedPiece.lock()->getPosition();
 		selectedPiece.reset();
-		return tuple<boardCoord, boardCoord>();
+		return forward_as_tuple(initialPosition, moveChoice);
 	}
 	void Player::selectPiece(unsigned int number) {
 		selectedPiece = (*playerArmy)[number];
 		cout << selectedPiece.lock()->getRepresentation() << endl;
 	}
-	void Player::movePiece(unsigned int number) {
+	boardCoord Player::movePiece(unsigned int number) {
 
 	}
 // protected
