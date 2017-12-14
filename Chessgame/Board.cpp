@@ -28,13 +28,13 @@ using namespace std;
 			cout << endl;
 		}
 	}
-	array<array<shared_ptr<Cell>, 8>, 8>* Board::getData() { return &data; }
-	array<shared_ptr<Cell>, 8> Board::operator[](unsigned int index) { return data.at(index); }
+	array<boardRow, 8>* Board::getData() { return &data; }
+	boardRow Board::operator[](unsigned int index) { return data.at(index); }
 	shared_ptr<Cell> Board::operator()(unsigned int index, unsigned int index2) { return data.at(index).at(index2); }
-	array<array<shared_ptr<Cell>, 8>, 8>::iterator Board::getBegin() { return data.begin(); }
-	array<shared_ptr<Cell>, 8>::iterator Board::getBegin(unsigned int index) { return data.at(index).begin(); }
-	array<array<shared_ptr<Cell>, 8>, 8>::iterator Board::getEnd() { return data.end(); }
-	array<shared_ptr<Cell>, 8>::iterator Board::getEnd(unsigned int index) { return data.at(index).end(); }
+	array<boardRow, 8>::iterator Board::getBegin() { return data.begin(); }
+	boardRow::iterator Board::getBegin(unsigned int index) { return data.at(index).begin(); }
+	array<boardRow, 8>::iterator Board::getEnd() { return data.end(); }
+	boardRow::iterator Board::getEnd(unsigned int index) { return data.at(index).end(); }
 // protected
 // private
 	Board::Board() {}

@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <memory>
 #include <iostream>
 #include <iterator>
+#include <memory>
 #include <string>
 #include <tuple>
 
@@ -40,7 +40,7 @@ class Player {
 		private:
 			void placePieces(
 				unsigned int rowNumber,
-				std::array<std::shared_ptr<Cell>, 8>::iterator cellStart, std::array<std::shared_ptr<Cell>, 8>::iterator cellEnd,
+				boardRow::iterator cellStart, boardRow::iterator cellEnd,
 				std::vector<std::shared_ptr<Piece>>::iterator pieceStart, std::vector<std::shared_ptr<Piece>>::iterator pieceEnd
 			);
 			std::vector<unsigned int> possibleMoves(std::weak_ptr<Piece> piece);

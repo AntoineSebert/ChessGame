@@ -13,23 +13,25 @@
 #include "Singleton.h"
 #include "Cell.h"
 
+typedef std::array<std::shared_ptr<Cell>, 8> boardRow;
+
 class Board : public Singleton<Board> {
 	friend class Singleton<Board>;
 	// attributes
 		private:
-			std::array<std::array<std::shared_ptr<Cell>, 8>, 8> data;
+			std::array<boardRow, 8> data;
 
 	// methods
 		public:
 			void initialize();
 			void display(unsigned int turns);
-			std::array<std::array<std::shared_ptr<Cell>, 8>, 8>* getData();
-			std::array<std::shared_ptr<Cell>, 8> operator[](unsigned int index);
+			std::array<boardRow, 8>* getData();
+			boardRow operator[](unsigned int index);
 			std::shared_ptr<Cell> operator()(unsigned int index, unsigned int index2);
-			std::array<std::array<std::shared_ptr<Cell>, 8>, 8>::iterator getBegin();
-			std::array<std::shared_ptr<Cell>, 8>::iterator getBegin(unsigned int index);
-			std::array<std::array<std::shared_ptr<Cell>, 8>, 8>::iterator getEnd();
-			std::array<std::shared_ptr<Cell>, 8>::iterator getEnd(unsigned int index);
+			std::array<boardRow, 8>::iterator getBegin();
+			boardRow::iterator getBegin(unsigned int index);
+			std::array<boardRow, 8>::iterator getEnd();
+			boardRow::iterator getEnd(unsigned int index);
 		private:
 			Board();
 			~Board();
