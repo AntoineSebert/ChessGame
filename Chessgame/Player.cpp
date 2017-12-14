@@ -55,7 +55,7 @@ using namespace std;
 		cout << selectedPiece.lock()->getRepresentation() << endl;
 	}
 	boardCoord Player::movePiece(unsigned int number) {
-
+		return boardCoord();
 	}
 // protected
 // private

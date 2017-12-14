@@ -10,7 +10,9 @@
 #include <array>
 #include <list>
 #include <memory>
+#include <fstream>
 #include <string>
+#include <ctime>
 #include <tuple>
 #include <vector>
 #include <GL\glew.h>
@@ -22,6 +24,7 @@
 #include "Board.h"
 #include "Player.h"
 #include "Interface.h"
+#include "json.hpp"
 
 class Game : public Singleton<Game> {
 	friend class Singleton<Game>;
@@ -49,6 +52,11 @@ class Game : public Singleton<Game> {
 			bool isGameFinished();
 			std::weak_ptr<Player> selectPlayerToPlay(unsigned int turns);
 			void reinitializeCallbacks();
+			// import/ export
+				bool exportToFile();
+				nlohmann::json convertToJson();
+				bool importFile();
+				std::string currentDatetimeToString();
 			// préparation
 				void initializeBoard();
 				void initializePlayers();

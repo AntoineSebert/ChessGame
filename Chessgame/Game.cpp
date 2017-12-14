@@ -7,17 +7,19 @@
 #include "Game.h"
 
 using namespace std;
+using json = nlohmann::json;
 
 // public
 	void Game::initialize() {
 		gameInterface = &Interface::getInstance();
 		gameMode = setGameModes();
-		//initializePlayers();
-		//difficulty = setDifficulty();
+		initializePlayers();
+		difficulty = setDifficulty();
 		gameBoard = &gameBoard->getInstance();
-		//initializeBoard();
-		//initializeArmies();
-		//gameLoop();
+		initializeBoard();
+		initializeArmies();
+		gameLoop();
+		exportToFile();
 	}
 	difficulties Game::getDifficulty() { return difficulty; }
 	gameModes Game::getGameMode() { return gameMode; }
@@ -26,10 +28,10 @@ using namespace std;
 	Game::Game() {}
 	Game::~Game() {}
 	void Game::gameLoop() {
-		while (turns < 0 || isGameFinished()) {
+		while (turns < 2 || isGameFinished()) {
 			++turns;
 			gameBoard->display(turns);
-			selectPlayerToPlay(turns).lock()->play(gameBoard);
+			gameProgress.push_back(selectPlayerToPlay(turns).lock()->play(gameBoard));
 		}
 	}
 	bool Game::isGameFinished() {
@@ -45,6 +47,42 @@ using namespace std;
 		glutMotionFunc(NULL);
 		glutPassiveMotionFunc(NULL);
 	}
+	// import/ export
+		bool Game::exportToFile() {
+			json container = convertToJson();
+			cout << container.dump(4) << endl;
+			ofstream o("output.json");
+			o << std::setw(4) << container << endl;
+			return false;
+		}
+		json Game::convertToJson() {
+			json container;
+			container["date"] = currentDatetimeToString();
+			container["players"] = json::array();
+			for (shared_ptr<Player> player : players)
+				container["players"].push_back(player->getName());
+			container["progress"] = json::array();
+			for (tuple<boardCoord, boardCoord> move : gameProgress)
+				container["progress"].push_back(move);
+			return container;
+		}
+		bool Game::importFile() {
+			/*
+			std::ifstream i("file.json");
+			json j;
+			i >> j;
+			*/
+			return false;
+		}
+		std::string Game::currentDatetimeToString() {
+			time_t rawtime;
+			time(&rawtime);
+			struct tm timeinfo;
+			localtime_s(&timeinfo, &rawtime);
+			char buffer[80];
+			strftime(buffer, 80, "%c", &timeinfo);
+			return buffer;
+		}
 	// préparation
 		gameModes Game::setGameModes() {
 			vector<string> labels = {
