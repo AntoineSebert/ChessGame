@@ -53,10 +53,11 @@ class Game : public Singleton<Game> {
 			std::weak_ptr<Player> selectPlayerToPlay(unsigned int turns);
 			void reinitializeCallbacks();
 			// import/ export
-				bool exportToFile();
+				void exportToFile();
 				nlohmann::json convertToJson();
 				bool importFile();
 				std::string currentDatetimeToString();
+				bool checkJSONValidity(nlohmann::json object);
 			// préparation
 				void initializeBoard();
 				void initializePlayers();
