@@ -1,8 +1,8 @@
 <map id="Piece" name="Piece">
-<area shape="rect" id="node2" href="$de/d1c/class_bishop.html" title="bishop class " alt="" coords="5,80,68,107"/>
-<area shape="rect" id="node3" href="$d5/dde/class_king.html" title="king class " alt="" coords="93,80,141,107"/>
-<area shape="rect" id="node4" href="$d5/d98/class_knight.html" title="knight class " alt="" coords="165,80,223,107"/>
-<area shape="rect" id="node5" href="$dc/d4f/class_pawn.html" title="pawn class " alt="" coords="248,80,303,107"/>
-<area shape="rect" id="node6" href="$d8/dfc/class_queen.html" title="queen class " alt="" coords="327,80,387,107"/>
-<area shape="rect" id="node7" href="$d3/d05/class_rook.html" title="rook class " alt="" coords="411,80,463,107"/>
+<area shape="rect" id="node2" href="$de/d1c/class_bishop.html" title="Bishop class. " alt="" coords="5,80,68,107"/>
+<area shape="rect" id="node3" href="$d5/dde/class_king.html" title="King class. " alt="" coords="93,80,141,107"/>
+<area shape="rect" id="node4" href="$d5/d98/class_knight.html" title="Knight class. " alt="" coords="165,80,223,107"/>
+<area shape="rect" id="node5" href="$dc/d4f/class_pawn.html" title="Pawn class. " alt="" coords="248,80,303,107"/>
+<area shape="rect" id="node6" href="$d8/dfc/class_queen.html" title="Queen class. " alt="" coords="327,80,387,107"/>
+<area shape="rect" id="node7" href="$d3/d05/class_rook.html" title="Rook class. " alt="" coords="411,80,463,107"/>
 </map>
