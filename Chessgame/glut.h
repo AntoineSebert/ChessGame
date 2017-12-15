@@ -1,4 +1,4 @@
-/*
+/**
 	@author Antoine "Anthony" Sébert
 	@creation_date 04/12/2017
 	@description glut related functions & data header
