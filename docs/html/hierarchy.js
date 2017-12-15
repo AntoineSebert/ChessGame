@@ -2,7 +2,6 @@ var hierarchy =
 [
     [ "Army", "da/d8c/class_army.html", null ],
     [ "Cell", "dd/d11/class_cell.html", null ],
-    [ "iterator_range< T >", "d7/d52/structiterator__range.html", null ],
     [ "Piece", "d7/d87/class_piece.html", [
       [ "Bishop", "de/d1c/class_bishop.html", null ],
       [ "King", "d5/dde/class_king.html", null ],

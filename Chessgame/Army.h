@@ -1,5 +1,5 @@
-/**
-	@author Antoine "Anthony" S�bert
+﻿/**
+	@author Antoine "Anthony" Sébert
 	@creation_date 10/11/2017
 	@description player army container
 */
@@ -37,4 +37,3 @@ class Army {
 			std::vector<std::shared_ptr<Piece>>::iterator getBegin();
 			std::vector<std::shared_ptr<Piece>>::iterator getEnd();
 };
-

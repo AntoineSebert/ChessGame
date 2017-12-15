@@ -1,5 +1,5 @@
-/**
-	@author Antoine "Anthony" S�bert
+﻿/**
+	@author Antoine "Anthony" Sébert
 	@creation_date 14/11/2017
 	@description bishop class
 */
@@ -20,5 +20,3 @@ using namespace std;
 	vector<boardCoord> const Bishop::movement() const {
 		return vector<boardCoord>();
 	}
-// protected
-// private

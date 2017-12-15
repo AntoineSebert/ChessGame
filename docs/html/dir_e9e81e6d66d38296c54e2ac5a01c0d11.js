@@ -10,7 +10,6 @@ var dir_e9e81e6d66d38296c54e2ac5a01c0d11 =
     [ "glut.h", "d9/db8/glut_8h_source.html", null ],
     [ "header.h", "df/dcb/header_8h_source.html", null ],
     [ "Interface.h", "da/d20/_interface_8h_source.html", null ],
-    [ "iterator_range.hpp", "da/d3d/iterator__range_8hpp_source.html", null ],
     [ "King.h", "d1/d5b/_king_8h_source.html", null ],
     [ "Knight.h", "d7/d04/_knight_8h_source.html", null ],
     [ "palettes.h", "d3/db5/palettes_8h_source.html", null ],

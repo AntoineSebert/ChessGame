@@ -1,5 +1,5 @@
-/**
-	@author Antoine "Anthony" Sébert
+ï»¿/**
+	@author Antoine "Anthony" SÃ©bert
 	@creation_date 05/11/2017
 	@description game initializer and handler
 */
@@ -140,7 +140,7 @@ using json = nlohmann::json;
 			}
 			return false;
 		}
-	// préparation
+	// prÃ©paration
 		gameModes Game::setGameModes() {
 			vector<string> labels = {
 				"Select the gamemode",

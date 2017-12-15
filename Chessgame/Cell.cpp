@@ -1,5 +1,5 @@
-/**
-	@author Antoine "Anthony" S�bert
+﻿/**
+	@author Antoine "Anthony" Sébert
 	@creation_date 06/11/2017
 	@description board element container
 */

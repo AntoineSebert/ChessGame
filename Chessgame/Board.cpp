@@ -1,5 +1,5 @@
-/**
-	@author Antoine "Anthony" S�bert
+﻿/**
+	@author Antoine "Anthony" Sébert
 	@creation_date 06/11/2017
 	@description game board container
 */
@@ -39,3 +39,4 @@ using namespace std;
 // private
 	Board::Board() {}
 	Board::~Board() {}
+Demo Version, Only convert first 5 files at one time, Please buy now!Demo Version, Only convert first 5 files at one time, Please buy now!

@@ -6,7 +6,6 @@ var annotated_dup =
     [ "Cell", "dd/d11/class_cell.html", "dd/d11/class_cell" ],
     [ "Game", "dd/d1f/class_game.html", "dd/d1f/class_game" ],
     [ "Interface", "de/d95/class_interface.html", "de/d95/class_interface" ],
-    [ "iterator_range", "d7/d52/structiterator__range.html", "d7/d52/structiterator__range" ],
     [ "King", "d5/dde/class_king.html", "d5/dde/class_king" ],
     [ "Knight", "d5/d98/class_knight.html", "d5/d98/class_knight" ],
     [ "Pawn", "dc/d4f/class_pawn.html", "dc/d4f/class_pawn" ],

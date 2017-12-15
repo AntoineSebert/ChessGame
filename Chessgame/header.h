@@ -1,5 +1,5 @@
-/**
-	@author Antoine "Anthony" S�bert
+﻿/**
+	@author Antoine "Anthony" Sébert
 	@creation_date 07/11/2017
 	@description header file for main
 */

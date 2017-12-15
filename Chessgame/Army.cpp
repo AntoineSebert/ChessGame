@@ -1,5 +1,5 @@
-/**
-	@author Antoine "Anthony" S�bert
+﻿/**
+	@author Antoine "Anthony" Sébert
 	@creation_date 10/11/2017
 	@description player army container
 */
@@ -55,5 +55,3 @@ using namespace std;
 	vector<shared_ptr<Piece>>::iterator Army::getEnd() {
 		return alivePieces.end();
 	}
-// protected
-// private

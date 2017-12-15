@@ -1,5 +1,5 @@
-/**
-	@author Antoine "Anthony" Sébert
+ï»¿/**
+	@author Antoine "Anthony" SÃ©bert
 	@creation_date 07/12/2017
 	@description glut related functions
 */
@@ -67,7 +67,7 @@ using namespace std;
 				// preparation
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 				glMatrixMode(GL_MODELVIEW);
-				glLoadIdentity(); // Réinitialise la matrice
+				glLoadIdentity(); // RÃ©initialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 
 				// buttons
@@ -87,7 +87,7 @@ using namespace std;
 				// preparation
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 				glMatrixMode(GL_MODELVIEW);
-				glLoadIdentity(); // Réinitialise la matrice
+				glLoadIdentity(); // RÃ©initialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
 				// draw board
 				unsigned int caseWidth = 8;

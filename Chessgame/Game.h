@@ -1,5 +1,5 @@
-/**
-	@author Antoine "Anthony" Sébert
+ï»¿/**
+	@author Antoine "Anthony" SÃ©bert
 	@creation_date 05/11/2017
 	@description game initializer and handler
 */
@@ -61,7 +61,7 @@ class Game : public Singleton<Game> {
 				bool importFile();
 				std::string currentDatetimeToString();
 				bool checkJSONValidity(nlohmann::json object);
-			// préparation
+			// prÃ©paration
 				void initializeBoard();
 				void initializePlayers();
 				void initializePlayersNames(std::array<std::string, 2>* names);
