@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 04/12/2017
-	@description glut related functions & data header
+	\author Antoine "Anthony" Sébert
+	\date 04/12/2017
+	\brief glut related functions & data header
 */
 
 #pragma once

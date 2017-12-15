@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 07/12/2017
-	@description glut related functions
+	\author Antoine "Anthony" Sébert
+	\date 07/12/2017
+	\brief glut related functions
 */
 
 #include "glut.h"

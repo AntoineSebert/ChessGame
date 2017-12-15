@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 04/11/2017
-	@description main function
+	\author Antoine "Anthony" Sébert
+	\date 04/11/2017
+	\brief main function
 */
 
 #include "header.h"

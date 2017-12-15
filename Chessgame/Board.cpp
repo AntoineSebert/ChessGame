@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 06/11/2017
-	@description game board container
+	\author Antoine "Anthony" Sébert
+	\date 06/11/2017
+	\brief game board container
 */
 
 #include "Board.h"
@@ -39,4 +39,3 @@ using namespace std;
 // private
 	Board::Board() {}
 	Board::~Board() {}
-Demo Version, Only convert first 5 files at one time, Please buy now!Demo Version, Only convert first 5 files at one time, Please buy now!

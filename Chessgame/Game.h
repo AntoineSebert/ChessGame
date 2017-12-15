@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 05/11/2017
-	@description game initializer and handler
+	\author Antoine "Anthony" Sébert
+	\date 05/11/2017
+	\brief game initializer and handler
 */
 
 #pragma once

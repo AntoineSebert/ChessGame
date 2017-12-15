@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 10/12/2017
-	@description palettes for graphical interface
+	\author Antoine "Anthony" Sébert
+	\date 10/12/2017
+	\brief palettes for graphical interface
 */
 
 #pragma once

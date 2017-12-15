@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 07/11/2017
-	@description header file for main
+	\author Antoine "Anthony" Sébert
+	\date 07/11/2017
+	\brief header file for main
 */
 
 #pragma once

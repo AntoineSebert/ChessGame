@@ -1,4 +1,4 @@
 <map id="Board" name="Board">
 <area shape="rect" id="node2" href="$d3/dbc/class_singleton.html" title="Singleton\&lt; Board \&gt;" alt="" coords="5,95,140,121"/>
-<area shape="rect" id="node3" href="$d3/dbc/class_singleton.html" title="Singleton\&lt; T \&gt;" alt="" coords="19,5,126,32"/>
+<area shape="rect" id="node3" href="$d3/dbc/class_singleton.html" title="thread&#45;safe templated singleton class using magic statics " alt="" coords="19,5,126,32"/>
 </map>

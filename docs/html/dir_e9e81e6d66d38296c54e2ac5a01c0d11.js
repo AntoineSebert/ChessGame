@@ -12,6 +12,7 @@ var dir_e9e81e6d66d38296c54e2ac5a01c0d11 =
     [ "Interface.h", "da/d20/_interface_8h_source.html", null ],
     [ "King.h", "d1/d5b/_king_8h_source.html", null ],
     [ "Knight.h", "d7/d04/_knight_8h_source.html", null ],
+    [ "mainPage.h", "d8/d5d/main_page_8h_source.html", null ],
     [ "palettes.h", "d3/db5/palettes_8h_source.html", null ],
     [ "Pawn.h", "d7/d1d/_pawn_8h_source.html", null ],
     [ "Piece.h", "d4/daa/_piece_8h_source.html", null ],

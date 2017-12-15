@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 04/11/2017
-	@description abstract class for the pieces
+	\author Antoine "Anthony" Sébert
+	\date 04/11/2017
+	\brief abstract class for the pieces
 */
 
 #include "Piece.h"

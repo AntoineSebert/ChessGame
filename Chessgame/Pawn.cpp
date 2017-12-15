@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 14/11/2017
-	@description pawn class
+	\author Antoine "Anthony" Sébert
+	\date 14/11/2017
+	\brief pawn class
 */
 
 #include "Pawn.h"

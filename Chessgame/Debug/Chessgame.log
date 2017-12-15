@@ -1,6 +1,26 @@
-﻿  Interface.cpp
-  Génération de code en cours...
-  Ignoré... (aucune modification pertinente détectée)
+﻿  Rook.cpp
+  Queen.cpp
+  Player.cpp
+c:\users\i\desktop\chessgame\chessgame\interface.h(12): fatal error C1083: Impossible d'ouvrir le fichier include : 'GL\glew.h' : No such file or directory
+  Piece.cpp
+  Pawn.cpp
   main.cpp
+c:\users\i\desktop\chessgame\chessgame\header.h(9): fatal error C1083: Impossible d'ouvrir le fichier include : 'GL\glew.h' : No such file or directory
+  Knight.cpp
+  King.cpp
+  Interface.cpp
+c:\users\i\desktop\chessgame\chessgame\interface.h(12): fatal error C1083: Impossible d'ouvrir le fichier include : 'GL\glew.h' : No such file or directory
+  glut.cpp
+c:\users\i\desktop\chessgame\chessgame\glut.h(14): fatal error C1083: Impossible d'ouvrir le fichier include : 'GL\glew.h' : No such file or directory
   Game.cpp
-  Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\Debug\Chessgame.exe
+c:\users\i\desktop\chessgame\chessgame\game.h(19): fatal error C1083: Impossible d'ouvrir le fichier include : 'GL\glew.h' : No such file or directory
+  Cell.cpp
+  Board.cpp
+  Bishop.cpp
+  Army.cpp
+  Génération de code en cours...
+c:\users\i\desktop\chessgame\chessgame\piece.cpp(34): warning C4172: retourne l'adresse d'une variable locale ou : moves temporaire
+FileTracker : error FTK1013: impossible de trouver le marqueur d'ordre d'octet unicode dans le fichier de suivi de fichier : C:\Users\i\Desktop\ChessGame\Chessgame\Debug\Chessgame.tlog\CL.read.1.tlog. Les données de suivi ne sont pas valides.
+  
+FileTracker : error FTK1013: impossible de trouver le marqueur d'ordre d'octet unicode dans le fichier de suivi de fichier : C:\Users\i\Desktop\ChessGame\Chessgame\Debug\Chessgame.tlog\CL.write.1.tlog. Les données de suivi ne sont pas valides.
+  

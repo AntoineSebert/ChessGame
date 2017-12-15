@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 06/11/2017
-	@description game board container
+	\author Antoine "Anthony" Sébert
+	\date 06/11/2017
+	\brief game board container
 */
 
 #pragma once

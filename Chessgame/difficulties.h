@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 05/11/2017
-	@description difficulties
+	\author Antoine "Anthony" Sébert
+	\date 05/11/2017
+	\brief difficulties
 */
 
 #pragma once

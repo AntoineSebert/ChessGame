@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 05/11/2017
-	@description user input/output handler
+	\author Antoine "Anthony" Sébert
+	\date 05/11/2017
+	\brief user input/output handler
 */
 
 #include "Interface.h"

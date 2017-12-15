@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 06/11/2017
-	@description player
+	\author Antoine "Anthony" Sébert
+	\date 06/11/2017
+	\brief player class
 */
 
 #include "Player.h"

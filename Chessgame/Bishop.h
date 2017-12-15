@@ -1,7 +1,7 @@
 ﻿/**
-	@author Antoine "Anthony" Sébert
-	@creation_date 14/11/2017
-	@description bishop class
+	\author Antoine "Anthony" Sébert
+	\date 14/11/2017
+	\brief bishop class
 */
 
 #pragma once
