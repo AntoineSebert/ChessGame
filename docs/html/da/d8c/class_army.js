@@ -7,5 +7,8 @@ var class_army =
     [ "getArmySize", "da/d8c/class_army.html#a50f449dceb1dde5428c1acd73371791d", null ],
     [ "getBegin", "da/d8c/class_army.html#a585b73dcb2d7204064bc1a4144a5395e", null ],
     [ "getEnd", "da/d8c/class_army.html#a2972beaafb0a53f2f9f30bd37af17a38", null ],
-    [ "operator[]", "da/d8c/class_army.html#aa312ef636abcfe0eeb9e31626b485a9d", null ]
+    [ "operator[]", "da/d8c/class_army.html#aa312ef636abcfe0eeb9e31626b485a9d", null ],
+    [ "alivePieces", "da/d8c/class_army.html#a89a97362404832767b717c9ae298f6a1", null ],
+    [ "color", "da/d8c/class_army.html#ae4b4aada3b65c3697d0a0489a826e943", null ],
+    [ "deadPieces", "da/d8c/class_army.html#a9932c1bbfc92e47d80bc810fbd30eed2", null ]
 ];

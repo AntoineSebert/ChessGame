@@ -1,4 +1,4 @@
-﻿/**
+﻿/*!
 	\author Antoine "Anthony" Sébert
 	\date 07/12/2017
 	\brief glut related functions

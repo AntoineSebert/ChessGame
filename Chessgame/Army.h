@@ -1,4 +1,4 @@
-﻿/**
+﻿/*!
 	\author Antoine "Anthony" Sébert
 	\date 10/11/2017
 	\brief player army container

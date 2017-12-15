@@ -1,7 +1,10 @@
-﻿/**
-	\author Antoine "Anthony" Sébert
-	\date 04/11/2017
-	\brief main function
+﻿/*! \fn			int main(int argc, char *argv[])
+	\author		Antoine "Anthony" Sébert
+	\date		04/11/2017
+	\brief		Program entry point.
+	\details	Initialize GLUT and the game object, and holds the graphic interface loop.
+	\param[in]	argc	parameters count
+	\param[in]	argv	parameters
 */
 
 #include "header.h"

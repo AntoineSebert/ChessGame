@@ -1,4 +1,4 @@
-﻿/**
+﻿/*!
 	\author Antoine "Anthony" Sébert
 	\date 04/11/2017
 	\brief abstract class for the pieces

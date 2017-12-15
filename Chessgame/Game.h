@@ -1,14 +1,13 @@
-﻿/**
-	\author Antoine "Anthony" Sébert
-	\date 05/11/2017
-	\brief game initializer and handler
+﻿/*! \class		Game
+	\author		Antoine "Anthony" Sébert
+	\date		05/11/2017
+	\brief		Game initializer and handler.
+	\details	Holds the board, the players, the game parameters & moves. Order the initialization of each element. Handle the game loop.
 */
 
 #pragma once
 
-#include <algorithm>
 #include <array>
-#include <chrono>
 #include <ctime>
 #include <fstream>
 #include <list>
@@ -46,7 +45,6 @@ class Game : public Singleton<Game> {
 			void initialize();
 			difficulties getDifficulty();
 			gameModes getGameMode();
-		// protected
 		private:
 			Game();
 			~Game();

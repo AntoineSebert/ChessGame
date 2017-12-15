@@ -1,4 +1,4 @@
-﻿/**
+﻿/*!
 	\author Antoine "Anthony" Sébert
 	\date 14/11/2017
 	\brief bishop class

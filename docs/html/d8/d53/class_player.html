@@ -81,6 +81,8 @@ $(document).ready(function(){initNavTree('d8/d53/class_player.html','../../');})
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d5/d5c/class_player-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Player Class Reference</div>  </div>
@@ -91,38 +93,442 @@ $(document).ready(function(){initNavTree('d8/d53/class_player.html','../../');})
  <a href="../../d8/d53/class_player.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d39/_player_8h_source.html">Player.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Player:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/db3/class_player__coll__graph.png" border="0" usemap="#_player_coll__map" alt="Collaboration graph"/></div>
+<map name="_player_coll__map" id="_player_coll__map">
+<area shape="rect" id="node3" href="../../da/d8c/class_army.html" title="player army container " alt="" coords="799,25,852,52"/>
+<area shape="rect" id="node5" title="STL class. " alt="" coords="158,24,271,51"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="304,76,443,103"/>
+<area shape="rect" id="node15" title="STL class. " alt="" coords="149,125,280,152"/>
+<area shape="rect" id="node8" title="STL class. " alt="" coords="1076,180,1156,207"/>
+<area shape="rect" id="node9" title="STL class. " alt="" coords="762,179,889,221"/>
+<area shape="rect" id="node10" href="../../de/d95/class_interface.html" title="user input/output handler " alt="" coords="1081,235,1151,261"/>
+<area shape="rect" id="node11" href="../../d3/dbc/class_singleton.html" title="Singleton\&lt; Interface \&gt;" alt="" coords="751,245,900,272"/>
+<area shape="rect" id="node12" href="../../d3/dbc/class_singleton.html" title="thread&#45;safe templated singleton class using magic statics " alt="" coords="493,245,599,272"/>
+<area shape="rect" id="node14" href="../../d7/d87/class_piece.html" title="Piece" alt="" coords="187,176,242,203"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac9e6f5ee72553487ce51498772612c4c"><td class="memItemLeft" align="right" valign="top"><a id="ac9e6f5ee72553487ce51498772612c4c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Player</b> (std::string playerName, unsigned int newColor, <a class="el" href="../../de/d95/class_interface.html">Interface</a> *newGameInterface)</td></tr>
+<tr class="memitem:ac9e6f5ee72553487ce51498772612c4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#ac9e6f5ee72553487ce51498772612c4c">Player</a> (std::string playerName, unsigned int newColor, <a class="el" href="../../de/d95/class_interface.html">Interface</a> *newGameInterface)</td></tr>
 <tr class="separator:ac9e6f5ee72553487ce51498772612c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a6045fa96f736664c4eab4caa5e8e5"><td class="memItemLeft" align="right" valign="top"><a id="af9a6045fa96f736664c4eab4caa5e8e5"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
+<tr class="memitem:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
+<tr class="separator:a749d2c00e1fe0f5c2746f7505a58c062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a6045fa96f736664c4eab4caa5e8e5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#af9a6045fa96f736664c4eab4caa5e8e5">getName</a> ()</td></tr>
 <tr class="separator:af9a6045fa96f736664c4eab4caa5e8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb6fcfdb2295744a6a07c5f7191d4f0c"><td class="memItemLeft" align="right" valign="top"><a id="afb6fcfdb2295744a6a07c5f7191d4f0c"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getColor</b> ()</td></tr>
+<tr class="memitem:afb6fcfdb2295744a6a07c5f7191d4f0c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#afb6fcfdb2295744a6a07c5f7191d4f0c">getColor</a> ()</td></tr>
 <tr class="separator:afb6fcfdb2295744a6a07c5f7191d4f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31b07f1c8ee530d6e00c53bba9d0f137"><td class="memItemLeft" align="right" valign="top"><a id="a31b07f1c8ee530d6e00c53bba9d0f137"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initializeArmy</b> (<a class="el" href="../../d3/dfd/class_board.html">Board</a> *gameBoard)</td></tr>
+<tr class="memitem:a31b07f1c8ee530d6e00c53bba9d0f137"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#a31b07f1c8ee530d6e00c53bba9d0f137">initializeArmy</a> (<a class="el" href="../../d3/dfd/class_board.html">Board</a> *gameBoard)</td></tr>
 <tr class="separator:a31b07f1c8ee530d6e00c53bba9d0f137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c6c4e2d95f3508d111ec4a7e5c68d96"><td class="memItemLeft" align="right" valign="top"><a id="a2c6c4e2d95f3508d111ec4a7e5c68d96"></a>
-std::tuple&lt; boardCoord, boardCoord &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>play</b> (<a class="el" href="../../d3/dfd/class_board.html">Board</a> *gameBoard)</td></tr>
+<tr class="memitem:a2c6c4e2d95f3508d111ec4a7e5c68d96"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a>, <a class="el" href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#a2c6c4e2d95f3508d111ec4a7e5c68d96">play</a> (<a class="el" href="../../d3/dfd/class_board.html">Board</a> *gameBoard)</td></tr>
 <tr class="separator:a2c6c4e2d95f3508d111ec4a7e5c68d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9d2979eb08a2554047c5f0f33422324"><td class="memItemLeft" align="right" valign="top"><a id="ae9d2979eb08a2554047c5f0f33422324"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>selectPiece</b> (unsigned int number)</td></tr>
+<tr class="memitem:ae9d2979eb08a2554047c5f0f33422324"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#ae9d2979eb08a2554047c5f0f33422324">selectPiece</a> (unsigned int number)</td></tr>
 <tr class="separator:ae9d2979eb08a2554047c5f0f33422324"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a132dd78279e2047547246b0b9ac7f696"><td class="memItemLeft" align="right" valign="top"><a id="a132dd78279e2047547246b0b9ac7f696"></a>
-boardCoord&#160;</td><td class="memItemRight" valign="bottom"><b>movePiece</b> (unsigned int number)</td></tr>
+<tr class="memitem:a132dd78279e2047547246b0b9ac7f696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#a132dd78279e2047547246b0b9ac7f696">movePiece</a> (unsigned int number)</td></tr>
 <tr class="separator:a132dd78279e2047547246b0b9ac7f696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1600d0da454f530ea30a3c1ec29b32cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#a1600d0da454f530ea30a3c1ec29b32cd">placePieces</a> (unsigned int rowNumber, boardRow::iterator cellStart, boardRow::iterator cellEnd, std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d7/d87/class_piece.html">Piece</a> &gt;&gt;::iterator pieceStart, std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d7/d87/class_piece.html">Piece</a> &gt;&gt;::iterator pieceEnd)</td></tr>
+<tr class="separator:a1600d0da454f530ea30a3c1ec29b32cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8951a2f958e692f649fb42e2bdc2d1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#a3c8951a2f958e692f649fb42e2bdc2d1">possibleMoves</a> (std::weak_ptr&lt; <a class="el" href="../../d7/d87/class_piece.html">Piece</a> &gt; piece)</td></tr>
+<tr class="separator:a3c8951a2f958e692f649fb42e2bdc2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afcb487baa3ab178a7c77181a56e98f34"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../da/d8c/class_army.html">Army</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#afcb487baa3ab178a7c77181a56e98f34">playerArmy</a></td></tr>
+<tr class="separator:afcb487baa3ab178a7c77181a56e98f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9da83121ea33b4df3dcb1aed3a9cca4a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#a9da83121ea33b4df3dcb1aed3a9cca4a">color</a></td></tr>
+<tr class="separator:a9da83121ea33b4df3dcb1aed3a9cca4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c920fabaafdeb7961a645315b521ff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#af9c920fabaafdeb7961a645315b521ff">name</a></td></tr>
+<tr class="separator:af9c920fabaafdeb7961a645315b521ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef99269f4a828825c4514ac22072c71d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d95/class_interface.html">Interface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#aef99269f4a828825c4514ac22072c71d">gameInterface</a> = nullptr</td></tr>
+<tr class="separator:aef99269f4a828825c4514ac22072c71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a178966b4af2da38fdc31dca45b32a87a"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="../../d7/d87/class_piece.html">Piece</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d53/class_player.html#a178966b4af2da38fdc31dca45b32a87a">selectedPiece</a></td></tr>
+<tr class="separator:a178966b4af2da38fdc31dca45b32a87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>player </p>
 <dl class="section author"><dt>Author</dt><dd>Antoine "Anthony" Sébert </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>06/11/2017 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac9e6f5ee72553487ce51498772612c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e6f5ee72553487ce51498772612c4c">&#9670;&nbsp;</a></span>Player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::Player </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>playerName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>newColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d95/class_interface.html">Interface</a> *&#160;</td>
+          <td class="paramname"><em>newGameInterface</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;: <a class="code" href="../../d8/d53/class_player.html#af9c920fabaafdeb7961a645315b521ff">name</a>(playerName), <a class="code" href="../../d8/d53/class_player.html#a9da83121ea33b4df3dcb1aed3a9cca4a">color</a>(newColor), <a class="code" href="../../d8/d53/class_player.html#aef99269f4a828825c4514ac22072c71d">gameInterface</a>(newGameInterface) {}</div><div class="ttc" id="class_player_html_aef99269f4a828825c4514ac22072c71d"><div class="ttname"><a href="../../d8/d53/class_player.html#aef99269f4a828825c4514ac22072c71d">Player::gameInterface</a></div><div class="ttdeci">Interface * gameInterface</div><div class="ttdef"><b>Definition:</b> Player.h:26</div></div>
+<div class="ttc" id="class_player_html_a9da83121ea33b4df3dcb1aed3a9cca4a"><div class="ttname"><a href="../../d8/d53/class_player.html#a9da83121ea33b4df3dcb1aed3a9cca4a">Player::color</a></div><div class="ttdeci">unsigned int color</div><div class="ttdef"><b>Definition:</b> Player.h:24</div></div>
+<div class="ttc" id="class_player_html_af9c920fabaafdeb7961a645315b521ff"><div class="ttname"><a href="../../d8/d53/class_player.html#af9c920fabaafdeb7961a645315b521ff">Player::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> Player.h:25</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a749d2c00e1fe0f5c2746f7505a58c062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749d2c00e1fe0f5c2746f7505a58c062">&#9670;&nbsp;</a></span>~Player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::~Player </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="afb6fcfdb2295744a6a07c5f7191d4f0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb6fcfdb2295744a6a07c5f7191d4f0c">&#9670;&nbsp;</a></span>getColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Player::getColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d53/class_player.html#a9da83121ea33b4df3dcb1aed3a9cca4a">color</a>; }</div><div class="ttc" id="class_player_html_a9da83121ea33b4df3dcb1aed3a9cca4a"><div class="ttname"><a href="../../d8/d53/class_player.html#a9da83121ea33b4df3dcb1aed3a9cca4a">Player::color</a></div><div class="ttdeci">unsigned int color</div><div class="ttdef"><b>Definition:</b> Player.h:24</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af9a6045fa96f736664c4eab4caa5e8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a6045fa96f736664c4eab4caa5e8e5">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Player::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d8/d53/class_player.html#af9c920fabaafdeb7961a645315b521ff">name</a>; }</div><div class="ttc" id="class_player_html_af9c920fabaafdeb7961a645315b521ff"><div class="ttname"><a href="../../d8/d53/class_player.html#af9c920fabaafdeb7961a645315b521ff">Player::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> Player.h:25</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a31b07f1c8ee530d6e00c53bba9d0f137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b07f1c8ee530d6e00c53bba9d0f137">&#9670;&nbsp;</a></span>initializeArmy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::initializeArmy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/dfd/class_board.html">Board</a> *&#160;</td>
+          <td class="paramname"><em>gameBoard</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                                {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">// only the player holds the pointer</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="../../d8/d53/class_player.html#afcb487baa3ab178a7c77181a56e98f34">playerArmy</a> = make_unique&lt;Army&gt;(&amp;<a class="code" href="../../d8/d53/class_player.html#a9da83121ea33b4df3dcb1aed3a9cca4a">color</a>);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">// if black player, the pawns are in row 1, otherwise in row 6</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pawnRowNumber = (<a class="code" href="../../d8/d53/class_player.html#a9da83121ea33b4df3dcb1aed3a9cca4a">color</a> == 0 ? 1 : 6);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">// if black player, the other pieces are in row 0, otherwise in row 7</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bourgeoisieRowNumber = (<a class="code" href="../../d8/d53/class_player.html#a9da83121ea33b4df3dcb1aed3a9cca4a">color</a> == 0 ? 0 : 7);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">// place pawns</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="../../d8/d53/class_player.html#a1600d0da454f530ea30a3c1ec29b32cd">placePieces</a>(</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            pawnRowNumber,</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            gameBoard-&gt;<a class="code" href="../../d3/dfd/class_board.html#a102be109e0204f2c1caf1aa29fc8548d">getBegin</a>(pawnRowNumber), gameBoard-&gt;<a class="code" href="../../d3/dfd/class_board.html#a51e0dcf1b37568875797a8363d7b9e00">getEnd</a>(pawnRowNumber),</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="../../d8/d53/class_player.html#afcb487baa3ab178a7c77181a56e98f34">playerArmy</a>-&gt;getBegin() + 8, <a class="code" href="../../d8/d53/class_player.html#afcb487baa3ab178a7c77181a56e98f34">playerArmy</a>-&gt;getEnd()</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        );</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// place other pieces</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="../../d8/d53/class_player.html#a1600d0da454f530ea30a3c1ec29b32cd">placePieces</a>(</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            bourgeoisieRowNumber,</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            gameBoard-&gt;<a class="code" href="../../d3/dfd/class_board.html#a102be109e0204f2c1caf1aa29fc8548d">getBegin</a>(bourgeoisieRowNumber), gameBoard-&gt;<a class="code" href="../../d3/dfd/class_board.html#a51e0dcf1b37568875797a8363d7b9e00">getEnd</a>(bourgeoisieRowNumber),</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="../../d8/d53/class_player.html#afcb487baa3ab178a7c77181a56e98f34">playerArmy</a>-&gt;getBegin(), <a class="code" href="../../d8/d53/class_player.html#afcb487baa3ab178a7c77181a56e98f34">playerArmy</a>-&gt;getEnd() - 8</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        );</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div><div class="ttc" id="class_board_html_a51e0dcf1b37568875797a8363d7b9e00"><div class="ttname"><a href="../../d3/dfd/class_board.html#a51e0dcf1b37568875797a8363d7b9e00">Board::getEnd</a></div><div class="ttdeci">std::array&lt; boardRow, 8 &gt;::iterator getEnd()</div><div class="ttdef"><b>Definition:</b> Board.cpp:36</div></div>
+<div class="ttc" id="class_player_html_a1600d0da454f530ea30a3c1ec29b32cd"><div class="ttname"><a href="../../d8/d53/class_player.html#a1600d0da454f530ea30a3c1ec29b32cd">Player::placePieces</a></div><div class="ttdeci">void placePieces(unsigned int rowNumber, boardRow::iterator cellStart, boardRow::iterator cellEnd, std::vector&lt; std::shared_ptr&lt; Piece &gt;&gt;::iterator pieceStart, std::vector&lt; std::shared_ptr&lt; Piece &gt;&gt;::iterator pieceEnd)</div><div class="ttdef"><b>Definition:</b> Player.cpp:75</div></div>
+<div class="ttc" id="class_player_html_a9da83121ea33b4df3dcb1aed3a9cca4a"><div class="ttname"><a href="../../d8/d53/class_player.html#a9da83121ea33b4df3dcb1aed3a9cca4a">Player::color</a></div><div class="ttdeci">unsigned int color</div><div class="ttdef"><b>Definition:</b> Player.h:24</div></div>
+<div class="ttc" id="class_board_html_a102be109e0204f2c1caf1aa29fc8548d"><div class="ttname"><a href="../../d3/dfd/class_board.html#a102be109e0204f2c1caf1aa29fc8548d">Board::getBegin</a></div><div class="ttdeci">std::array&lt; boardRow, 8 &gt;::iterator getBegin()</div><div class="ttdef"><b>Definition:</b> Board.cpp:34</div></div>
+<div class="ttc" id="class_player_html_afcb487baa3ab178a7c77181a56e98f34"><div class="ttname"><a href="../../d8/d53/class_player.html#afcb487baa3ab178a7c77181a56e98f34">Player::playerArmy</a></div><div class="ttdeci">std::unique_ptr&lt; Army &gt; playerArmy</div><div class="ttdef"><b>Definition:</b> Player.h:23</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a132dd78279e2047547246b0b9ac7f696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a132dd78279e2047547246b0b9ac7f696">&#9670;&nbsp;</a></span>movePiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a> Player::movePiece </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                                    {</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">//</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a>();</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div><div class="ttc" id="_piece_8h_html_a47b331e0b6934097078d9409e37de836"><div class="ttname"><a href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a></div><div class="ttdeci">std::tuple&lt; unsigned int, unsigned int &gt; boardCoord</div><div class="ttdoc">abstract class for the pieces </div><div class="ttdef"><b>Definition:</b> Piece.h:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1600d0da454f530ea30a3c1ec29b32cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1600d0da454f530ea30a3c1ec29b32cd">&#9670;&nbsp;</a></span>placePieces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::placePieces </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>rowNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boardRow::iterator&#160;</td>
+          <td class="paramname"><em>cellStart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boardRow::iterator&#160;</td>
+          <td class="paramname"><em>cellEnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d7/d87/class_piece.html">Piece</a> &gt;&gt;::iterator&#160;</td>
+          <td class="paramname"><em>pieceStart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../d7/d87/class_piece.html">Piece</a> &gt;&gt;::iterator&#160;</td>
+          <td class="paramname"><em>pieceEnd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      {</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">// check if iterators are correct</span></div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">if</span> (cellEnd - cellStart == pieceEnd - pieceStart &amp;&amp; cellStart &lt; cellEnd &amp;&amp; pieceStart &lt; pieceEnd) {</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keyword">auto</span> pieceIt = pieceStart;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = cellStart; it &lt; cellEnd; ++it) {</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="comment">// assign positions to pieces</span></div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                (*pieceIt)-&gt;setPosition(forward_as_tuple(distance(cellStart, it), rowNumber));</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="comment">// assign pointers to pieces</span></div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                (*it)-&gt;setPiece(*pieceIt);</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="comment">// second limitating variable (ternary condition impossible because of &#39;break&#39;)</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">if</span> (pieceIt != pieceEnd)</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    ++pieceIt;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">else</span></div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">else</span> {</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="comment">// throw error and information</span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            perror(<span class="stringliteral">&quot;The given intervals does not match or the iterators are unordered&quot;</span>);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            cout &lt;&lt; cellEnd - cellStart &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; pieceEnd - pieceStart &lt;&lt; endl;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            cout &lt;&lt; *cellEnd &lt;&lt; <span class="charliteral">&#39;:&#39;</span> &lt;&lt; *cellStart &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; *pieceEnd &lt;&lt; <span class="charliteral">&#39;:&#39;</span> &lt;&lt; *pieceStart &lt;&lt; endl;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a2c6c4e2d95f3508d111ec4a7e5c68d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c6c4e2d95f3508d111ec4a7e5c68d96">&#9670;&nbsp;</a></span>play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tuple&lt; <a class="el" href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a>, <a class="el" href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a> &gt; Player::play </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/dfd/class_board.html">Board</a> *&#160;</td>
+          <td class="paramname"><em>gameBoard</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                                               {</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        vector&lt;string&gt; labels;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> choice;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// select a piece, and select a move</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">do</span> {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">// select a piece</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            labels = { <span class="stringliteral">&quot;Chosse a piece to select&quot;</span> };</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">for</span> (shared_ptr&lt;Piece&gt; piece : *<a class="code" href="../../d8/d53/class_player.html#afcb487baa3ab178a7c77181a56e98f34">playerArmy</a>-&gt;getArmyContainer())</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                labels.push_back(</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    (<span class="keywordtype">char</span>)(get&lt;0&gt;(piece-&gt;getPosition()) + 65) + to_string(get&lt;1&gt;(piece-&gt;getPosition()))</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                );</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="../../d8/d53/class_player.html#ae9d2979eb08a2554047c5f0f33422324">selectPiece</a>(<a class="code" href="../../d8/d53/class_player.html#aef99269f4a828825c4514ac22072c71d">gameInterface</a>-&gt;<a class="code" href="../../de/d95/class_interface.html#a49cfb1cf26731ef6090f3932088a5f0b">numberChoice</a>(&amp;labels, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)labels.size() - 1));</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">// select a move, or deselect</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            labels = { <span class="stringliteral">&quot;Chosse a move or deselect piece&quot;</span> };</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../d8/d53/class_player.html#a3c8951a2f958e692f649fb42e2bdc2d1">possibleMoves</a>(<a class="code" href="../../d8/d53/class_player.html#a178966b4af2da38fdc31dca45b32a87a">selectedPiece</a>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="comment">// for</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            labels.push_back(<span class="stringliteral">&quot;Deselect&quot;</span>);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            choice = <a class="code" href="../../d8/d53/class_player.html#aef99269f4a828825c4514ac22072c71d">gameInterface</a>-&gt;<a class="code" href="../../de/d95/class_interface.html#a49cfb1cf26731ef6090f3932088a5f0b">numberChoice</a>(&amp;labels, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)labels.size() - 1);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        } <span class="keywordflow">while</span> (choice &lt; labels.size() - 2); <span class="comment">// if choice is not &#39;deselect&#39;</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">// record start position</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a> initialPosition = <a class="code" href="../../d8/d53/class_player.html#a178966b4af2da38fdc31dca45b32a87a">selectedPiece</a>.lock()-&gt;getPosition();</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">// record end position, and perform move</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a> moveChoice = <a class="code" href="../../d8/d53/class_player.html#a132dd78279e2047547246b0b9ac7f696">movePiece</a>(choice);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">//vdeselect piece</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="../../d8/d53/class_player.html#a178966b4af2da38fdc31dca45b32a87a">selectedPiece</a>.reset();</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> forward_as_tuple(initialPosition, moveChoice);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div><div class="ttc" id="class_player_html_aef99269f4a828825c4514ac22072c71d"><div class="ttname"><a href="../../d8/d53/class_player.html#aef99269f4a828825c4514ac22072c71d">Player::gameInterface</a></div><div class="ttdeci">Interface * gameInterface</div><div class="ttdef"><b>Definition:</b> Player.h:26</div></div>
+<div class="ttc" id="_piece_8h_html_a47b331e0b6934097078d9409e37de836"><div class="ttname"><a href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a></div><div class="ttdeci">std::tuple&lt; unsigned int, unsigned int &gt; boardCoord</div><div class="ttdoc">abstract class for the pieces </div><div class="ttdef"><b>Definition:</b> Piece.h:14</div></div>
+<div class="ttc" id="class_player_html_a132dd78279e2047547246b0b9ac7f696"><div class="ttname"><a href="../../d8/d53/class_player.html#a132dd78279e2047547246b0b9ac7f696">Player::movePiece</a></div><div class="ttdeci">boardCoord movePiece(unsigned int number)</div><div class="ttdef"><b>Definition:</b> Player.cpp:69</div></div>
+<div class="ttc" id="class_player_html_ae9d2979eb08a2554047c5f0f33422324"><div class="ttname"><a href="../../d8/d53/class_player.html#ae9d2979eb08a2554047c5f0f33422324">Player::selectPiece</a></div><div class="ttdeci">void selectPiece(unsigned int number)</div><div class="ttdef"><b>Definition:</b> Player.cpp:64</div></div>
+<div class="ttc" id="class_interface_html_a49cfb1cf26731ef6090f3932088a5f0b"><div class="ttname"><a href="../../de/d95/class_interface.html#a49cfb1cf26731ef6090f3932088a5f0b">Interface::numberChoice</a></div><div class="ttdeci">unsigned int numberChoice(std::vector&lt; std::string &gt; *labels, unsigned int firstBound, unsigned int secondBound=0)</div><div class="ttdef"><b>Definition:</b> Interface.cpp:12</div></div>
+<div class="ttc" id="class_player_html_a3c8951a2f958e692f649fb42e2bdc2d1"><div class="ttname"><a href="../../d8/d53/class_player.html#a3c8951a2f958e692f649fb42e2bdc2d1">Player::possibleMoves</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; possibleMoves(std::weak_ptr&lt; Piece &gt; piece)</div><div class="ttdef"><b>Definition:</b> Player.cpp:102</div></div>
+<div class="ttc" id="class_player_html_afcb487baa3ab178a7c77181a56e98f34"><div class="ttname"><a href="../../d8/d53/class_player.html#afcb487baa3ab178a7c77181a56e98f34">Player::playerArmy</a></div><div class="ttdeci">std::unique_ptr&lt; Army &gt; playerArmy</div><div class="ttdef"><b>Definition:</b> Player.h:23</div></div>
+<div class="ttc" id="class_player_html_a178966b4af2da38fdc31dca45b32a87a"><div class="ttname"><a href="../../d8/d53/class_player.html#a178966b4af2da38fdc31dca45b32a87a">Player::selectedPiece</a></div><div class="ttdeci">std::weak_ptr&lt; Piece &gt; selectedPiece</div><div class="ttdef"><b>Definition:</b> Player.h:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3c8951a2f958e692f649fb42e2bdc2d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8951a2f958e692f649fb42e2bdc2d1">&#9670;&nbsp;</a></span>possibleMoves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; unsigned int &gt; Player::possibleMoves </td>
+          <td>(</td>
+          <td class="paramtype">std::weak_ptr&lt; <a class="el" href="../../d7/d87/class_piece.html">Piece</a> &gt;&#160;</td>
+          <td class="paramname"><em>piece</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                                                    {</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">/*</span></div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">        switch (typeid(piece).name()) {</span></div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">        }</span></div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">        */</span></div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">//for</span></div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a> move : piece.lock()-&gt;<a class="code" href="../../d7/d87/class_piece.html#ad1b3c0a7ea467b92ecfb593009c301fe">movement</a>())</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            cout &lt;&lt; (<span class="keywordtype">char</span>)(get&lt;0&gt;(move) + 65) &lt;&lt; <span class="charliteral">&#39;:&#39;</span> &lt;&lt; get&lt;1&gt;(move) &lt;&lt; endl;</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> vector&lt;unsigned int&gt;();</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div><div class="ttc" id="_piece_8h_html_a47b331e0b6934097078d9409e37de836"><div class="ttname"><a href="../../d4/daa/_piece_8h.html#a47b331e0b6934097078d9409e37de836">boardCoord</a></div><div class="ttdeci">std::tuple&lt; unsigned int, unsigned int &gt; boardCoord</div><div class="ttdoc">abstract class for the pieces </div><div class="ttdef"><b>Definition:</b> Piece.h:14</div></div>
+<div class="ttc" id="class_piece_html_ad1b3c0a7ea467b92ecfb593009c301fe"><div class="ttname"><a href="../../d7/d87/class_piece.html#ad1b3c0a7ea467b92ecfb593009c301fe">Piece::movement</a></div><div class="ttdeci">virtual std::vector&lt; boardCoord &gt; const movement() const =0</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae9d2979eb08a2554047c5f0f33422324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d2979eb08a2554047c5f0f33422324">&#9670;&nbsp;</a></span>selectPiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::selectPiece </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                {</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="../../d8/d53/class_player.html#a178966b4af2da38fdc31dca45b32a87a">selectedPiece</a> = (*playerArmy)[number];</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        cout &lt;&lt; <a class="code" href="../../d8/d53/class_player.html#a178966b4af2da38fdc31dca45b32a87a">selectedPiece</a>.lock()-&gt;getRepresentation() &lt;&lt; endl;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div><div class="ttc" id="class_player_html_a178966b4af2da38fdc31dca45b32a87a"><div class="ttname"><a href="../../d8/d53/class_player.html#a178966b4af2da38fdc31dca45b32a87a">Player::selectedPiece</a></div><div class="ttdeci">std::weak_ptr&lt; Piece &gt; selectedPiece</div><div class="ttdef"><b>Definition:</b> Player.h:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9da83121ea33b4df3dcb1aed3a9cca4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9da83121ea33b4df3dcb1aed3a9cca4a">&#9670;&nbsp;</a></span>color</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Player::color</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef99269f4a828825c4514ac22072c71d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef99269f4a828825c4514ac22072c71d">&#9670;&nbsp;</a></span>gameInterface</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d95/class_interface.html">Interface</a>* Player::gameInterface = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9c920fabaafdeb7961a645315b521ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c920fabaafdeb7961a645315b521ff">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Player::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcb487baa3ab178a7c77181a56e98f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb487baa3ab178a7c77181a56e98f34">&#9670;&nbsp;</a></span>playerArmy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="../../da/d8c/class_army.html">Army</a>&gt; Player::playerArmy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a178966b4af2da38fdc31dca45b32a87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a178966b4af2da38fdc31dca45b32a87a">&#9670;&nbsp;</a></span>selectedPiece</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt;<a class="el" href="../../d7/d87/class_piece.html">Piece</a>&gt; Player::selectedPiece</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/i/Desktop/ChessGame/Chessgame/<a class="el" href="../../d1/d39/_player_8h_source.html">Player.h</a></li>
-<li>C:/Users/i/Desktop/ChessGame/Chessgame/Player.cpp</li>
+<li>C:/Users/i/Desktop/ChessGame/Chessgame/<a class="el" href="../../d2/d82/_player_8cpp.html">Player.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

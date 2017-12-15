@@ -1,4 +1,4 @@
-﻿/**
+﻿/*!
 	\author Antoine "Anthony" Sébert
 	\date 10/12/2017
 	\brief palettes for graphical interface

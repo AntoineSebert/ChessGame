@@ -1,4 +1,4 @@
-﻿/**
+﻿/*!
 	\mainpage Main Page
 
 	\section intro_sec Introduction
@@ -30,8 +30,7 @@
 
 	Executables files are at *ChessGame/x64/Debug*, for 64-bits operating systems, or *ChessGame/Debug* for 32-bits operating systems.
 
-	\warning
-	If you want to target the project for a 32-bits operating system, you will have to change the include directories in the project parameters.
+	\warning If you want to target the project for a 32-bits operating system, you will have to change the include directories in the project parameters.
 
 	The documentation files is to be found in *ChessGame/docs*.
 

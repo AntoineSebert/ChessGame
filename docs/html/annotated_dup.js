@@ -13,5 +13,5 @@ var annotated_dup =
     [ "Player", "d8/d53/class_player.html", "d8/d53/class_player" ],
     [ "Queen", "d8/dfc/class_queen.html", "d8/dfc/class_queen" ],
     [ "Rook", "d3/d05/class_rook.html", "d3/d05/class_rook" ],
-    [ "Singleton", "d3/dbc/class_singleton.html", null ]
+    [ "Singleton", "d3/dbc/class_singleton.html", "d3/dbc/class_singleton" ]
 ];

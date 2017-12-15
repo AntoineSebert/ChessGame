@@ -1,0 +1,12 @@
+<map id="Player" name="Player">
+<area shape="rect" id="node3" href="$da/d8c/class_army.html" title="player army container " alt="" coords="799,25,852,52"/>
+<area shape="rect" id="node5" title="STL class. " alt="" coords="158,24,271,51"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="304,76,443,103"/>
+<area shape="rect" id="node15" title="STL class. " alt="" coords="149,125,280,152"/>
+<area shape="rect" id="node8" title="STL class. " alt="" coords="1076,180,1156,207"/>
+<area shape="rect" id="node9" title="STL class. " alt="" coords="762,179,889,221"/>
+<area shape="rect" id="node10" href="$de/d95/class_interface.html" title="user input/output handler " alt="" coords="1081,235,1151,261"/>
+<area shape="rect" id="node11" href="$d3/dbc/class_singleton.html" title="Singleton\&lt; Interface \&gt;" alt="" coords="751,245,900,272"/>
+<area shape="rect" id="node12" href="$d3/dbc/class_singleton.html" title="thread&#45;safe templated singleton class using magic statics " alt="" coords="493,245,599,272"/>
+<area shape="rect" id="node14" href="$d7/d87/class_piece.html" title="Piece" alt="" coords="187,176,242,203"/>
+</map>

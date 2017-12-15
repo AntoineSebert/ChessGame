@@ -1,0 +1,19 @@
+<map id="C:/Users/i/Desktop/ChessGame/Chessgame/Game.h" name="C:/Users/i/Desktop/ChessGame/Chessgame/Game.h">
+<area shape="rect" id="node14" href="$de/dec/_singleton_8h.html" title="Singleton.h" alt="" coords="1606,259,1693,285"/>
+<area shape="rect" id="node15" href="$d5/d9c/difficulties_8h.html" title="difficulties.h" alt="" coords="2473,109,2564,136"/>
+<area shape="rect" id="node16" href="$d9/d83/game_modes_8h.html" title="gameModes.h" alt="" coords="2588,109,2692,136"/>
+<area shape="rect" id="node17" href="$de/ded/_board_8h.html" title="Board.h" alt="" coords="776,184,843,211"/>
+<area shape="rect" id="node23" href="$d1/d39/_player_8h.html" title="Player.h" alt="" coords="819,109,890,136"/>
+<area shape="rect" id="node31" href="$da/d20/_interface_8h.html" title="Interface.h" alt="" coords="1736,184,1819,211"/>
+<area shape="rect" id="node33" href="$d9/db8/glut_8h.html" title="glut.h" alt="" coords="1530,109,1585,136"/>
+<area shape="rect" id="node19" href="$dd/dcf/_cell_8h.html" title="Cell.h" alt="" coords="547,259,602,285"/>
+<area shape="rect" id="node21" href="$d4/daa/_piece_8h.html" title="Piece.h" alt="" coords="1047,333,1113,360"/>
+<area shape="rect" id="node24" href="$d6/da1/_army_8h.html" title="Army.h" alt="" coords="867,184,931,211"/>
+<area shape="rect" id="node25" href="$dc/df2/_bishop_8h.html" title="Bishop.h" alt="" coords="817,259,890,285"/>
+<area shape="rect" id="node26" href="$d1/d5b/_king_8h.html" title="King.h" alt="" coords="915,259,973,285"/>
+<area shape="rect" id="node27" href="$d7/d04/_knight_8h.html" title="Knight.h" alt="" coords="998,259,1069,285"/>
+<area shape="rect" id="node28" href="$d7/d1d/_pawn_8h.html" title="Pawn.h" alt="" coords="1093,259,1158,285"/>
+<area shape="rect" id="node29" href="$d2/d0a/_queen_8h.html" title="Queen.h" alt="" coords="1182,259,1253,285"/>
+<area shape="rect" id="node30" href="$d2/dd3/_rook_8h.html" title="Rook.h" alt="" coords="678,259,741,285"/>
+<area shape="rect" id="node34" href="$d3/db5/palettes_8h.html" title="palettes.h" alt="" coords="1365,184,1443,211"/>
+</map>

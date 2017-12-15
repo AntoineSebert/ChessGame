@@ -1,7 +1,7 @@
-﻿/**
+﻿/*!
 	\author Antoine "Anthony" Sébert
 	\date 07/11/2017
-	\brief header file for main
+	\brief Header file for main.
 */
 
 #pragma once
