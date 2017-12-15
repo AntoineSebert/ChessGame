@@ -14,7 +14,6 @@
 
 #include "Singleton.h"
 #include "Piece.h"
-#include "glut.h"
 
 class Interface : public Singleton<Interface> {
 	friend class Singleton<Interface>;

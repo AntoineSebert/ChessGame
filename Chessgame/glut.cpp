@@ -50,6 +50,7 @@ using namespace std;
 		}
 		void difficutyMenuClick(int button, int state, int x, int y) {
 			if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
+				//game.displayBoard();
 				cout << x << ':' << y << endl;
 				glutDisplayFunc(drawBoard);
 				glutMouseFunc(boardClick);
@@ -88,7 +89,6 @@ using namespace std;
 				glMatrixMode(GL_MODELVIEW);
 				glLoadIdentity(); // Réinitialise la matrice
 				gluLookAt(0, 0, 100, 0, 0, 0, 0, 1, 0);
-
 				// draw board
 				unsigned int caseWidth = 8;
 				for (unsigned int ii = 0; ii < 8; ++ii) {
@@ -102,11 +102,9 @@ using namespace std;
 						);
 					}
 				}
-
 				// grid and origin
 				drawGrid(forward_as_tuple(-60, -40), 120, 80);
 				drawOrigin();
-
 				// refresh
 				glutSwapBuffers();
 				glutPostRedisplay();
@@ -224,12 +222,11 @@ using namespace std;
 			void drawCircleStroke(coord origin, float r, unsigned int segments, rgba color) {
 				glBegin(GL_LINE_LOOP);
 				setColor(color);
-				float x, y;
 				for (unsigned int i = 0; i < segments; ++i) {
 					// determine angle
 					float theta = 2.0f * 3.1415926f * float(i) / float(segments);
 					// determine coordinates of vertex and add it
-					glVertex2f((r * cosf(theta)) + get<0>(origin), (r * sinf(theta)) + get<1>(origin));
+					glVertex3f((r * cosf(theta)) + get<0>(origin), (r * sinf(theta)) + get<1>(origin), 0.0);
 				}
 				glEnd();
 			}
@@ -238,7 +235,7 @@ using namespace std;
 				setColor(color);
 				// determine coordinates of vertices and add them
 				for (double i = 0; i < 2 * PI; i += PI / segments)
-					glVertex3f((get<0>(origin) + (cosf(i) * r)), (get<1>(origin) + (sinf(i) * r)), 0.0);
+					glVertex3f((GLfloat)(get<0>(origin) + (cosf(i) * r)), (GLfloat)(get<1>(origin) + (sinf(i) * r)), 0.0);
 				glEnd();
 			}
 			void setColor(rgba color) {

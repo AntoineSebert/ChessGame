@@ -8,11 +8,12 @@
 
 #include <algorithm>
 #include <array>
+#include <chrono>
+#include <ctime>
+#include <fstream>
 #include <list>
 #include <memory>
-#include <fstream>
 #include <string>
-#include <ctime>
 #include <tuple>
 #include <vector>
 #include <GL\glew.h>
@@ -25,6 +26,7 @@
 #include "Player.h"
 #include "Interface.h"
 #include "json.hpp"
+#include "glut.h"
 
 class Game : public Singleton<Game> {
 	friend class Singleton<Game>;
@@ -52,6 +54,7 @@ class Game : public Singleton<Game> {
 			bool isGameFinished();
 			std::weak_ptr<Player> selectPlayerToPlay(unsigned int turns);
 			void reinitializeCallbacks();
+			void displayBoard();
 			// import/ export
 				void exportToFile();
 				nlohmann::json convertToJson();

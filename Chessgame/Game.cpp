@@ -48,6 +48,9 @@ using json = nlohmann::json;
 		glutMotionFunc(NULL);
 		glutPassiveMotionFunc(NULL);
 	}
+	void Game::displayBoard() {
+		
+	}
 	// import / export
 		void Game::exportToFile() {
 			json container = convertToJson();

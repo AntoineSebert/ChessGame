@@ -10,3 +10,4 @@
 #include <GL\freeglut.h>
 
 #include "Game.h"
+#include "glut.h"

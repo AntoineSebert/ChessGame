@@ -24,7 +24,7 @@
 	const long double PI = 3.1415926535897932384626433832795;
 
 	typedef std::tuple<int, int> coord;
-
+	
 // functions
 	// initialization
 		void initializeViewPort();
