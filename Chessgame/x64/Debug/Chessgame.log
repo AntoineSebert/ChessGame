@@ -1,2 +1,88 @@
-﻿  main.cpp
+﻿  Game.cpp
+  Génération de code en cours...
+  Compilation en cours...
+  main.cpp
+  glut.cpp
+c:\users\i\desktop\chessgame\chessgame\glut.cpp(238): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+  Rook.cpp
+  Queen.cpp
+  Player.cpp
+d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\tuple(157): warning C4244: 'initialisation' : conversion de '__int64' en 'unsigned int', perte possible de données
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\tuple(276): note: voir la référence à l'instanciation de la fonction modèle 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' en cours de compilation
+          with
+          [
+              _This=unsigned int,
+              _Ty=__int64,
+              _Other=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\tuple(275): note: voir la référence à l'instanciation de la fonction modèle 'std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)' en cours de compilation
+          with
+          [
+              _This=unsigned int,
+              _Ty=__int64,
+              _Other=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\tuple(837): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Exact_args_t,__int64,unsigned int&,0>(_Tag,_This2 &&,unsigned int &)' en cours de compilation
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\tuple(836): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Exact_args_t,__int64,unsigned int&,0>(_Tag,_This2 &&,unsigned int &)' en cours de compilation
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=__int64
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\tuple(291): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,_Ty,0,1,0>(_Tag,_Tpl &&,std::integer_sequence<unsigned __int64,0,1>)' en cours de compilation
+          with
+          [
+              _Ty=std::tuple<__int64 &&,unsigned int &>,
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<__int64 &&,unsigned int &>
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\tuple(289): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,_Ty,0,1,0>(_Tag,_Tpl &&,std::integer_sequence<unsigned __int64,0,1>)' en cours de compilation
+          with
+          [
+              _Ty=std::tuple<__int64 &&,unsigned int &>,
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<__int64 &&,unsigned int &>
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\tuple(450): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,std::tuple<__int64 &&,unsigned int &>,0>(_Tag,_Tpl &&)' en cours de compilation
+          with
+          [
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<__int64 &&,unsigned int &>
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\tuple(449): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<std::_Unpack_tuple_t,std::tuple<__int64 &&,unsigned int &>,0>(_Tag,_Tpl &&)' en cours de compilation
+          with
+          [
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<__int64 &&,unsigned int &>
+          ]
+  c:\users\i\desktop\chessgame\chessgame\player.cpp(85): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<__int64&&,unsigned int&,0,0>(std::tuple<__int64 &&,unsigned int &> &&)' en cours de compilation
+  c:\users\i\desktop\chessgame\chessgame\player.cpp(85): note: voir la référence à l'instanciation de la fonction modèle 'std::tuple<unsigned int,unsigned int>::tuple<__int64&&,unsigned int&,0,0>(std::tuple<__int64 &&,unsigned int &> &&)' en cours de compilation
+  Piece.cpp
+  Pawn.cpp
+  Knight.cpp
+  King.cpp
+  Interface.cpp
+  Cell.cpp
+  Board.cpp
+d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\memory(1849): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\memory(1914): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<unsigned __int64>(unsigned __int64 &&)' en cours de compilation
+          with
+          [
+              _Ty=Cell
+          ]
+  d:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.12.25827\include\memory(1914): note: voir la référence à l'instanciation de la fonction modèle 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<unsigned __int64>(unsigned __int64 &&)' en cours de compilation
+          with
+          [
+              _Ty=Cell
+          ]
+  c:\users\i\desktop\chessgame\chessgame\board.cpp(15): note: voir la référence à l'instanciation de la fonction modèle 'std::shared_ptr<Cell> std::make_shared<Cell,::size_t>(size_t &&)' en cours de compilation
+  Bishop.cpp
+  Army.cpp
+  Génération de code en cours...
+c:\users\i\desktop\chessgame\chessgame\piece.cpp(34): warning C4172: retourne l'adresse d'une variable locale ou : moves temporaire
   Chessgame.vcxproj -> C:\Users\i\Desktop\ChessGame\x64\Debug\Chessgame.exe

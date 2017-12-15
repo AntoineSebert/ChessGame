@@ -1,7 +1,7 @@
 ﻿/*!
-	\author Antoine "Anthony" Sébert
-	\date 05/11/2017
-	\brief game initializer and handler
+	\author		Antoine "Anthony" Sébert
+	\date		05/11/2017
+	\brief		Game initializer and handler.
 */
 
 #include "Game.h"

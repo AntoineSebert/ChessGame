@@ -1,4 +1,4 @@
-﻿/*! \class		Game
+﻿/*!
 	\author		Antoine "Anthony" Sébert
 	\date		05/11/2017
 	\brief		Game initializer and handler.

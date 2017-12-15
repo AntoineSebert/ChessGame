@@ -1,7 +1,7 @@
 ﻿/*!
-	\author Antoine "Anthony" Sébert
-	\date 14/11/2017
-	\brief pawn class
+	\author	Antoine "Anthony" Sébert
+	\date	14/11/2017
+	\brief	Pawn class.
 */
 
 #pragma once

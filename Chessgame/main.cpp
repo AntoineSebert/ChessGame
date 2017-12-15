@@ -1,4 +1,4 @@
-﻿/*! \fn			int main(int argc, char *argv[])
+﻿/*!
 	\author		Antoine "Anthony" Sébert
 	\date		04/11/2017
 	\brief		Program entry point.

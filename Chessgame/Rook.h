@@ -1,7 +1,7 @@
 ﻿/*!
-	\author Antoine "Anthony" Sébert
-	\date 14/11/2017
-	\brief rook class
+	\author	Antoine "Anthony" Sébert
+	\date	14/11/2017
+	\brief	Rook class.
 */
 
 #pragma once

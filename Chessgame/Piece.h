@@ -1,13 +1,13 @@
 ﻿/*!
-	\author Antoine "Anthony" Sébert
-	\date 04/11/2017
-	\brief abstract class for the pieces
+	\author		Antoine "Anthony" Sébert
+	\date		04/11/2017
+	\brief		Abstract class for the pieces.
+	\details	Pack all necessary members for pieces. Force all derived classes to implement and redefine piece-specific functions.
 */
 
 #pragma once
 
 #include <string>
-#include <functional>
 #include <tuple>
 #include <vector>
 

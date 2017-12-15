@@ -1,7 +1,7 @@
 ﻿/*!
-	\author Antoine "Anthony" Sébert
-	\date 14/11/2017
-	\brief queen class
+	\author	Antoine "Anthony" Sébert
+	\date	14/11/2017
+	\brief	Queen class.
 */
 
 #pragma once
